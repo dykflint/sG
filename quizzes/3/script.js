@@ -13,6 +13,8 @@ const answerButtons = document.getElementById("answers");
 const countdown = document.getElementById("timerArea");
 const scoreArea = document.getElementById("scoreArea");
 const highScoresButton = document.getElementById("showScoresButton");
+const submitButton = document.getElementById("submitButtonID");
+const nextButton = document.getElementById("nextButtonID");
 
 //LocalStorage Objects
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
@@ -54,13 +56,19 @@ function showQuestion(question) {
   });
 }
 
-
+function myFunction() {
+  clearQuestion();
+  qNumber++;
+  showQuestion(questions[qNumber]);
+}
 //function to collect answers
 //should listen for what answer the user clicks on, compare it to the correct answer, and decrease the timer if wrong. should then run the next question function
 //unless the current question is the last, then it should run the game over function
+var clicked = false;
 function selectAnswer(e) {
   const selectedButton = e.target;
   if (!selectedButton.dataset.correct) {
+    //selectedButton.style.border = "10px solid red";
     //timer = timer - 100;
     //console.log(timer);
   } else {
@@ -69,13 +77,22 @@ function selectAnswer(e) {
   if (qNumber == questions.length - 1) {
     gameOver();
   } else {
+    //submitButton.classList.add("hide");
+    submitButton.addEventListener("click", evaluation(selectedButton));
     clearQuestion();
     qNumber++;
     showQuestion(questions[qNumber]);
+
     //console.log(score);
   }
 }
 
+function evaluation(selectedButton) {
+  submitButton.classList.add("hide");
+  if (!selectedButton.dataset.correct) {
+    selectedButton.style.border = "10px solid red";
+  }
+}
 //function to clear the current question
 //should empty the HTML elements that are occupied with the currently displayed question
 function clearQuestion() {

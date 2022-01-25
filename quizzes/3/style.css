@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-body {
+#quizbody-konstantin {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -18,16 +18,12 @@ body {
   color: black;
 }
 
-h3 {
-  margin: 10px 0px;
-}
-
-.mainHeader {
+.mainHeader.konstantin {
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
 }
 
-.quizArea {
+.quizArea.konstantin {
   width: 60vw;
   max-width: 90%;
   background-color: #84C7C0;
@@ -37,15 +33,16 @@ h3 {
   box-shadow: 0 0 10px 2px;
 }
 
-.buttonArea {
+.buttonArea.konstantin{
   display: grid;
   grid-template-columns: repeat(1, auto);
   gap: 10px;
-  margin: 20px 0;
+  margin: 20px auto;
   background-color: #84C7C0;
+  width: 50%;
 }
 
-button {
+.button-konstantin {
   --hue: var(--hue-neutral);
   border: 1px solid grey;
   background-color: white;
@@ -58,18 +55,18 @@ button {
   font-size: 20px;
 }
 
-button:hover {
+.button.konstantin:hover {
   border-color: black;
 }
 
-.start {
+.start.button-konstantin {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
   margin: 10px 0px;
 }
 
-.controls {
+.controls.konstantin {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,38 +77,38 @@ button:hover {
   display: none;
 }
 
-.scoresList {
+.scoresList.konstantin {
   text-decoration: none;
   list-style-type: none;
   margin: 0.3rem 0;
 }
 
-#highScoresList {
+#highScoresList-konstantin {
   margin: 1rem 0;
 }
 
-#scoreArea {
+#scoreArea-konstantin {
   padding-bottom: 1rem;
 }
 
-#init {
+#init-konstantin {
   margin-top: 0.7rem;
 }
-#initials {
+#initials-konstantin {
   margin: 0.3rem;
 }
 
-#save-btn {
+#save-btn-konstantin {
   margin: 0.7rem;
 }
 
-#showScoresButton {
+#showScoresButton-konstantin {
   margin-top: 0.3rem;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .buttonArea {
+  .buttonArea.konstantin {
     display: grid;
     grid-template-columns: none;
     gap: 10px;

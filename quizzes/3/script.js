@@ -6,15 +6,15 @@ let finalScore;
 
 
 //DOM Objects = START BUTTON, ANSWER BUTTONS, QUESTION CONTAINER, QUESTION ELEMENT
-const startButton = document.getElementById("startButton");
-const qContainer = document.getElementById("questionsContainer");
-const qElement = document.getElementById("question");
-const answerButtons = document.getElementById("answers");
-const countdown = document.getElementById("timerArea");
-const scoreArea = document.getElementById("scoreArea");
-const highScoresButton = document.getElementById("showScoresButton");
-const submitButton = document.getElementById("submitButtonID");
-const nextButton = document.getElementById("nextButtonID");
+const startButton = document.getElementById("startButton-konstantin");
+const qContainer = document.getElementById("questionsContainer-konstantin");
+const qElement = document.getElementById("question-konstantin");
+const answerButtons = document.getElementById("answers-konstantin");
+const countdown = document.getElementById("timerArea-konstantin");
+const scoreArea = document.getElementById("scoreArea-konstantin");
+const highScoresButton = document.getElementById("showScoresButton-konstantin");
+const submitButton = document.getElementById("submitButtonID-konstantin");
+const nextButton = document.getElementById("nextButtonID-konstantin");
 
 //LocalStorage Objects
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
@@ -47,7 +47,7 @@ function showQuestion(question) {
   question.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerText = answer.text;
-    button.classList.add("btn");
+    button.classList.add("button-konstantin");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
@@ -78,19 +78,31 @@ function selectAnswer(e) {
     gameOver();
   } else {
     //submitButton.classList.add("hide");
-    submitButton.addEventListener("click", evaluation(selectedButton));
-    clearQuestion();
-    qNumber++;
-    showQuestion(questions[qNumber]);
+    submitButton.addEventListener("click", evaluation(nextButton, selectedButton));
+    setTimeout(function() {
+      clearQuestion()
+      qNumber++;
+      showQuestion(questions[qNumber]);
+    }, 1000);
 
     //console.log(score);
   }
 }
 
-function evaluation(selectedButton) {
-  submitButton.classList.add("hide");
+function evaluation(nextButton, selectedButton) {
+  //nextButton.classList.add("hide");
   if (!selectedButton.dataset.correct) {
-    selectedButton.style.border = "10px solid red";
+    selectedButton.style.border = "5px solid red";
+    //alert("red")
+    //nextButton.addEventListener("click", function() {
+    //  clicked = true
+    //});
+  } else {
+    selectedButton.style.border = "5px solid green";
+    //alert("green")
+    //nextButton.addEventListener("click", function() {
+    //  clicked = true
+    //});
   }
 }
 //function to clear the current question
@@ -124,8 +136,8 @@ function showResults() {
   scoreArea.classList.remove("hide");
   answerButtons.classList.add("hide");
   scoreArea.innerHTML = `You got ${finalScore} out of ${questions.length} questions correct.`;
-  username = document.getElementById("initials");
-  saveButton = document.getElementById("save-btn");
+  username = document.getElementById("initials-konstantin");
+  saveButton = document.getElementById("save-btn-konstantin");
   username.addEventListener("keyup", function() {
     saveButton.disabled = !username.value;
   });
@@ -138,13 +150,13 @@ function displayScores() {
   countdown.innerHTML = "";
   clearQuestion();
   qElement.innerText = "";
-  scoreArea.classList.remove("hide");
+  scoreArea.classList.remove("hide-konstantin");
 
-  scoreArea.innerHTML = `<h2>High Scores</h2><ul id="highScoresList"></ul><button id="clearScores" class="btn" onclick="clearScores()">Clear Scores</button>`;
+  scoreArea.innerHTML = `<h2>High Scores</h2><ul id="highScoresList-konstantin"></ul><button id="clearScores-konstantin" class="btn button-konstantin" onclick="clearScores()">Clear Scores</button>`;
   const highScoresList = document.getElementById("highScoresList");
   highScoresList.innerHTML = highScores
     .map(score => {
-      return `<li class="scoresList">${score.name} - ${score.score}</li>`;
+      return `<li class="scoresList konstantin">${score.name} - ${score.score}</li>`;
     })
     .join("");
   startButton.classList.remove("hide");

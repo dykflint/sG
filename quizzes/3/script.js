@@ -27,6 +27,7 @@ startButton.addEventListener("click", startGame);
 //called when start button is clicked, should run the function to display questions and the function to start the timer
 
 function startGame() {
+  alert("Hi");
   startButton.classList.add("hide-konstantin");
   scoreArea.classList.add("hide-konstantin");
   answerButtons.classList.remove("hide-konstantin");

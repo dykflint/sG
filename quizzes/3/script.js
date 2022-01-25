@@ -17,7 +17,7 @@ const submitButton = document.getElementById("submitButtonID-konstantin");
 const nextButton = document.getElementById("nextButtonID-konstantin");
 
 //LocalStorage Objects
-let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+//let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 //
 
 startButton.addEventListener("click", startGame);

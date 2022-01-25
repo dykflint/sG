@@ -12,7 +12,7 @@ const qElement = document.getElementById("question-konstantin");
 const answerButtons = document.getElementById("answers-konstantin");
 const countdown = document.getElementById("timerArea-konstantin");
 const scoreArea = document.getElementById("scoreArea-konstantin");
-const highScoresButton = document.getElementById("showScoresButton-konstantin");
+//const highScoresButton = document.getElementById("showScoresButton-konstantin");
 const submitButton = document.getElementById("submitButtonID-konstantin");
 const nextButton = document.getElementById("nextButtonID-konstantin");
 

@@ -21,7 +21,7 @@ let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 //
 
 startButton.addEventListener("click", startGame);
-highScoresButton.addEventListener("click", displayScores);
+//highScoresButton.addEventListener("click", displayScores);
 
 //function to start the game
 //called when start button is clicked, should run the function to display questions and the function to start the timer
@@ -146,22 +146,22 @@ function showResults() {
 
 //function to display high scores
 //should populate the HTML with a ranked display of the high scores and and provide the option to clear the scores via a function
-function displayScores() {
-  countdown.innerHTML = "";
-  clearQuestion();
-  qElement.innerText = "";
-  scoreArea.classList.remove("hide-konstantin");
-
-  scoreArea.innerHTML = `<h2>High Scores</h2><ul id="highScoresList-konstantin"></ul><button id="clearScores-konstantin" class="btn button-konstantin" onclick="clearScores()">Clear Scores</button>`;
-  const highScoresList = document.getElementById("highScoresList");
-  highScoresList.innerHTML = highScores
-    .map(score => {
-      return `<li class="scoresList konstantin">${score.name} - ${score.score}</li>`;
-    })
-    .join("");
-  startButton.classList.remove("hide");
-  highScoresButton.classList.add("hide");
-}
+//function displayScores() {
+//  countdown.innerHTML = "";
+//  clearQuestion();
+//  qElement.innerText = "";
+//  scoreArea.classList.remove("hide-konstantin");
+//
+//  scoreArea.innerHTML = `<h2>High Scores</h2><ul id="highScoresList-konstantin"></ul><button id="clearScores-konstantin" class="btn button-konstantin" onclick="clearScores()">Clear Scores</button>`;
+//  const highScoresList = document.getElementById("highScoresList");
+//  highScoresList.innerHTML = highScores
+//    .map(score => {
+//      return `<li class="scoresList konstantin">${score.name} - ${score.score}</li>`;
+//    })
+//    .join("");
+//  startButton.classList.remove("hide");
+//  highScoresButton.classList.add("hide");
+//}
 
 //function to clear high scores
 //should fire on click, and erase the values of the high scores object

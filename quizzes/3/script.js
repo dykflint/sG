@@ -27,11 +27,11 @@ startButton.addEventListener("click", startGame);
 //called when start button is clicked, should run the function to display questions and the function to start the timer
 
 function startGame() {
-  startButton.classList.add("hide");
-  scoreArea.classList.add("hide");
-  answerButtons.classList.remove("hide");
+  startButton.classList.add("hide-konstantin");
+  scoreArea.classList.add("hide-konstantin");
+  answerButtons.classList.remove("hide-konstantin");
   qNumber = 0;
-  qContainer.classList.remove("hide");
+  qContainer.classList.remove("hide-konstantin");
   scoreArea.innerHTML = "";
   //startClock();
   while (answerButtons.firstChild) {
@@ -120,7 +120,7 @@ function gameOver() {
   clearQuestion();
   showResults();
   startButton.innerText = "Restart";
-  startButton.classList.remove("hide");
+  startButton.classList.remove("hide-konstantin");
   if (score == questions.length) {
       startButton.innerText = "Continue";
   }
@@ -133,8 +133,8 @@ function showResults() {
     finalScore = 0;
   }
   qElement.innerText = "";
-  scoreArea.classList.remove("hide");
-  answerButtons.classList.add("hide");
+  scoreArea.classList.remove("hide-konstantin");
+  answerButtons.classList.add("hide-konstantin");
   scoreArea.innerHTML = `You got ${finalScore} out of ${questions.length} questions correct.`;
   username = document.getElementById("initials-konstantin");
   saveButton = document.getElementById("save-btn-konstantin");

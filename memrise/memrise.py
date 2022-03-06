@@ -138,10 +138,15 @@ exceptions_list.extend(vocab_list)
 #except OSError:
 #    pass
 #? ADD THE NEW EXCEPTIONS TO THE CURRENT EXCEPTIONS FILE
-#with open(exceptions, 'a') as file:
-#    for word in exceptions_list:
-#        file.write(word+'\n')
+with open('non-separable', 'a') as file:
+    for word in words_array:
+        if not('bring' in word or 'bracht' in word or 'ab' in word):
+            file.write(word+'\n')
 
+with open('separable', 'a') as file:
+    for word in words_array:
+        if ('bring' in word or 'bracht' in word and 'ab' in word):
+            file.write(word+'\n')    
 
 #? NUMBER OF WORDS:
 #number_of_words = sample_list[-1][0]

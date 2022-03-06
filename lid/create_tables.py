@@ -30,23 +30,27 @@ with open(output_html, 'a') as file:
     file.write("<!DOCTYPE html>\n")
     file.write("<html>\n")
     file.write("<head>\n")
+    file.write("    <meta charset=\"utf8\">\n")
     file.write("    <style>\n")
-    file.write("        table, tr, td {\n")
+    file.write("        table.lid, tr.lid, td.lid {\n")
     file.write("            border: 2px solid #FFC7DB;\n")
     file.write("            border-radius: 10px;\n")
     file.write("        }\n")
-    file.write("        table {\n")
+    file.write("        table.lid {\n")
     file.write("            border: 5px solid #FFC7DB;\n")
     file.write("        }\n")
     file.write("        #correct_answer span {\n")
     file.write("            background-color: lightgreen;\n")
-    file.write("            font-size: 20px;\n")
+    file.write("        }\n")
+    file.write("        div.lid {\n")
+    file.write("            width: 50%;\n")
+    file.write("            margin: auto;\n")
     file.write("        }\n")
     file.write("    </style>\n")
     file.write("</head>\n")
-    file.write("<body>\n")
-    file.write("    <div>\n")
-    file.write("        <table>\n")
+    file.write("<body class=\"lid\">\n")
+    file.write("    <div class=\"lid\">\n")
+    file.write("        <table class=\"lid\">\n")
     file.write("            <colgroup>\n")
     file.write("                <col>\n")
     file.write("                <col>\n")
@@ -54,53 +58,53 @@ with open(output_html, 'a') as file:
     file.write("            </colgroup>\n")
     file.write("            <body class=\"lid\">\n")
     for row in range(number_of_questions):
-        file.write("                <tr>\n")
-        file.write("                    <td>\n")
-        file.write("                        <p>"+str(row+1))
+        file.write("                <tr class=\"lid\">\n")
+        file.write("                    <td class=\"lid\">\n")
+        file.write("                        <p class=\"lid\">"+str(row+1))
         file.write("                        </p>\n")
         file.write("                    </td>\n")
-        file.write("                    <td>\n")
-        file.write("                        <h3>"+str(questions[row*8])+"</h3>\n")
+        file.write("                    <td class=\"lid\">\n")
+        file.write("                        <p>"+str(questions[row*10])+"</p>\n")
         file.write("                        <ul>\n")
         #! German questions and answers
-        if "&#10004;" in str(questions[row*8+1]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+1])+" </span></li>")
+        if "&#10004;" in str(questions[row*10+1]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+1])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+1])+"</li>")
-        if "&#10004;" in str(questions[row*8+2]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+2])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+1])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+2]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+2])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+2])+"</li>")
-        if "&#10004;" in str(questions[row*8+3]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+3])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+2])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+3]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+3])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+3])+"</li>")
-        if "&#10004;" in str(questions[row*8+4]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+4])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+3])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+4]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+4])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+4])+"</li>")
+            file.write("                            <li>"+str(questions[row*10+4])+"</li><br>\n")
         file.write("                        </ul><br>\n")
         file.write("                    </td>\n")
         #! English questions and answers
-        file.write("                    <td>\n")
-        file.write("                        <h3>"+str(questions[row*4+5])+"</h3>\n")
+        file.write("                    <td class=\"lid\">\n")
+        file.write("                        <p>"+str(questions[row*10+5])+"</p>\n")
         file.write("                        <ul>\n")
-        if "&#10004;" in str(questions[row*8+6]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+6])+" </span></li>")
+        if "&#10004;" in str(questions[row*10+6]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+6])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+6])+"</li>")
-        if "&#10004;" in str(questions[row*8+7]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+7])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+6])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+7]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+7])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+7])+"</li>")
-        if "&#10004;" in str(questions[row*8+8]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+8])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+7])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+8]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+8])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+8])+"</li>")
-        if "&#10004;" in str(questions[row*8+9]):
-            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*8+9])+" </span></li>")
+            file.write("                            <li>"+str(questions[row*10+8])+"</li><br>\n")
+        if "&#10004;" in str(questions[row*10+9]):
+            file.write("<li id=\"correct_answer\"> <span>"+str(questions[row*10+9])+" </span></li><br>\n")
         else:
-            file.write("                            <li>"+str(questions[row*8+9])+"</li>")
+            file.write("                            <li>"+str(questions[row*10+9])+"</li><br>\n")
         file.write("                        </ul><br>\n")
         file.write("                    </td>\n")
         file.write("                </tr>\n")
@@ -109,4 +113,5 @@ with open(output_html, 'a') as file:
     file.write("    </div>\n")
     file.write("</body>\n")
     file.write("</html>\n")
-print(questions)
+print(questions[9])
+

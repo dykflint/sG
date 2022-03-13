@@ -3,9 +3,15 @@ import os
 
 from numpy import number
 
+
+if len(sys.argv) != 5:
+    print("USAGE: python3 a1_create_tables.py [quesiton file] [output html] [starting question] [number of questions]")
+    exit(1)
+
 questionfile = str(sys.argv[1])
 output_html = str(sys.argv[2])
-number_of_questions = int(sys.argv[3])
+starting_number = int(sys.argv[3])
+number_of_questions = int(sys.argv[4])
 questions = []
 counter = 0
 with open(questionfile, 'r') as qfile:
@@ -69,7 +75,7 @@ with open(output_html, 'a') as file:
     for row in range(number_of_questions):
         file.write("                <tr class=\"lid\">\n")
         file.write("                    <td class=\"lid\">\n")
-        file.write("                        <p class=\"lid\" id=\"lidquestionnumber\">"+str(row+1))
+        file.write("                        <p class=\"lid\" id=\"lidquestionnumber\">"+str(row+starting_number))
         file.write("                        </p>\n")
         file.write("                    </td>\n")
         file.write("                    <td class=\"lid\">\n")

@@ -5,16 +5,17 @@ import re
 import collections
 
 
-if len(sys.argv) != 6:
-    print("USAGE: python3 memrise.py [chapter] [output for chapter] [list of exceptions] [course: A, B or C] [format]")
+if len(sys.argv) != 8:
+    print("USAGE: python3 memrise.py [chapter] [output for chapter] [all_verbs] [list of exceptions] [sentences_file] [course: A, B or C] [format]")
     sys.exit(1)
 
 lesson = str(sys.argv[1])
 words = str(sys.argv[2])
-exceptions = str(sys.argv[3])
-course = str(sys.argv[4])
-format = str(sys.argv[5])
-sentences_file = "sentences_file"
+all_verbs = str(sys.argv[3])
+exceptions = str(sys.argv[4])
+sentences_file = str(sys.argv[5])
+course = str(sys.argv[6])
+format = str(sys.argv[7])
 #lesson_number = str(sys.argv[4])
 vocab_list = []
 exceptions_list = []
@@ -114,6 +115,21 @@ for sentence in sentences_list:
                 groups[str(word)].append(sentence)
                 #print(sentence + "elif statement")
 groups = collections.OrderedDict(sorted(groups.items(), key=lambda i: i[0].lower()))
+#? VERBS DICT
+verbs_array = []
+with open(all_verbs) as v:
+    for line in v:
+        list_tmp = [elt.strip() for elt in line.split('\t')]
+        verbs_array.append(list_tmp) 
+#### create a verbs dict 
+verbs_dict = {}
+for arr in verbs_array:
+    if str(arr[0]) not in verbs_dict.keys():
+        verbs_dict[arr[0]] = []
+        list_tmp = [elt.strip() for elt in arr[1].split(",")]
+        while '' in list_tmp:
+            list_tmp.remove('')
+        verbs_dict[arr[0]].extend(list_tmp)
 #? PRINT THE GROUPS DICTIONARY INTO A FILE:
 if format == "csv":
     with open("dictionary_file", "a") as dict_file:
@@ -129,34 +145,5 @@ else:
             for elt in value:
                 dict_file.write(" \n\t " + elt )
             dict_file.write("\n")
-     
-#? PUT THE CURRRENT VOCAB_LIST TO THE EXCEPTIONS:
-exceptions_list.extend(vocab_list)
-#? OVERWRITE THE EXCEPTIONS FILE:
-#try:
-#    os.remove(exceptions)
-#except OSError:
-#    pass
-#? ADD THE NEW EXCEPTIONS TO THE CURRENT EXCEPTIONS FILE
-#with open(exceptions, 'a') as file:
-#    for word in exceptions_list:
-#        file.write(word+'\n')
 
-
-#? NUMBER OF WORDS:
-#number_of_words = sample_list[-1][0]
-#print(number_of_words)
-#sample_list = sample_list[:-2]
-# ? REMOVE THE FIRST 4 CHARACTERS OF THE STRING:
-#for i in range(len(sample_list)):
-#    sample_list[i][0] = sample_list[i][0][4:]
-
-#print(sample_list)
-
-# write list to html file:
-#try:
-#    os.remove(words)
-#except OSError:
-#    pass
-#with open(output, 'a') as file:
-
+print(groups)

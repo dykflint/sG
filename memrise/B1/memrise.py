@@ -125,23 +125,27 @@ if format == "csv":
 else:
    with open("dictionary_file", "a") as dict_file:
         for key, value in groups.items():
-            dict_file.write(key+":")
+            dict_file.write(key+"\t")
             for elt in value:
-                dict_file.write(" \n\t " + elt )
-            dict_file.write("\n")
+                dict_file.write(" \t " + elt )
+            dict_file.write("@\n")
      
 #? PUT THE CURRRENT VOCAB_LIST TO THE EXCEPTIONS:
 exceptions_list.extend(vocab_list)
 #? OVERWRITE THE EXCEPTIONS FILE:
-#try:
-#    os.remove(exceptions)
-#except OSError:
-#    pass
+try:
+    os.remove(exceptions)
+except OSError:
+    pass
 #? ADD THE NEW EXCEPTIONS TO THE CURRENT EXCEPTIONS FILE
-#with open(exceptions, 'a') as file:
-#    for word in exceptions_list:
-#        file.write(word+'\n')
+with open(exceptions, 'a') as file:
+    for word in exceptions_list:
+        if not('bring' or 'bracht' or 'ab' in word):
+            file.write(word+'\n')
 
+with open('separable', 'a') as file:
+        if 'bring' or 'bracht' or 'ab' in word:
+            file.write(word+'\n')    
 
 #? NUMBER OF WORDS:
 #number_of_words = sample_list[-1][0]

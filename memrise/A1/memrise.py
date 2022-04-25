@@ -125,10 +125,10 @@ if format == "csv":
 else:
    with open("dictionary_file", "a") as dict_file:
         for key, value in groups.items():
-            dict_file.write(key+":")
+            dict_file.write(key+"\t")
             for elt in value:
-                dict_file.write(" \n\t " + elt )
-            dict_file.write("\n")
+                dict_file.write(" \t " + elt )
+            dict_file.write("@\n")
      
 #? PUT THE CURRRENT VOCAB_LIST TO THE EXCEPTIONS:
 exceptions_list.extend(vocab_list)

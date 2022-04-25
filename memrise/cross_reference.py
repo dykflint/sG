@@ -65,7 +65,7 @@ with open(crfile, "w") as file:
     for key, value in cross_reference.items():
         file.write(str(key)+"\t")
         for string in value:
-            file.write(str(string)+" ")
+            file.write(str(string)+",")
         file.write("\n")
 # print(cross_reference)
 #? Remove the dict_file if it exists
@@ -78,7 +78,7 @@ with open(dict_file, "a") as file:
     for key, value in vocab_dict.items():
         file.write(str(key)+"\t")
         for string in value:
-            file.write(str(string)+" ")
+            file.write(str(string)+",")
         file.write("\n")
 
 

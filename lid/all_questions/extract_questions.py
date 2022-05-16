@@ -15,7 +15,7 @@ with open(question_file) as f:
 
 for i in range(len(question_arr)):
     if i % 6 == 0:
-        with open("test/"+str(start_question+counter), "a") as out:
+        with open("test/"+str(question_file)+str(start_question+counter), "a") as out:
             out.write(question_arr[i]+"\n")
             out.write(question_arr[i+1]+"\n")
             out.write(question_arr[i+2]+"\n")

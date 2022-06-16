@@ -64,7 +64,7 @@ body{
 	background-color: #E9F3F3;
 }
 
-.check,.next,.evaluate,.restart, .translation_button, .questions-bank{
+.check,.next,.evaluate,.restart, .translation_button, .questions-bank, .try-again{
 	width: auto;
 	height: 4vh;
 	padding: 5px;
@@ -105,4 +105,9 @@ body{
 .questions-bank {
 	color: white;
 	background-color: #64A69F;
+}
+
+.try-again {
+	background-color: #FFA4A5;
+	color: white;	
 }

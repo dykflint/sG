@@ -8,9 +8,9 @@ if len(sys.argv) != 6:
 
 def create_array_from_file(file):
     tmp_arr = []
-    with open(file, 'r') as qfile:
+    with open(file, "r") as qfile:
         for line in qfile:
-            line_tmp = [elt.strip() for elt in line.split('\n') if line != '\n']
+            line_tmp = [elt.strip() for elt in line.split("\n") if line != "\n"]
             #! skip iteration if array is empty
             if len(line_tmp) == 0: continue
             line_tmp = line_tmp[0].replace("—", "")
@@ -40,27 +40,27 @@ for i in range(len(german_question_arr)):
             else: 
                 out.write("{\n")
             out.write("    id: "+str(question_number-start_question)+",\n")
-            out.write("    q: "+"\""+str(german_question_arr[0])+"\",\n")
+            out.write("    q: "+"\'"+str(german_question_arr[0])+"\',\n")
         if i == 1:
             if "&#10004;" in german_question_arr[i]:
-                out.write("    a: [{ text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("    a: [{ text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")
             else:
-                out.write("    a: [{ text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("    a: [{ text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 2:
             if "&#10004;" in german_question_arr[i]:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")    
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 3:
             if "&#10004;" in german_question_arr[i]:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 4:
             if "&#10004;" in german_question_arr[i]:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(german_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(german_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
             out.write("]\n")
             if (question_number-start_question+1) == number_of_questions:
                 out.write("}\n")
@@ -76,27 +76,27 @@ for i in range(len(english_question_arr)):
             else: 
                 out.write("{\n")
             out.write("    id: "+str(question_number-start_question)+",\n")
-            out.write("    q: "+"\""+str(english_question_arr[0])+"\",\n")
+            out.write("    q: "+"\'"+str(english_question_arr[0])+"\',\n")
         if i == 1:
             if "&#10004;" in english_question_arr[i]:
-                out.write("    a: [{ text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("    a: [{ text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")
             else:
-                out.write("    a: [{ text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("    a: [{ text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 2:
             if "&#10004;" in english_question_arr[i]:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")    
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 3:
             if "&#10004;" in english_question_arr[i]:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
         if i == 4:
             if "&#10004;" in english_question_arr[i]:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: true},\n")
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: true},\n")    
             else:
-                out.write("        { text: \""+str(english_question_arr[i]).replace("&#10004;","")+"\", isCorrect: false},\n")
+                out.write("        { text: \'"+str(english_question_arr[i]).replace("&#10004;","")+"\', isCorrect: false},\n")
             out.write("]\n")
             if (question_number-start_question+1) == number_of_questions:
                 out.write("}\n")

@@ -2,18 +2,19 @@ body{
 	padding: 0;
 	margin: 0;	
 	width: 100vw;
-	height: 100vh;	
+	/* height: 100vh;	 */
 }
 .panel{
-    width: 50vw; 
+	width: 50vw; 
 	display: flex; 
 	flex-direction: column;
 	align-items: center;
-    /* border-radius: 10px; */
-    background-color: #E9F3F3;
+	/* border-radius: 10px; */
+	background-color: #E9F3F3;
 	box-shadow: 0 0 5px grey;
-    margin: auto;
+	margin: auto;
 	flex-wrap: wrap;
+	position: relative;
 }
 .question-container{
 	width: 40vw;
@@ -31,20 +32,20 @@ body{
 	width: auto;
 	text-align: center;
 	font-size: 2em;
-    z-index: 1;
+	z-index: 1;
 }
 .option-container{
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	width: auto;
-	height: 20vh;
+	/* height: 20vh; */
 	background-color: #E9F3F3;
-		
+	position: relative;
 }
 .option{	
-    border: none;
+	border: none;
 	padding: 10px;
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 	width: auto;
 	height: 10vh;
 	font-size: larger;
@@ -58,19 +59,20 @@ body{
 .navigation{
 	width: 40vw;
 	height: 5vh;
-    padding-top: 20px;
+	padding-top: 20px;
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 	background-color: #E9F3F3;
+	position: relative;
 }
 
-.check,.next,.evaluate,.restart, .translation_button, .questions-bank, .try-again{
+.check,.next,.evaluate,.restart, .translation_button, .questions-bank, .try-again, .original_button{
 	width: auto;
 	height: 4vh;
 	padding: 5px;
-    margin-right: 20px;
+	margin-right: 20px;
 	font-size: x-large;
-    /* border-radius: 10px; */
+	/* border-radius: 10px; */
 	box-shadow: 0 0 4px grey;
 	border: none;
 }
@@ -95,7 +97,7 @@ body{
 .hide-konstantin {
 	display: none;
 }
-.translation_button {
+.translation_button, .original_button {
 	font-size: 1em;
 	margin: 1em 0;
 	background-color: #FFA4A5;
@@ -111,3 +113,4 @@ body{
 	background-color: #FFA4A5;
 	color: white;	
 }
+

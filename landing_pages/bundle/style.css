@@ -92,7 +92,7 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  font-size: 2.625rem;
+  font-size: 2.2rem;
 }
 h3 {
   font-size: 2.25rem;
@@ -1208,7 +1208,7 @@ span.coupon-price {
 @media (max-width: 40rem) {
   .section-personal-hero .container,
   .section-personal-hero-2 .container {
-    padding-bottom: 25rem;
+    padding-bottom: 20rem;
   }
 
   .section-personal-hero {
@@ -1492,11 +1492,6 @@ li.star::after {
   margin-top: 1rem;
 }
 
-.rating-stars {
-  font-size: 3.0rem !important;
-  letter-spacing: 0.75rem !important;
-  line-height: 1;
-}
 
 .testimonial {
   display: flex;
@@ -2295,15 +2290,19 @@ button.hello-bar-close {
   --light: #FFF;
   --image: url('https://www.filepicker.io/api/file/1os15ziQeKYB9qVHwcJF')
 }
-
+.rating-stars {
+  font-size: 3.0rem !important;
+  letter-spacing: 0.75rem !important;
+  line-height: 1;
+}
 .section-course-hero .container-k {
-  background: url(https://www.filepicker.io/api/file/sKVV6TOoSBeYcvPfxRvE), #a6bfdc;
+  background: url(https://www.filepicker.io/api/file/sKVV6TOoSBeYcvPfxRvE), #D7EBFA;
 }
 
 
 @media (max-width: 80rem) {
   .section-course-hero .container-k {
-  background: #a6bfdc !important;
+  background: #D7EBFA !important;
 }
 }
 
@@ -2895,9 +2894,14 @@ button.hello-bar-close {
     /* width: 4.2rem; */
     margin: auto;
     overflow: auto;
-    top: 7.2rem;
     margin-right: 1.0rem;
     z-index: 2;
+  }
+  .dropdown-content-k.buy-konstantin {
+    top: 7.1rem;
+  }
+  .dropdown-content-k.try-konstantin {
+    top: 3.9rem;
   }
   
   .dropdown-content-k a {
@@ -2907,13 +2911,13 @@ button.hello-bar-close {
     margin-bottom: 0.2rem;
     /* text-decoration: none; */
     display: block;
-    width: 12.0rem;
+    width: 12.1rem;
     text-align: center;
     border: 1px solid grey;
     border-radius: 0.625rem;
   }
   .dropdown-content-k.dropdown-content-blue-k.wider-dropdown-k a {
-    width: 12.0rem !important;
+    width: 12.5rem !important;
   } 
 
   .dropdown-content-k.dropdown-content-blue-k a:hover {
@@ -3159,6 +3163,22 @@ a {
   border-radius: 2.0rem;
 }
 
+/* ARROW DOWN FOR BUTTONS */
+.arrow-konstantin {
+  border: solid white;
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.3rem;
+  margin-left: 0.3rem;
+}
+.arrow-konstantin.blue-arrow-konstantin {
+  border: solid #293F5C;
+  border-width: 0 0.25rem 0.25rem 0;
+}
+.down-konstantin {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 /* ################################################################################## */
 /* ################################################################################## */
 /* #####  #####  ####     ###################     ######     ######################## */
@@ -3213,7 +3233,7 @@ a {
 .btn-color-blue-k:hover a, 
 .btn-color-blue-k:active a{
   border-radius: 0.625rem !important;
-  padding: 0.8rem 1.5rem !important;
+  padding: 0.8rem 1.35rem !important;
   font-weight: 500 !important;
   display: block;
   max-width: fit-content;
@@ -3751,6 +3771,7 @@ a {
   flex-direction: row;
   justify-content: center;
   margin: 1.0rem auto;
+  z-index: 3;
 }
 .dropdown-content-k {
   box-sizing: border-box;
@@ -3765,6 +3786,12 @@ a {
   overflow: auto;
   /* top: 25.2rem; */
   z-index: 2;
+}
+.dropdown-content-k.buy-konstantin {
+  top: 7.1rem;
+}
+.dropdown-content-k.try-konstantin {
+  top: 3.9rem;
 }
 /* I had to add these two tags (regular and high price tag)
 because there was some issue with the alignment of the dropups */
@@ -3781,14 +3808,14 @@ because there was some issue with the alignment of the dropups */
   margin-bottom: 0.2rem;
   /* text-decoration: none; */
   display: block;
-  width: 12.0rem;
+  width: 12.1rem;
   text-align: center;
   border: 1px solid grey;
   border-radius: 0.625rem;
 }
 
 .dropdown-content-k.dropdown-content-blue-k.wider-dropdown-k a {
-  width: 12.0rem !important;
+  width: 12.5rem !important;
 } 
 
 .dropdown-content-k.dropdown-content-blue-k a:hover {
@@ -4048,6 +4075,11 @@ a {
 /* ################################################################################# */
 /* ################################################################################# */
 @media (max-width: 40rem){
+  .rating-stars {
+    font-size: 2.65rem !important;
+    letter-spacing: 0.75rem !important;
+    line-height: 1;
+  }
 .container-k2 {
   margin-inline: auto;
   width: min(80%, 70rem);
@@ -4085,7 +4117,7 @@ a {
 .btn-color-blue-k:hover a, 
 .btn-color-blue-k:active a{
   border-radius: 0.625rem !important;
-  padding: 0.8rem 1.5rem !important;
+  padding: 0.8rem 1.35rem !important;
   font-weight: 500 !important;
   display: block;
   max-width: fit-content;
@@ -4530,7 +4562,7 @@ a {
     border-radius: 10px;;
     padding: 1.5rem 1.5rem;
     color: white;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -4615,6 +4647,7 @@ a {
   flex-direction: row;
   justify-content: center;
   margin: 1.0rem auto;
+  z-index: 3;
 }
 
 .dropdown-content-k {
@@ -4628,10 +4661,14 @@ a {
   /* width: 4.2rem; */
   margin: auto;
   overflow: auto;
-  top: -4.0rem;
   z-index: 2;
 }
-
+.dropdown-content-k.buy-konstantin {
+  top: -3.9rem;
+}
+.dropdown-content-k.try-konstantin {
+  top: 3.9rem;
+}
 .dropdown-content-k a {
   color: black;
   font-weight: bold;
@@ -4639,14 +4676,14 @@ a {
   margin-bottom: 0.2rem;
   /* text-decoration: none; */
   display: block;
-  width: 12.0rem;
+  width: 12.1rem;
   text-align: center;
   border: 1px solid grey;
   border-radius: 0.625rem;
 }
 
 .dropdown-content-k.dropdown-content-blue-k.wider-dropdown-k a {
-  width: 12.0rem !important;
+  width: 12.5rem !important;
 } 
 
 .dropdown-content-k.dropdown-content-blue-k a:hover {
@@ -4666,7 +4703,7 @@ a {
 .option3-k .dropdown-k a {
   max-width: 100%;
   /* margin-right: -1.0rem; */
-  font-size: 2.0rem; 
+  font-size: 1.5rem; 
   font-weight: bold;
 }
 .dropdown-content-pink-white-k {
@@ -4687,7 +4724,7 @@ a {
 }
 @media (max-width: 30rem) {
   .dropdown-content-pink-white-k a{
-    width: 15.6rem;
+    width: 12.7rem;
   }
 }
 .dropdown-content-pink-white-k a:hover{
@@ -4714,7 +4751,7 @@ a {
   text-align: center; 
 }
 .video_holder iframe {
-  width: 280px;
+  width: 235px;
   height: 130px;
 }
 .container-k .container-k {

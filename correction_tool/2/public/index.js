@@ -19,9 +19,7 @@ let tool_container = document.querySelector(".container-konstantin");
 let difficulty_container = document.querySelector(".difficulty_box-konstantin");
 let finished_section = document.querySelector(".finished-section-konstantin");
 let start_counter = 0;
-checker_div.innerText = "";
-// let time_left = 60;
-// let time_passed = 0;
+// checker_div.innerText = "";
 let total_errors = 0;
 let errors = 0;
 let accuracy = 0;
@@ -83,39 +81,49 @@ function triggerFocus(element) {
   element.focus();
   element.dispatchEvent(event);
 }
+
 function easyGame() {
   difficulty_level = 1;
   tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Es war ein schöner Montagmorgen in Berlin.",
-  "Wie jeden Tag mussten Simone und Stefan zur Arbeit."];
+  tmp_content = ["Sehr geehrte Damen und Herren,",
+ "ich habe Ihre Anzeige in der Zeitung gelesen.",
+ "Ich hätte Interesse an einem Deutschkurs.",
+ "Mit freundlichen Grüßen",
+ "Erika Mustermann"];
   difficulty_container.classList.add("hide-konstantin");
   startGame();
   triggerFocus(input_box);
-}
-
-function normalGame() {
+ }
+ function normalGame() {
   difficulty_level = 2;
   tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Es war ein schöner", "Montagmorgen in Berlin.",
-  "Wie jeden Tag", "mussten Simone und Stefan", "zur Arbeit."]
+  tmp_content = ["Sehr geehrte",
+ "Damen und",
+ "Herren,",
+ "ich habe Ihre Anzeige",
+ "in der Zeitung gelesen.",
+ "Ich hätte Interesse",
+ "an einem Deutschkurs.",
+ "Mit freundlichen Grüßen",
+ "Erika Mustermann"];
   difficulty_container.classList.add("hide-konstantin");
   startGame();
   triggerFocus(input_box);
-}
-
-function hardGame() {
+ }
+ function hardGame() {
   difficulty_level = 3;
   tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Es war ein schöner Montagmorgen in Berlin.",
-  "Wie jeden Tag mussten Simone und Stefan zur Arbeit."];
+  tmp_content = ["Sehr geehrte Damen und Herren,",
+ "ich habe Ihre Anzeige in der Zeitung gelesen.",
+ "Ich hätte Interesse an einem Deutschkurs.",
+ "Mit freundlichen Grüßen",
+ "Erika Mustermann"];
   difficulty_container.classList.add("hide-konstantin");
   startGame();
   triggerFocus(input_box);
-}
-
-if (difficulty_level == 3) {
-  console.log("3");
-}
+ }
+ 
+ 
 let content_counter = 0;
 function ChangeContent() {
   if (content_counter < tmp_content.length) {
@@ -137,37 +145,35 @@ let array2 = ['a', 'b'];
 function textInput() {
   input = input_box.value;
   input_array = input.split('');
-  console.log(input_box.value);
+  // console.log(input_box.value);
   if (input_box.value.length > 1 ) {
     // UMLAUT ä
-    if ((input_array.slice(-2).equals(['\\','a']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['a','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"ä";
     }
     // UMLAUT Ä
-    if ((input_array.slice(-2).equals(['\\','A']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['A','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"Ä";
     }
     // UMLAUT ö
-    if ((input_array.slice(-2).equals(['\\','o']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['o','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"ö";
     }
     // UMLAUT Ö
-    if ((input_array.slice(-2).equals(['\\','O']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['O','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"Ö";
     }
     // UMLAUT ü
-    if ((input_array.slice(-2).equals(['\\','u']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['u','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"ü";
     }
     // UMLAUT Ü
-    if ((input_array.slice(-2).equals(['\\','U']))) {
-      console.log("yes");
+    if ((input_array.slice(-2).equals(['U','/']))) {
       input_box.value = input_box.value.slice(0,-2)+"Ü";
+    }
+    // ß
+    if ((input_array.slice(-2).equals(['s','z']))) {
+      input_box.value = input_box.value.slice(0,-2)+"ß";
     }
   }
 
@@ -176,7 +182,6 @@ function textInput() {
   quoteSpanArray = content_text.querySelectorAll('span');
   quoteSpanArray.forEach((char, index) => {
   let typed = input_array[index];
-  // console.log(input_array.toString());
   if (difficulty_level > 1) {
     if (input_array.length > 5) {
       // content_text.classList.add("hide-konstantin");
@@ -196,7 +201,6 @@ function textInput() {
     char.classList.remove('correct-konstantin');
     errors++;
     if (total_errors >= 0) {
-      // console.log(total_errors);
       total_errors++;
     }
   }
@@ -220,34 +224,23 @@ function textInput() {
         finishGame();
       }
       ChangeContent();
-      checker_div.innerText = "";
+      checker_div.style.color = "transparent";
       input_box.value = "";
     }
     else {
+      checker_div.style.color = "red";
       checker_div.innerText = "Correct your mistakes before you continue.";
     }
 
   }
 }
 
-// function updateTimer() {
-//   if (time_left > 0) {
-//     time_left--;
-//     time_passed++;
-//     timer_text.textContent = time_left ;
-//   }
-//   else {
-//     finishGame();
-//   }
-// }
 
 function finishGame() {
   if (content_counter == tmp_content.length) {
     var delta = Math.floor((Date.now() - start)/1000);
     var minutes = Math.floor(delta/60);
     var seconds = delta - minutes*60;
-    console.log(minutes);
-    console.log(seconds);
     input_box.disabled = true;
     content_text.classList.add("transparent-konstantin");
     finished_section.classList.remove("hide-konstantin");
@@ -261,38 +254,16 @@ function finishGame() {
       finished_section.innerText = "You didn't beat your highscore. Your time is " +String(minutes)
       + " minutes and " + String(seconds) +" seconds. Can you beat this?"
     }
-    // console.log("finished");
-    // content_text.classList.add("hide-konstantin");
-    // input_box.disabled = true;
-    // input_box.classList.add("hide-konstantin");
-    // // score_container.classList.add("hide-konstantin");
-    // // errors_container.classList.add("hide-konstantin");
-    // // playbutton_container.classList.add("hide-konstantin");
-    // written_div.innerText = "";
-    // console.log("You finished the game. ");
-    // written_div.innerText += "\n CONGRATULATIONS \n";
-    // written_div.innerText += "Final Score: " + highscore;
   }
 }
 
 function startGame() {
   start = Date.now();
-  // content_text.style.display="block"
   content_text.classList.remove("hide-konstantin");
   start_btn.classList.remove("hide-konstantin");
-  // if (start_counter%2 == 0) {
-  //   start_btn.innerHTML = "<img src=\"images/resetbutton.png\" width=\"50\" height=\"50\">";
-  // }
-  // else {
-  //   start_btn.innerHTML = "<img src=\"images/playbutton.png\" width=\"50\" height=\"50\">";
-  // }
   start_btn.innerHTML = "<img src=\"https://www.filepicker.io/api/file/9KBTW5kDRluhcmsNlIOE\" width=\"50\" height=\"50\">";
-  // resetGame();
   ChangeContent();
   start_counter++;
-  console.log(difficulty_level);
-  // clearInterval(timer);
-  // timer = setInterval(updateTimer, 1000);
 }
 
 function resetGame() {

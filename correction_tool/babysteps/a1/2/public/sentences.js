@@ -1,3 +1,5 @@
+############################ BEGINNING OF LESSON textFiles/a1/2 ##################################
+<script>
 function easyGame() {
  difficulty_level = 1;
  tool_container.classList.remove("hide-konstantin");
@@ -34,4 +36,5 @@ function hardGame() {
  startGame();
  triggerFocus(input_box);
 }
-
+</script>
+############################ END OF LESSON textFiles/a1/2 ##################################

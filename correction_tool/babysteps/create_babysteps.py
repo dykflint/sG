@@ -30,7 +30,6 @@ with open(babystep) as f:
 
 print(normal_sentences_arr)
 with open(output, "a") as out:
-    out.write("############################ BEGINNING OF LESSON " + babystep + " ##################################\n" )
     out.write("<script>\n")
     out.write("function easyGame() {\n")
     out.write(" difficulty_level = 1;\n")
@@ -83,4 +82,3 @@ with open(output, "a") as out:
     out.write(" triggerFocus(input_box);\n")
     out.write("}\n")
     out.write("</script>\n")
-    out.write("############################ END OF LESSON " + babystep + " ##################################\n" )

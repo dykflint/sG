@@ -1,4 +1,3 @@
-############################ BEGINNING OF LESSON textFiles/a2/25 ##################################
 <script>
 function easyGame() {
  difficulty_level = 1;
@@ -76,4 +75,3 @@ function hardGame() {
  triggerFocus(input_box);
 }
 </script>
-############################ END OF LESSON textFiles/a2/25 ##################################

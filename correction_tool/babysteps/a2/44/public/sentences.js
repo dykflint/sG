@@ -1,0 +1,50 @@
+############################ BEGINNING OF LESSON textFiles/a2/44 ##################################
+<script>
+function easyGame() {
+ difficulty_level = 1;
+ tool_container.classList.remove("hide-konstantin");
+ tmp_content = ["Liebe Vera,",
+"mein Corona-Test war positiv.",
+"Könntest Du für mich einkaufen gehen?",
+"Das wäre total lieb von Dir.",
+"Sag einfach kurz Bescheid.",
+"Liebe Grüße",
+"Lydia"];
+ difficulty_container.classList.add("hide-konstantin");
+ startGame();
+ triggerFocus(input_box);
+}
+function normalGame() {
+ difficulty_level = 2;
+ tool_container.classList.remove("hide-konstantin");
+ tmp_content = ["Liebe Vera,",
+"mein Corona-Test",
+"war positiv.",
+"Könntest Du für",
+"mich einkaufen gehen?",
+"Das wäre total",
+"lieb von Dir.",
+"Sag einfach",
+"kurz Bescheid.",
+"Liebe Grüße",
+"Lydia"];
+ difficulty_container.classList.add("hide-konstantin");
+ startGame();
+ triggerFocus(input_box);
+}
+function hardGame() {
+ difficulty_level = 3;
+ tool_container.classList.remove("hide-konstantin");
+ tmp_content = ["Liebe Vera,",
+"mein Corona-Test war positiv.",
+"Könntest Du für mich einkaufen gehen?",
+"Das wäre total lieb von Dir.",
+"Sag einfach kurz Bescheid.",
+"Liebe Grüße",
+"Lydia"];
+ difficulty_container.classList.add("hide-konstantin");
+ startGame();
+ triggerFocus(input_box);
+}
+</script>
+############################ END OF LESSON textFiles/a2/44 ##################################

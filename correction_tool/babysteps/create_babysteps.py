@@ -30,7 +30,6 @@ with open(babystep) as f:
 
 print(normal_sentences_arr)
 with open(output, "a") as out:
-    out.write("<script>\n")
     out.write("function easyGame() {\n")
     out.write(" difficulty_level = 1;\n")
     out.write(" tool_container.classList.remove(\"hide-konstantin\");\n")
@@ -81,4 +80,3 @@ with open(output, "a") as out:
     out.write(" startGame();\n")
     out.write(" triggerFocus(input_box);\n")
     out.write("}\n")
-    out.write("</script>\n")

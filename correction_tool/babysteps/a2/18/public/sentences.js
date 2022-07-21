@@ -1,4 +1,3 @@
-<script>
 function easyGame() {
  difficulty_level = 1;
  tool_container.classList.remove("hide-konstantin");
@@ -58,4 +57,3 @@ function hardGame() {
  startGame();
  triggerFocus(input_box);
 }
-</script>

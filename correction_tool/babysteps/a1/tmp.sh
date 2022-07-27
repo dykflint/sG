@@ -1,6 +1,5 @@
 #!/bin/bash
-for i in {3..49}
+for i in {2..49}
 do 
-mkdir $i
-cp -r  1/* $i
+cp index.html $i
 done

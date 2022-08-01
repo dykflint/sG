@@ -86,12 +86,10 @@ function easyGame() {
   difficulty_level = 1;
   tool_container.classList.remove("hide-konstantin");
   tmp_content = ["In meinem Thema geht es um die Frage, ob ...",
- "Zunächst möchte ich bei diesem Thema",
- "über meine persönlichen Erfahrungen sprechen.",
+ "Zunächst möchte ich bei diesem Thema über meine persönlichen Erfahrungen sprechen.",
  "Danach will ich berichten wie es dabei in meiner Heimat ist.",
  "Daraufhin will ich zeigen welche Vor- und Nachteile ich sehe.",
- "Und zum Schluss möchte ich meine",
- "eigene Meinung zu diesem Thema geben."];
+ "Und zum Schluss möchte ich meine eigene Meinung zu diesem Thema geben."];
   difficulty_container.classList.add("hide-konstantin");
   startGame();
   triggerFocus(input_box);

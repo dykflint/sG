@@ -7,8 +7,8 @@
     float: left;
     height: 10.0rem;
     padding: 0 10px;
-    margin: auto 0 0 0;
-    width: 50%;
+    /* margin: auto 0 0 0; */
+    /* width: 50%; */
 }
 .rate-k:not(:checked) > input {
     position:absolute;

@@ -34,34 +34,34 @@
     max-width: max-content;
   }
   
+  
+  .container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
   @media all and (min-width: 40.0rem) {
     hide-konstantin {
       display: none;
-    }
-    
-    .container {
-      color: #333;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    h1 {
-      font-weight: normal;
-      letter-spacing: .125rem;
-      text-transform: uppercase;
-    }
-    
-    li {
-      display: inline-block;
-      font-size: 1.5em;
-      list-style-type: none;
-      padding: 1em;
-      text-transform: uppercase;
-    }
-    
-    li span {
-      display: block;
-      font-size: 4.5rem;
     }
   }
   @media all and (max-width: 40.0rem) {

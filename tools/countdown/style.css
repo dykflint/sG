@@ -1,6 +1,7 @@
 /* general styling */
 :root {
-    --smaller: .75;
+    --smaller: .5;
+    --small: 0.75;
   }
   
   * {
@@ -53,20 +54,25 @@
     font-size: 4.5rem;
   }
   
-  .emoji {
-    display: none;
-    padding: 1rem;
-  }
-  
-  .emoji span {
-    font-size: 4rem;
-    padding: 0 .5rem;
-  }
+
   #countdown {
     max-width: max-content;
   }
   
-  @media all and (max-width: 768px) {
+  @media all and (min-width: 40.0rem) {
+    h1 {
+      font-size: calc(1.5rem * var(--small));
+    }
+    
+    li {
+      font-size: calc(1.125rem * var(--small));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--small));
+    }
+  }
+  @media all and (max-width: 40.0rem) {
     h1 {
       font-size: calc(1.5rem * var(--smaller));
     }

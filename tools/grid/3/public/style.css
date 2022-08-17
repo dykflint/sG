@@ -253,7 +253,127 @@ a.fill-div {
 
 @media (max-width: 40.0rem) {
     .grid {
+        width: 85%;
+    }
+    .grid-row {
+        height: 50px;
+        border-radius: 0.5rem;
+        font-size: .8rem;
+    }
+    img {
+        width: 42px;
+        height: 42px;
+    }
+    .check-container img {
+        width: 21px;
+        height: 21px;
+    }
+    .image-container {
+        position: absolute;
+        top: 0.2rem;
+        left: 0.7rem;
+        z-index: 2;
+    }
+    .check-container {
+        position: absolute;
+        top: 0.2rem;
+        left: 2.5rem;
+        z-index: 3;
+    }
+    .grid-row p{
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+    }
+    .grid-row a{
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        text-decoration: none;
+        color: #29415c;
+    }
+    a.fill-div {
+        display: block;
+        height: 100%;
         width: 100%;
+        text-decoration: none;
+        border-radius: .5rem;
+    }
+
+
+/* DROPDOWN */
+.dropbtn-k {
+    border-radius: .5rem;
+    font-weight: 500 ;
+    display: block;
+    align-self: center;
+    font-size: .8rem;
+    position: relative;
+    /* margin: auto; */
+    margin-right: 1.0rem;
+    min-width: max-content;
+    width: 100%;
+  }
+
+  .dropbtn-k:hover, .dropbtn-k:focus {
+    background-color: #F4618C;
+  }
+  
+  .dropdown-k.dropdown-center-k {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* display: inline-block; */
+  }
+  
+
+  .dropdown-content-k {
+    box-sizing: border-box;
+    border-radius: .5rem;
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 0.4rem;
+    /* padding: 0.6rem 4.0rem; */
+    /* width: 4.2rem; */
+    /* margin: auto; */
+    overflow: auto;
+    margin-right: 1.0rem;
+    width: 50%;
+  }
+  .dropdown-content-k {
+    top: 4.2rem;
+  }
+  .dropdown-content-k a {
+    color: black;
+    background-color: #A6BFDC;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    /* text-decoration: none; */
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: .5rem;
+  }
+
+
+  .dropdown-k a:hover {cursor: pointer;} 
+  
+  .show-k {display: block;}
+}
+
+
+/* ######################################################################################### */
+/* ######################################################################################### */
+/* ######################################################################################### */
+/* ######################################################################################### */
+
+@media (max-width: 20.0rem) {
+    .grid {
+        width: 85%;
     }
     .grid-row {
         height: 50px;

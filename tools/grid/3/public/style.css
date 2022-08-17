@@ -43,6 +43,18 @@
     left: 2.0rem;
     z-index: 2;
 }
+
+.check-container {
+    position: absolute;
+    top: 0.2rem;
+    left: 5.0rem;
+    z-index: 3;
+}
+
+.hide {
+    display: none;
+}
+
 .grayscale {
     filter: grayscale(100%);
 }

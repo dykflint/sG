@@ -21,4 +21,5 @@ function dropdownFunction_k(dropNumber) {
   
 function giveColor(imageId) {
     document.getElementById(imageId).classList.remove("grayscale");
+    document.getElementById(imageId+'check').classList.remove("hide");
 }  

@@ -381,8 +381,8 @@ a.fill-div {
         font-size: .8rem;
     }
     img {
-        width: 42px;
-        height: 42px;
+        width: 30px;
+        height: 30px;
     }
     .check-container img {
         width: 21px;
@@ -390,14 +390,14 @@ a.fill-div {
     }
     .image-container {
         position: absolute;
-        top: 0.2rem;
+        top: 0.66rem;
         left: 0.7rem;
         z-index: 2;
     }
     .check-container {
         position: absolute;
         top: 0.2rem;
-        left: 2.5rem;
+        left: 1.9rem;
         z-index: 3;
     }
     .grid-row p{
@@ -413,6 +413,7 @@ a.fill-div {
         line-height: 50px;
         text-decoration: none;
         color: #29415c;
+        padding-left: 1.2rem;
     }
     a.fill-div {
         display: block;

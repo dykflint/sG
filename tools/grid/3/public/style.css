@@ -269,7 +269,7 @@ a.fill-div {
     .grid-row {
         height: 50px;
         border-radius: 3.5rem;
-        font-size: .8rem;
+        font-size: 1.1rem;
     }
     img {
         width: 42px;
@@ -320,7 +320,7 @@ a.fill-div {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: .8rem;
+    font-size: 1.1rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;
@@ -390,7 +390,7 @@ a.fill-div {
     .grid-row {
         height: 50px;
         border-radius: 0.5rem;
-        font-size: .8rem;
+        font-size: 1.1rem;
     }
     img {
         width: 30px;
@@ -442,7 +442,7 @@ a.fill-div {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: .8rem;
+    font-size: 1.1rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;

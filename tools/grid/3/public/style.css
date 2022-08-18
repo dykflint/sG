@@ -74,7 +74,7 @@ a.fill-div {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: 2.0rem;
+    font-size: 1.1rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;
@@ -137,8 +137,8 @@ a.fill-div {
 
     .grid-row {
         height: 75px;
-        border-radius: 0.5rem;
-        font-size: 1.5rem;
+        border-radius: 3.5rem;
+        font-size: 1.1rem;
     }
     img {
         width: 61px;
@@ -179,7 +179,7 @@ a.fill-div {
         height: 100%;
         width: 100%;
         text-decoration: none;
-        border-radius: .5rem;
+        border-radius: 3.5rem;
     }
 
 
@@ -212,7 +212,7 @@ a.fill-div {
 
   .dropdown-content-k {
     box-sizing: border-box;
-    border-radius: .5rem;
+    border-radius: 3.5rem;
     display: none;
     position: absolute;
     background: white;
@@ -236,7 +236,7 @@ a.fill-div {
     display: block;
     width: 100%;
     text-align: center;
-    border-radius: .5rem;
+    border-radius: 3.5rem;
   }
 
 

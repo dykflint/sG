@@ -2,7 +2,7 @@
     background-color: white;
     width: 75%;
     margin: auto;
-    border-radius: 1.5rem;
+    /* border-radius: 1.5rem; */
     padding: 1.0rem;
 }
 .grid-row {
@@ -11,9 +11,9 @@
     background-color: #A6BFDC;
     margin: auto;
     margin: 1.0rem auto;
-    border-radius: 1.5rem;
+    border-radius: 3.5rem;
     color: #29415c;
-    font-size: 2.0rem;
+    font-size: 1.1rem;
     position: relative;
 }
 
@@ -40,14 +40,14 @@
 .image-container {
     position: absolute;
     top: 0.65rem;
-    left: 2.0rem;
+    left: 0.8rem;
     z-index: 2;
 }
 
 .check-container {
     position: absolute;
     top: 0.2rem;
-    left: 5.0rem;
+    left: 4.0rem;
     z-index: 3;
 }
 

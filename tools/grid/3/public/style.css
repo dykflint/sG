@@ -105,10 +105,10 @@ a.fill-div {
 
   .dropdown-content-k {
     box-sizing: border-box;
-    border-radius: 1.5rem;
+    border-radius: 2.5rem;
     display: none;
     position: absolute;
-    background: white;
+    background: #A6BFDC;
     padding: 0.4rem;
     /* padding: 0.6rem 4.0rem; */
     /* width: 4.2rem; */
@@ -124,8 +124,7 @@ a.fill-div {
   }
   .dropdown-content-k a {
     color: #29415c;
-    background-color: #A6BFDC;
-    margin-bottom: 1.0rem;
+    background-color: white;
     font-weight: bold;
     /* text-decoration: none; */
     display: block;
@@ -133,8 +132,9 @@ a.fill-div {
     text-align: center;
     border-radius: 3.5rem;
   }
-
-
+  .dropdown-content-k a:not(:last-child) {
+    margin-bottom: 1.0rem;
+  }
   .dropdown-k a:hover {cursor: pointer;} 
   
   .show-k {display: block;}

@@ -149,6 +149,13 @@ function textInput() {
   input = input_box.value;
   input_array = input.split('');
   // console.log(input_box.value);
+  input_box.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+      return false;
+    }
+  })
+
   if (input_box.value.length > 1 ) {
     // UMLAUT ä
     if ((input_array.slice(-2).equals(['a','e']))) {

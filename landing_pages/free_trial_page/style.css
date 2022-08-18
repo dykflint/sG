@@ -196,7 +196,7 @@ section {
     flex-basis: 100%;
   }
   .row > * + * {
-    margin-left: 2em !important;
+    margin-left: 0em !important;
   }
 }
 
@@ -708,9 +708,9 @@ footer li a {
 .section-course-title .container {
   position: relative;
   background-position: right 20px center !important;
-  background-size: auto 95% !important;
-  background-repeat: no-repeat !important;
-}
+  background-size: auto 142%;
+  background-repeat: no-repeat;
+} 
 
 @media (max-width: 40rem) {
   .section-course-hero .container {
@@ -776,7 +776,7 @@ span.coupon-price {
   }
 
   .course-hero-img-container {
-    width: 40%;
+    width: 42%;
     position: absolute;
     right: 0;
     top: 0;
@@ -785,7 +785,7 @@ span.coupon-price {
 
   .course-hero-img {
     object-fit: contain;
-    width: 100%;
+    width: 120%;
     height: 100%;
     max-width: 580px;
   }
@@ -2296,11 +2296,12 @@ button.hello-bar-close {
   line-height: 1;
 }
 .section-course-hero .container-k {
+  background-size: 50% 100% !important;
   background: url(https://www.filepicker.io/api/file/sKVV6TOoSBeYcvPfxRvE), #D7EBFA;
 }
 
 
-@media (max-width: 80rem) {
+@media (max-width: 50rem) {
   .section-course-hero .container-k {
   background: #D7EBFA !important;
 }
@@ -2347,7 +2348,7 @@ button.hello-bar-close {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.5rem !important;
   font-weight: 500 !important;
-  display: block;
+  /* display: block; */
   /* max-width: fit-content; */
   align-self: center;
   font-size: 1.2rem;
@@ -2408,7 +2409,7 @@ button.hello-bar-close {
   }
 
   .course-hero-img-container-k2 {
-    width: 40%;
+    width: 42%;
     position: absolute;
     right: 0;
     top: 0;
@@ -2427,7 +2428,7 @@ button.hello-bar-close {
   flex-direction: column;
   margin: 0;
   width: max-content;
-  background: white;
+  background: #FDFFFF;
   border-radius: 2rem;
   padding: 2rem;
 }
@@ -2758,15 +2759,15 @@ button.hello-bar-close {
   position: relative;
 }
 .options-container-k2 {
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
+  background-size: 100%;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   justify-content: center;
   overflow: hidden;
   padding-bottom: 0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k {
+.option1-k, .option2-k, .option3-k {
     height: 15rem;
     padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
@@ -2774,13 +2775,13 @@ button.hello-bar-close {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 3rem;
     text-align: center;
     justify-content: center;
     width: 25%;
 }
 
-.option1-k p, .option2-k p, .option3-k p, .option4-k p {
+.option1-k p, .option2-k p, .option3-k p {
     font-weight: bold;
     font-size: 2.5rem;
     font-family: Roboto, sans-serif;
@@ -2788,13 +2789,13 @@ button.hello-bar-close {
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a {
+.option1-k a, .option2-k a, .option3-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
     padding: 1rem 0rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
@@ -2937,10 +2938,10 @@ button.hello-bar-close {
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a {
+.option3-k .dropdown-k a {
   max-width: 100%;
-  margin-right: -2.5rem;
-  font-size: 1.5rem; 
+  margin-right: -1.0rem;
+  font-size: 1.7rem; 
   font-weight: bold;
 }
 .dropdown-content-pink-white-k {
@@ -3016,8 +3017,8 @@ button.hello-bar-close {
   .section-course-title .container-k {
     position: relative;
     background-position: right 20px center !important;
-    background-size: auto 95% !important;
-    background-repeat: no-repeat !important;
+    background-size: auto 142%;
+    background-repeat: no-repeat;
   }
   
   @media (max-width: 40rem) {
@@ -3054,18 +3055,22 @@ button.hello-bar-close {
     }
   
     .course-hero-img-container {
-      width: 40%;
+      width: 42%;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 2rem;
+      top: -7rem;
       bottom: 0;
     }
   
     .course-hero-img {
       object-fit: contain;
-      width: 100%;
+      width: 70%;
       height: 100%;
       max-width: 580px;
+    }
+    .course-hero-img.big-konstantin {
+      width: 120%;
+      height: 120%
     }
   }
   @media (min-width: 40rem) {
@@ -3154,6 +3159,28 @@ button.hello-bar-close {
 a {
   text-decoration: none;
 }
+
+/* Free Trial settings */
+.row.trial-container {
+  background-color: #F3D0A6;
+  padding: 2.0rem;
+  border-radius: 5.0rem;
+  position: relative;
+}
+.trial-container .p2.img-container-k {
+  position: absolute;
+  top: -7.0rem;
+  left: -4.0rem;
+}
+.p2.margin-top-k {
+  margin-top: 13.0rem;
+}
+.p2.right-padding-konstantin {
+  padding-right: 2.0rem;
+}
+.row-k.white-box-konstantin {
+  width: min(70%,60rem);
+}
 }
 
 /* BULLET LISTS-K */
@@ -3235,7 +3262,7 @@ a {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.35rem !important;
   font-weight: 500 !important;
-  display: block;
+  /* display: block; */
   max-width: fit-content;
   align-self: center;
   font-size: 1.2rem;
@@ -3296,7 +3323,7 @@ a {
   }
 
   .course-hero-img-container-k2 {
-    width: 40%;
+    width: 42%;
     position: absolute;
     right: 0;
     top: 0;
@@ -3310,10 +3337,16 @@ a {
     max-width: 580px;
   }
 }
-.row-k {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+@media (min-width: 50.0rem) {
+  .row-k {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: max-content;
+    background: #FDFFFF;
+    border-radius: 2rem;
+    padding: 2rem;
+  }
 }
 .home-hero-text-k {
   margin-left: 0;
@@ -3642,16 +3675,15 @@ a {
   position: relative;
 }
 .options-container-k2 {
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
+  background-size: 100%;
+  background-repeat: no-repeat ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   padding-bottom: 0rem;
-  padding-left: 3.0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k {
+.option1-k, .option2-k, .option3-k {
     height: 15rem;
     padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
@@ -3659,13 +3691,13 @@ a {
     display: flex;
     /* overflow: hidden; */
     flex-direction: column;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 3rem;
     text-align: center;
     justify-content: center;
     width: 75%;
 }
 
-.option1-k p, .option2-k p, .option3-k p, .option4-k p {
+.option1-k p, .option2-k p, .option3-k p {
     font-weight: bold;
     font-size: 2.5rem;
     font-family: Roboto, sans-serif;
@@ -3673,7 +3705,7 @@ a {
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a {
+.option1-k a, .option2-k a, .option3-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
@@ -3687,7 +3719,7 @@ a {
     width: 75%;
     position: absolute;
     left: -7.5em;
-    top: -98em;
+    top: -82em;
     bottom: -37em;
 }
 .course-hero-img-k {
@@ -3833,7 +3865,7 @@ because there was some issue with the alignment of the dropups */
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a {
+.option3-k .dropdown-k a {
   max-width: 100%;
   margin-right: -1.0rem;
   font-size: 2.0rem; 
@@ -3874,7 +3906,7 @@ because there was some issue with the alignment of the dropups */
   margin-top: 2rem;
   text-align: center; 
 }
-.video_holder video {
+.video_holder iframe {
   width: 560px;
   height: 315px;
 }
@@ -3918,8 +3950,8 @@ because there was some issue with the alignment of the dropups */
   .section-course-title .container-k {
     position: relative;
     background-position: right 20px center !important;
-    background-size: auto 95% !important;
-    background-repeat: no-repeat !important;
+    background-size: auto 142%;
+    background-repeat: no-repeat;
   }
   
   @media (max-width: 40rem) {
@@ -3956,18 +3988,28 @@ because there was some issue with the alignment of the dropups */
     }
   
     .course-hero-img-container {
-      width: 40%;
+      width: 42%;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 2rem;
+      top: -7rem;
       bottom: 0;
+      display: none;
+    }
+    @media (min-width: 50.0rem) {
+      .course-hero-img-container {
+        display: block;
+      }
     }
   
     .course-hero-img {
       object-fit: contain;
-      width: 100%;
+      width: 70%;
       height: 100%;
       max-width: 580px;
+    }
+    .course-hero-img.big-konstantin {
+      width: 120%;
+      height: 120%
     }
   }
   @media (min-width: 40rem) {
@@ -4056,6 +4098,27 @@ because there was some issue with the alignment of the dropups */
 a {
   text-decoration: none;
 }
+/* Free Trial settings */
+.row.trial-container {
+  background-color: #F3D0A6;
+  padding: 2.0rem;
+  border-radius: 5.0rem;
+  position: relative;
+  flex-direction: column;
+}
+.trial-container .p2.img-container-k {
+  position: absolute;
+  top: -7.0rem;
+  left: -4.0rem;
+}
+.p2.margin-top-k {
+  margin-top: 12.0rem;
+}
+@media (min-width: 50.0rem){
+  .row-k.white-box-konstantin {
+    width: min(70%,60rem);
+  }
+}
 }
 
 
@@ -4120,7 +4183,7 @@ a {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.35rem !important;
   font-weight: 500 !important;
-  display: block;
+  /* display: block; */
   max-width: fit-content;
   align-self: center;
   font-size: 1.2rem;
@@ -4181,7 +4244,7 @@ a {
   }
 
   .course-hero-img-container-k2 {
-    width: 40%;
+    width: 42%;
     position: absolute;
     right: 0;
     top: 0;
@@ -4527,15 +4590,15 @@ a {
   position: relative;
 }
 .options-container-k2 {
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
+  background-size: 100%;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   padding-bottom: 0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k {
+.option1-k, .option2-k, .option3-k {
     height: 15rem;
     padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
@@ -4549,7 +4612,7 @@ a {
     width: 90%;
 }
 
-.option1-k p, .option2-k p, .option3-k p, .option4-k p {
+.option1-k p, .option2-k p, .option3-k p {
     font-weight: bold;
     font-size: 2.0rem;
     font-family: Roboto, sans-serif;
@@ -4557,7 +4620,7 @@ a {
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a {
+.option1-k a, .option2-k a, .option3-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
@@ -4570,7 +4633,7 @@ a {
 .course-hero-img-container-k2 {
     width: 75%;
     position: absolute;
-    left: -4.5em;
+    left: -5.5em;
     top: -6em;
     bottom: -37em;
 }
@@ -4603,7 +4666,7 @@ a {
 } */
 .dropbtn-k {
   border-radius: 0.625rem !important;
-  padding: 0.8rem 1.5rem ;
+  padding: 0.8rem 0.5rem ;
   font-weight: 500 ;
   display: block;
   max-width: fit-content;
@@ -4701,7 +4764,7 @@ a {
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a {
+.option3-k .dropdown-k a {
   max-width: 100%;
   /* margin-right: -1.0rem; */
   font-size: 1.5rem; 
@@ -4751,7 +4814,7 @@ a {
   margin-top: 2rem;
   text-align: center; 
 }
-.video_holder video {
+.video_holder iframe {
   width: 235px;
   height: 130px;
 }
@@ -4795,8 +4858,8 @@ a {
   .section-course-title .container-k {
     position: relative;
     background-position: right 20px center !important;
-    background-size: auto 95% !important;
-    background-repeat: no-repeat !important;
+    background-size: auto 142%;
+    background-repeat: no-repeat;
   }
   
   @media (max-width: 40rem) {
@@ -4833,7 +4896,7 @@ a {
     }
   
     .course-hero-img-container {
-      width: 40%;
+      width: 42%;
       position: absolute;
       right: 0;
       top: 0;
@@ -4937,5 +5000,15 @@ a {
 .bundle-title-k {
   font-size: 2.2rem;
 }
+/* Free Trial settings */
+.row.trial-container {
+  background-color: #F3D0A6;
+  padding: 2.0rem;
+  border-radius: 5.0rem;
+  position: relative;
+  flex-direction: column !important;
 }
-
+.trial-container .p2.img-container-k {
+  display: none;
+}
+}

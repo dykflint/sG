@@ -40,12 +40,15 @@
         </div>
     </section>
     <section>
-      <h2 class="center-k" id="how_it_works" style="margin: 2.0rem auto 4.0rem auto; width: min(80%,70rem);">This video will change your life</h2>
+      <h2 class="center-k" id="how_it_works" style="margin: 2.0rem auto 3.0rem auto; width: min(80%,70rem);">This video will change your life</h2>
       <div class="video_holder" style="display: block; text-align:center; margin-top: 2.5rem;">
-        <iframe width="840" height="470" src="https://www.youtube.com/embed/vBSoHT2AHxc" title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe width="840" height="470" src="https://www.youtube.com/embed/vBSoHT2AHxc" title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <video width="820" height="480" controls controlsList="nodownload">
+            <source src="https://www.dropbox.com/s/br7vpwfgxy9nmep/How%20does%20this%20work_%20-%20Homepage.mp4?raw=1" type="video/mp4">
+        </video>
+      </section>
       </div>
-    </section>
     <section class="section-course-cards">
         <h2 id="pay_as_you_can" class="center-k" style="margin: 2.0rem auto 1.0rem auto;"> Pay as you can </h2>
         <p class="center-k" style="width: min(80%,55rem); margin: 0 auto 1.0rem auto; font-size: 1.3rem;">We want to make German available to all who want to learn German with a premium product but can't afford a premium price.
@@ -53,14 +56,14 @@
         <div class="pink-options-container-k">
             <div class="options-container-k2" style="position: relative;">
                 <div class="option1-k">
-                    <p>Low<br>Income</p>
+                    <p>No<br>Income</p>
                   <a href="https://courses.smartergerman.com/purchase?product_id=3982662"style="z-index: 1;"><span class="default-product-price product_3982662">$99</span></a>
                 </div>
                 <div class="option2-k">
-                    <p>Regular<br>Income</p>
+                    <p>Low<br>Income</p>
                     <div class="dropdown-k">
-                      <a onclick="dropdownFunction_k('dropNumber5')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085532">3 x $99</span></a>
-                      <div id="dropNumber5" class="dropdown-content-k dropdown-content-pink-white-k regular-price-tag buy-konstantin">
+                      <a onclick="dropdownFunction_k('dropNumber2')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085532">3 x $99</span></a>
+                      <div id="dropNumber2" class="dropdown-content-k dropdown-content-pink-white-k regular-price-tag buy-konstantin">
                         <a href="https://courses.smartergerman.com/purchase?product_id=3982778"><span class="default-product-price product_3982778">1 x $299</span></a>
                         <a href="https://courses.smartergerman.com/purchase?product_id=4085532"><span class="default-product-price product_4085532">3 x $99</span></a>
                       </div>
@@ -68,15 +71,25 @@
                     <!-- <a href="https://courses.smartergerman.com/purchase?product_id=3982778"><span class="default-product-price product_3982778">$299</span></a> -->
                 </div>
                 <div class="option3-k">
-                    <p>High<br>Income</p>
+                    <p>Regular<br>Income</p>
                     <div class="dropdown-k">
-                      <a onclick="dropdownFunction_k('dropNumber6')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085535">5 x $99</span></a>
-                      <div id="dropNumber6" class="dropdown-content-k dropdown-content-pink-white-k high-price-tag buy-konstantin">
+                      <a onclick="dropdownFunction_k('dropNumber3')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085535">5 x $99</span></a>
+                      <div id="dropNumber3" class="dropdown-content-k dropdown-content-pink-white-k high-price-tag buy-konstantin">
                         <a href="https://courses.smartergerman.com/purchase?product_id=3982779"><span class="default-product-price product_3982779">1 x $499</span></a>
                         <a href="https://courses.smartergerman.com/purchase?product_id=4085535"><span class="default-product-price product_4085535">5 x $99</span></a>
                       </div>
                     </div>
                     <!-- <a href="https://courses.smartergerman.com/purchase?product_id=3982779 "><span class="default-product-price product_3982779">$499</span></a> -->
+                </div>
+                <div class="option4-k">
+                  <p>High<br>Income</p>
+                  <div class="dropdown-k">
+                    <a onclick="dropdownFunction_k('dropNumber4')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4194695">7 x $99</span></a>
+                    <div id="dropNumber4" class="dropdown-content-k dropdown-content-pink-white-k high-price-tag buy-konstantin">
+                      <a href="https://courses.smartergerman.com/purchase?product_id=4194460"><span class="default-product-price product_4194460">1 x $699</span></a>
+                      <a href="https://courses.smartergerman.com/purchase?product_id=4194695"><span class="default-product-price product_4194695">7 x $99</span></a>
+                    </div>
+                  </div>
                 </div>
                 <!-- <div class="course-hero-img-container-k2">
                     <img class="course-hero-img" src="https://www.filepicker.io/api/file/YHspfLORSZ2amM0f5HYg">
@@ -172,8 +185,8 @@
           >
           <div class="dropdown-k dropdown-left-k">
               <br>
-              <a onclick="dropdownFunction_k('dropNumber2')" class="dropbtn-k dropbtn-green-k">Try before you buy</a>
-              <div id="dropNumber2" class="dropdown-content-k dropdown-content-green-k  try-konstantin">
+              <a onclick="dropdownFunction_k('dropNumber5')" class="dropbtn-k dropbtn-green-k">Try before you buy</a>
+              <div id="dropNumber5" class="dropdown-content-k dropdown-content-green-k  try-konstantin">
                 <a href="https://courses.smartergerman.com/purchase?product_id=3657538">A1</a>
                 <a href="https://courses.smartergerman.com/purchase?product_id=3657539">A2</a>
                 <a href="https://courses.smartergerman.com/purchase?product_id=3657541">B1</a>
@@ -183,8 +196,11 @@
             </div>
         </div>
           <div class="video_holder">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/S5UP3o5tSBY" 
-              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/S5UP3o5tSBY" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <video width="560" height="315" controls controlsList="nodownload">
+                <source src="https://www.dropbox.com/s/ie8gptbep5fbvqv/Smarter%20German%20Reviews%20-%20Homepage.mp4?raw=1" type="video/mp4">
+            </video>
           </div>
     </div>
   </section>
@@ -198,8 +214,8 @@
             It only takes 1-2 hours to work through them but It will provide you with a
              clear insight into whether SmarterGerman is for you or not. </p>
           <div class="dropdown-k dropdown-left-k" style="margin-top: 6.0rem;">
-            <a onclick="dropdownFunction_k('dropNumber3')" class="dropbtn-k dropbtn-blue-k dropbtn-white-k">Try before you buy</a>
-            <div id="dropNumber3" class="dropdown-content-k dropdown-content-blue-k wider-dropdown-k  try-konstantin">
+            <a onclick="dropdownFunction_k('dropNumber6')" class="dropbtn-k dropbtn-blue-k dropbtn-white-k">Try before you buy</a>
+            <div id="dropNumber6" class="dropdown-content-k dropdown-content-blue-k wider-dropdown-k  try-konstantin">
               <a href="https://courses.smartergerman.com/purchase?product_id=3657538 ">A1</a>
               <a href="https://courses.smartergerman.com/purchase?product_id=3657539">A2</a>
               <a href="https://courses.smartergerman.com/purchase?product_id=3657541">B1</a>
@@ -216,11 +232,11 @@
         <div class="pink-options-container-k">
             <div class="options-container-k2" style="position: relative;">
               <div class="option1-k">
-                <p>Low<br>Income</p>
+                <p>No<br>Income</p>
               <a href="https://courses.smartergerman.com/purchase?product_id=3982662"style="z-index: 1;"><span class="default-product-price product_3982662">$99</span></a>
             </div>
             <div class="option2-k">
-                <p>Regular<br>Income</p>
+                <p>Low<br>Income</p>
                 <div class="dropdown-k">
                   <a onclick="dropdownFunction_k('dropNumber7')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085532">3 x $99</span></a>
                   <div id="dropNumber7" class="dropdown-content-k dropdown-content-pink-white-k regular-price-tag buy-konstantin">
@@ -231,7 +247,7 @@
                 <!-- <a href="https://courses.smartergerman.com/purchase?product_id=3982778"><span class="default-product-price product_3982778">$299</span></a> -->
             </div>
             <div class="option3-k">
-                <p>High<br>Income</p>
+                <p>Regular<br>Income</p>
                 <div class="dropdown-k">
                   <a onclick="dropdownFunction_k('dropNumber8')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4085535">5 x $99</span></a>
                   <div id="dropNumber8" class="dropdown-content-k dropdown-content-pink-white-k high-price-tag buy-konstantin">
@@ -240,6 +256,16 @@
                   </div>
                 </div>
                 <!-- <a href="https://courses.smartergerman.com/purchase?product_id=3982779 "><span class="default-product-price product_3982779">$499</span></a> -->
+            </div>
+            <div class="option4-k">
+              <p>High<br>Income</p>
+              <div class="dropdown-k">
+                <a onclick="dropdownFunction_k('dropNumber9')" class="dropbtn-k dropbtn-pink-k"><span style="pointer-events: none;" class="default-product-price product_4194695">7 x $99</span></a>
+                <div id="dropNumber9" class="dropdown-content-k dropdown-content-pink-white-k high-price-tag buy-konstantin">
+                  <a href="https://courses.smartergerman.com/purchase?product_id=4194460"><span class="default-product-price product_4194460">1 x $699</span></a>
+                  <a href="https://courses.smartergerman.com/purchase?product_id=4194695"><span class="default-product-price product_4194695">7 x $99</span></a>
+                </div>
+              </div>
             </div>
             </div>
             <div class="course-hero-img-container-k2">

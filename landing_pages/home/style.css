@@ -2924,7 +2924,7 @@
 
 
 .stars-container-k {
-  /* margin-right: 6.0rem; */
+  margin-right: 6.0rem;
 }
   /* CONTAINER PART */
   .container-k {
@@ -3778,9 +3778,9 @@
     margin-top: 2rem;
     text-align: center; 
   }
-  .video_holder iframe {
-    width: 280px;
-    height: 157px;
+  .video_holder video {
+    width: 360px;
+    height: 204px;
   }
   .container-k .container-k {
       padding: 1.5rem 2rem;
@@ -4622,7 +4622,7 @@
     margin-top: 2rem;
     text-align: center; 
   }
-  .video_holder iframe {
+  .video_holder video {
     width: 240px;
     height: 135px;
   }

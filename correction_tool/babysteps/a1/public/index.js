@@ -82,46 +82,6 @@ function triggerFocus(element) {
   element.dispatchEvent(event);
 }
 
-function easyGame() {
-  difficulty_level = 1;
-  tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Sehr geehrte Damen und Herren,",
- "ich habe Ihre Anzeige in der Zeitung gelesen.",
- "Ich hätte Interesse an einem Deutschkurs.",
- "Mit freundlichen Grüßen",
- "Erika Mustermann"];
-  difficulty_container.classList.add("hide-konstantin");
-  startGame();
-  triggerFocus(input_box);
- }
- function normalGame() {
-  difficulty_level = 2;
-  tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Sehr geehrte",
- "Damen und",
- "Herren,",
- "ich habe Ihre Anzeige",
- "in der Zeitung gelesen.",
- "Ich hätte Interesse",
- "an einem Deutschkurs.",
- "Mit freundlichen Grüßen",
- "Erika Mustermann"];
-  difficulty_container.classList.add("hide-konstantin");
-  startGame();
-  triggerFocus(input_box);
- }
- function hardGame() {
-  difficulty_level = 3;
-  tool_container.classList.remove("hide-konstantin");
-  tmp_content = ["Sehr geehrte Damen und Herren,",
- "ich habe Ihre Anzeige in der Zeitung gelesen.",
- "Ich hätte Interesse an einem Deutschkurs.",
- "Mit freundlichen Grüßen",
- "Erika Mustermann"];
-  difficulty_container.classList.add("hide-konstantin");
-  startGame();
-  triggerFocus(input_box);
- }
  
  
 let content_counter = 0;
@@ -139,13 +99,18 @@ function ChangeContent() {
     })
   }
 }
-let array1 = ["a", "b", "c", "d", "e"];
-let string1 = "abcde";
-let array2 = ['a', 'b'];
+
 function textInput() {
   input = input_box.value;
   input_array = input.split('');
   // console.log(input_box.value);
+  input_box.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+      return false;
+    }
+  })
+
   if (input_box.value.length > 1 ) {
     // UMLAUT ä
     if ((input_array.slice(-2).equals(['a','/']))) {
@@ -209,6 +174,7 @@ function textInput() {
 
   if (input.length == current_content.length) {
     input_box.placeholder = "";
+    console.log("Errors: " + errors);
     if (errors == 0) {
       content_text.classList.remove("hide-konstantin");
       written_div.classList.remove("hide-konstantin");
@@ -228,6 +194,7 @@ function textInput() {
       input_box.value = "";
     }
     else {
+      console.log(errors);
       checker_div.style.color = "red";
       checker_div.innerText = "Correct your mistakes before you continue.";
     }
@@ -289,3 +256,4 @@ function resetGame() {
   finished_section.classList.add("hide-konstantin");
   difficulty_container.classList.remove("hide-konstantin");
 }
+

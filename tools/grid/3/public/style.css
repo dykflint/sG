@@ -388,12 +388,12 @@ a.fill-div {
 
 @media (max-width: 25.0rem) {
     .grid {
-        width: 85%;
+        width: 90%;
     }
     .grid-row {
         height: 50px;
         border-radius: 3.5rem;
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
     img {
         width: 30px;
@@ -445,7 +445,7 @@ a.fill-div {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;

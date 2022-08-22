@@ -392,7 +392,7 @@ a.fill-div {
     }
     .grid-row {
         height: 50px;
-        border-radius: 0.5rem;
+        border-radius: 3.5rem;
         font-size: 1.1rem;
     }
     img {

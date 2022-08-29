@@ -388,12 +388,13 @@ a.fill-div {
 
 @media (max-width: 25.0rem) {
     .grid {
-        width: 90%;
+        width: 100%;
     }
     .grid-row {
         height: 50px;
         border-radius: 3.5rem;
         font-size: 1.05rem;
+        width: 19.0rem;
     }
     img {
         width: 30px;

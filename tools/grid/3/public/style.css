@@ -7,7 +7,7 @@
 }
 .grid-row {
     height: 60px;
-    width: 100%;
+    width: 21.0rem;
     background-color: #D7EBFA;
     margin: auto;
     margin: 1.0rem auto;
@@ -395,7 +395,7 @@ a.fill-div {
     .grid-row {
         height: 50px;
         border-radius: 3.5rem;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
     }
     img {
         width: 30px;
@@ -447,7 +447,7 @@ a.fill-div {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;
@@ -481,7 +481,7 @@ a.fill-div {
     overflow: auto;
     /* margin-right: 1.0rem; */
     margin: auto;
-    width: 100%;
+    width: 80%;
     z-index: 5;
   }
   .dropdown-content-k {
@@ -493,7 +493,7 @@ a.fill-div {
     font-weight: bold;
     /* text-decoration: none; */
     display: block;
-    width: 100%;
+    width: 90%;
     text-align: center;
     border-radius: 3.5rem;
   }

@@ -4,6 +4,7 @@
     margin: auto;
     /* border-radius: 1.5rem; */
     padding: 1.0rem;
+    min-width: max-content;
 }
 .grid-row {
     height: 60px;

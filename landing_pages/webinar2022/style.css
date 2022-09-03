@@ -1,25 +1,30 @@
 @media (max-width: 40em) {
     .section-course-hero .container {
     background: #eecfc8 !important;
-        background-position: right 20px center !important;
+        /* background-position: right 20px center !important;
     background-size: auto 95% !important;
-    background-repeat: no-repeat !important;
+    background-repeat: no-repeat !important; */
 }
 }
 
 .course-hero-img-container {
     z-index: -1;
 }
+
+.course-hero-img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 @media (min-width: 80.0rem) {
   .container.webinar-konstantin {
-    background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd), #FCCEDB;
-    background-size: 170%;
+    background: url(https://www.filepicker.io/api/file/8x65qipxTsmyDinfBKhO), #EECFC8;
+    background-size: 75%;
   }
   
   .container.webinar-flex-konstantin {
     display: flex;
     flex-direction: row; 
-    justify-content: space-between;
+    justify-content: center;
     padding: 1.0rem !important;
   }
   /* Video Container */
@@ -30,26 +35,32 @@
   .webinar-subflex-konstantin {
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
-    margin-left: 1.0rem;
+    justify-content: center;
+    /* margin: auto; */
+  }
+  ._form_34 {
+    margin-top: 0px !important;
   }
   .bullet-list-konstantin {
     background-color: lightblue;
     padding: 2.0rem;
     border-radius: 1.0rem;
+    width: 500px;
+    margin-right: 3.5rem;
   }
   .countdown-container-konstantin {
     background-color: lightpink;
     padding: 2.0rem;
     border-radius: 1.0rem;
-    margin-top: 1.0rem; 
+    /* margin-top: 1.0rem;  */
+    margin-right: 3.5rem;
   }
 }
 
 @media (min-width: 60.0rem) and (max-width: 80.0rem) {
   .container.webinar-konstantin {
-    background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd), #FCCEDB;
-    background-size: 170%;
+    background: url(https://www.filepicker.io/api/file/8x65qipxTsmyDinfBKhO), #EECFC8;
+    background-size: 120%;
   }
   
   .container.webinar-flex-konstantin {
@@ -84,8 +95,8 @@
 }
 @media (min-width: 40.0rem) and (max-width: 60.0rem) {
   .container.webinar-konstantin {
-    background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd), #FCCEDB;
-    background-size: 500%;
+    background: url(https://www.filepicker.io/api/file/8x65qipxTsmyDinfBKhO), #EECFC8;
+    background-size: 150%;
   }
   
   .container.webinar-flex-konstantin {

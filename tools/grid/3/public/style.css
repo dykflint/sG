@@ -396,8 +396,8 @@ a span {
     .grid-row {
         height: 50px;
         border-radius: 3.5rem;
-        font-size: 1.05rem;
-        width: 19.0rem;
+        font-size: 0.8rem;
+        width: 14.0rem;
     }
     img {
         width: 30px;
@@ -432,7 +432,7 @@ a span {
         line-height: 50px;
         text-decoration: none;
         color: #29415c;
-        padding-left: 1.2rem;
+        padding-left: .3rem;
     }
     a.fill-div {
         display: block;
@@ -449,7 +449,7 @@ a span {
     font-weight: 500 ;
     display: block;
     align-self: center;
-    font-size: 1.05rem;
+    font-size: 0.8rem;
     position: relative;
     /* margin: auto; */
     margin-right: 1.0rem;

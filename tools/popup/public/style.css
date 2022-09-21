@@ -1,11 +1,13 @@
 .webinar-container {
     background-color: #D7EAF9;
     border-radius: 2.0rem;
-    position: relative;
     max-width: 400px;
+    position: absolute;
     margin: auto;
     padding: 1.5rem 2.0rem;
     margin-top: 5.0rem;
+    bottom: 250px;
+    right: 30px;
 }
 
 .webinar-image-container {

@@ -8,7 +8,9 @@
     padding: 1.5rem 2.0rem;
     margin-top: 5.0rem;
 }
-
+.closePopUp {
+    display: none;
+}
 .webinar-image-container {
     position: absolute;
     top: -9.0rem;
@@ -46,4 +48,11 @@ p {
     font-weight: bold;
     font-size: 1.3rem;
     color: white;
+}
+
+.webinar-close-button a {
+    cursor: pointer;
+    position: absolute;
+    top: -2.0rem;
+    right: 0.0rem;
 }

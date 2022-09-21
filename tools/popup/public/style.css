@@ -7,6 +7,7 @@
     margin: auto;
     padding: 1.5rem 2.0rem;
     margin-top: 5.0rem;
+    z-index: 9001;
 }
 .closePopUp {
     display: none;

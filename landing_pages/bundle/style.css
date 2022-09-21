@@ -3796,12 +3796,19 @@ a {
 }
 /* I had to add these two tags (regular and high price tag)
 because there was some issue with the alignment of the dropups */
-.dropdown-content-k.regular-price-tag {
+.dropdown-content-k.no-income-price-tag {
+  top: 7.2rem;
+}
+.dropdown-content-k.low-price-tag {
   top: 25.2rem;
 }
-.dropdown-content-k.high-price-tag {
+.dropdown-content-k.regular-price-tag {
   top: 43.2rem;
 }
+.dropdown-content-k.high-price-tag {
+  top: 61.2rem;
+}
+
 .dropdown-content-k a {
   color: black;
   font-weight: bold;
@@ -3846,7 +3853,7 @@ because there was some issue with the alignment of the dropups */
 .dropdown-content-pink-white-k a{
   background: #F4618C;
   color: white;
-  width: 17.0rem;
+  width: 15.0rem;
   font-size: 2.0rem;
   padding: 1.0rem 0 !important;
   font-weight: bold !important;

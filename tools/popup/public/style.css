@@ -51,6 +51,9 @@
         color: white;
 }
 
+    .webinar-sign-up a {
+        z-index: 5;
+    }
     .webinar-close-button a {
         cursor: pointer;
         position: absolute;

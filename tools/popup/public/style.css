@@ -49,11 +49,9 @@
         font-weight: bold;
         font-size: 1.3rem;
         color: white;
+        z-index: 5;
 }
 
-    .webinar-sign-up a {
-        z-index: 5;
-    }
     .webinar-close-button a {
         cursor: pointer;
         position: absolute;

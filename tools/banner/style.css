@@ -1,65 +1,111 @@
-/* CSS Reset */
-/* html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  } */
-  
-  /* (Just ignore)top banner style */
-  .top-banner {
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: #FFBD58;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .top-banner a, .top-banner span {
-    display: inline-block;
-  }
-  
-  .top-banner a {
-    width: 100%;
-    padding: 15px 0;
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: bold;
+  @media (min-width: 500px){ 
+    .top-banner-konstantin {
+      margin-bottom: 30px;
+      text-align: center;
+      background-color: #FFBD58;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 2.0rem;
+      z-index: 500;
+    }
+    
+    .top-banner-konstantin a, .top-banner-konstantin span {
+      display: inline-block;
+    }
+    
+    .top-banner-konstantin a {
+      width: 100%;
+      padding: 15px 0;
+      text-decoration: none;
+      color: black;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    
+    .webinar-sign-up-konstantin {
+      width: max-content;
+      color: white; 
+      background-color: #29405C;
+      padding: 0.7rem 1.0rem;
+      border-radius: 1.0rem;
+      font-weight: bold;
+      margin-left: 1.0rem;
+    }
+    .top-banner-konstantin a:hover {
+      color: #fff9e0;
+    }
+    
+    .webinar-title-konstantin {
+      color: #004AAD;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 1.0rem;
+    }
+    
+    .webinar-time-konstantin {
+      color: #004AAD;
+    }
   }
 
-  .webinar-sign-up {
-    width: max-content;
-    color: white; 
-    background-color: #29405C;
-    padding: 0.7rem 1.0rem;
-    border-radius: 1.0rem;
-    font-weight: bold;
-    margin-left: 1.0rem;
-  }
-  .top-banner a:hover {
-    color: #fff9e0;
-  }
-
-  .webinar-title {
-    color: #004AAD;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 1.0rem;
-  }
-  
-  .webinar-time {
-    color: #004AAD;
-
+  @media (max-width: 500px){ 
+    .top-banner-konstantin {
+      margin-bottom: 30px;
+      text-align: center;
+      background-color: #FFBD58;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 2.0rem;
+      z-index: 500;
+    }
+    
+    .top-banner-konstantin a, .top-banner-konstantin span {
+      display: inline-block;
+    }
+    
+    .top-banner-konstantin a {
+      width: 100%;
+      padding: 15px 0;
+      text-decoration: none;
+      color: black;
+      font-size: 1.3rem;
+      font-weight: bold;
+      white-space: pre;
+      margin-left: -2.0rem;
+    }
+    
+    .webinar-sign-up-konstantin {
+      width: max-content;
+      color: white; 
+      background-color: #29405C;
+      padding: 0.7rem 1.0rem;
+      border-radius: 1.0rem;
+      font-weight: bold;
+      margin-left: -2.0rem;
+      font-size: 1.1rem;
+    }
+    .top-banner-konstantin a:hover {
+      color: #fff9e0;
+    }
+    
+    .webinar-title-konstantin {
+      color: #004AAD;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: -2.0rem;
+    }
+    
+    .webinar-time-konstantin {
+      color: #004AAD;
+      margin-right: -1.0rem;
+    }
   }

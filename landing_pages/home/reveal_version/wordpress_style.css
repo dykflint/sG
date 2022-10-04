@@ -1,3 +1,11 @@
+.login-button-konstantin a{
+        background-color: #F4608C;
+        color: white !important;
+        border-radius: 0.625rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+        padding: 1.0rem 2.0rem !important;
+}
 .wp-container-28 > * {
 	max-width: 100% !important;
 }
@@ -98,7 +106,7 @@
     font-weight: 700;
   }
   h2 {
-    font-size: 2.0rem;
+    font-size: 2.625rem;
   }
   h3 {
     font-size: 2.25rem;
@@ -1214,7 +1222,7 @@
   @media (max-width: 40rem) {
     .section-personal-hero .container,
     .section-personal-hero-2 .container {
-      padding-bottom: 20rem;
+      padding-bottom: 25rem;
     }
   
     .section-personal-hero {
@@ -1497,7 +1505,7 @@
   .section-course-testimonials .btn.btn-primary {
     margin-top: 1rem;
   }
-
+  
   
   .testimonial {
     display: flex;
@@ -2296,7 +2304,6 @@
     --light: #FFF;
     --image: url('https://www.filepicker.io/api/file/1os15ziQeKYB9qVHwcJF')
 }
-  
 .rating-stars {
   font-size: 3.2rem !important;
   letter-spacing: 0.75rem !important;
@@ -2890,7 +2897,7 @@
   padding: 0.4rem;
   /* padding: 0.6rem 4.0rem; */
   /* width: 4.2rem; */
-  /* margin: auto; */
+  margin: auto;
   overflow: auto;
   top: 4.2rem;
   margin-right: 1.0rem;
@@ -2904,7 +2911,7 @@
   margin-bottom: 0.2rem;
   /* text-decoration: none; */
   display: block;
-  width: 12.1rem;
+  width: 12.0rem;
   text-align: center;
   border: 1px solid grey;
   border-radius: 0.625rem;
@@ -3080,7 +3087,7 @@
     @media (max-width: 40rem) {
       .section-personal-hero .container-k,
       .section-personal-hero-2 .container-k {
-        padding-bottom: 18rem;
+        padding-bottom: 25rem;
       }
     
       .section-personal-hero {
@@ -3117,22 +3124,6 @@
   a {
     text-decoration: none;
   }
-  /* ARROW DOWN FOR BUTTONS */
-  .arrow-konstantin {
-    border: solid white;
-    border-width: 0 0.25rem 0.25rem 0;
-    display: inline-block;
-    padding: 0.3rem;
-    margin-left: 0.3rem;
-  }
-  .arrow-konstantin.blue-arrow-konstantin {
-    border: solid #293F5C;
-    border-width: 0 0.25rem 0.25rem 0;
-  }
-  .down-konstantin {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
 }
 
 /* ################################################################################## */
@@ -3152,7 +3143,6 @@
 /* ################################################################################## */
 /* ################################################################################## */
 @media (min-width: 40rem) and (max-width: 80rem) {
-    
   .rating-stars {
     font-size: 3.2rem !important;
     letter-spacing: 0.75rem !important;
@@ -3195,7 +3185,7 @@
   .btn-color-blue-k:hover a, 
   .btn-color-blue-k:active a{
     border-radius: 0.625rem !important;
-    padding: 0.8rem 2.05rem !important;
+    padding: 0.8rem 1.5rem !important;
     font-weight: 500 !important;
     display: block;
     max-width: fit-content;
@@ -3745,7 +3735,7 @@
   margin-bottom: 0.2rem;
   /* text-decoration: none; */
   display: block;
-  width: 12.1rem;
+  width: 12.0rem;
   text-align: center;
   border: 1px solid grey;
   border-radius: 0.625rem;
@@ -3778,9 +3768,9 @@
     margin-top: 2rem;
     text-align: center; 
   }
-  .video_holder video {
-    width: 360px;
-    height: 204px;
+  .video_holder iframe {
+    width: 280px;
+    height: 157px;
   }
   .container-k .container-k {
       padding: 1.5rem 2rem;
@@ -3960,22 +3950,6 @@
   a {
     text-decoration: none;
   }
-    /* ARROW DOWN FOR BUTTONS */
-    .arrow-konstantin {
-      border: solid white;
-      border-width: 0 0.25rem 0.25rem 0;
-      display: inline-block;
-      padding: 0.3rem;
-      margin-left: 0.3rem;
-    }
-    .arrow-konstantin.blue-arrow-konstantin {
-      border: solid #293F5C;
-      border-width: 0 0.25rem 0.25rem 0;
-    }
-    .down-konstantin {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-    }
 }
 
 
@@ -3996,7 +3970,6 @@
 /* ################################################################################# */
 /* ################################################################################# */
 @media (max-width: 40rem) {
-    
   .rating-stars {
     font-size: 2.2rem !important;
     letter-spacing: 0.75rem !important;
@@ -4061,7 +4034,7 @@
   .btn-color-pink-k:hover a,
   .btn-color-pink-k:active a{
     border-radius: 0.625rem !important;
-    padding: 0.8rem 1.45rem !important;
+    padding: 0.8rem 1.5rem !important;
     font-weight: 500 !important;
     display: block;
     max-width: fit-content;
@@ -4589,7 +4562,7 @@
   margin-bottom: 0.2rem;
   /* text-decoration: none; */
   display: block;
-  width: 12.1rem;
+  width: 12.0rem;
   text-align: center;
   border: 1px solid grey;
   border-radius: 0.625rem;
@@ -4622,7 +4595,7 @@
     margin-top: 2rem;
     text-align: center; 
   }
-  .video_holder video {
+  .video_holder iframe {
     width: 240px;
     height: 135px;
   }
@@ -4767,7 +4740,7 @@
     @media (max-width: 40rem) {
       .section-personal-hero .container-k,
       .section-personal-hero-2 .container-k {
-        padding-bottom: 18rem;
+        padding-bottom: 25rem;
       }
     
       .section-personal-hero {
@@ -4804,20 +4777,4 @@
   a {
     text-decoration: none;
   }
-    /* ARROW DOWN FOR BUTTONS */
-    .arrow-konstantin {
-      border: solid white;
-      border-width: 0 0.25rem 0.25rem 0;
-      display: inline-block;
-      padding: 0.3rem;
-      margin-left: 0.3rem;
-    }
-    .arrow-konstantin.blue-arrow-konstantin {
-      border: solid #293F5C;
-      border-width: 0 0.25rem 0.25rem 0;
-    }
-    .down-konstantin {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-    }
 }

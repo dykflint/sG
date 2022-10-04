@@ -128,15 +128,22 @@ body {
       }
       .csslider > .arrows {
           position: absolute;
-          left: -31px;
+          left: 15.5rem;
           top: 50%;
-          width: 100%;
+          width: 70%;
           height: 26px;
           padding: 0 31px;
           z-index: 0;
+          margin: auto;
           -moz-box-sizing: content-box;
           -webkit-box-sizing: content-box;
           box-sizing: content-box;
+      }
+      @media (max-width: 450px) {
+        .csslider > .arrows {
+            left: -12px !important;
+            width: 95% !important;
+        }
       }
       .csslider > .arrows label {
           display: none;

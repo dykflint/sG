@@ -31,8 +31,8 @@ body {
       }
       .csslider > ul {
           position: relative;
-          width: 820px;
-          height: 420px;
+          width: min(100%,820px);
+          height: min(100%,420px);
           z-index: 1;
           font-size: 0;
           line-height: 0;

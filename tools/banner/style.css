@@ -2,7 +2,8 @@
     .top-banner-konstantin {
       margin-bottom: 30px;
       text-align: center;
-      background-color: #FFBD58;
+      /* background-color: #FFBD58; */
+      background-color: #ebb1a4;
       position: fixed;
       top: 0;
       left: 0;
@@ -31,24 +32,26 @@
       width: max-content;
       color: white; 
       background-color: #29405C;
-      padding: 0.7rem 1.0rem;
+      padding: 0.5rem 1.0rem;
       border-radius: 1.0rem;
       font-weight: bold;
       margin-left: 1.0rem;
+      margin-top: 0.5rem;
     }
     .top-banner-konstantin a:hover {
       color: #fff9e0;
     }
     
     .webinar-title-konstantin {
-      color: #004AAD;
+      color: #29405C;
       font-size: 1.5rem;
       font-weight: bold;
       margin-right: 1.0rem;
     }
     
     .webinar-time-konstantin {
-      color: #004AAD;
+      color: #29405C;
+      margin-top: 0.5rem;
     }
   }
 
@@ -56,7 +59,7 @@
     .top-banner-konstantin {
       margin-bottom: 30px;
       text-align: center;
-      background-color: #FFBD58;
+      background-color: #ebb1a4;
       position: fixed;
       top: 0;
       left: 0;
@@ -90,7 +93,8 @@
       padding: 0.7rem 1.0rem;
       border-radius: 1.0rem;
       font-weight: bold;
-      margin-left: -2.0rem;
+      /* margin-left: -2.0rem; */
+      margin-top: 0.3rem;
       font-size: 1.1rem;
     }
     .top-banner-konstantin a:hover {
@@ -98,14 +102,15 @@
     }
     
     .webinar-title-konstantin {
-      color: #004AAD;
+      color: #29405C;
       font-size: 1.5rem;
       font-weight: bold;
-      margin-right: -2.0rem;
+      margin-right: -1.0rem;
     }
     
     .webinar-time-konstantin {
-      color: #004AAD;
-      margin-right: -1.0rem;
+      color: #29405C;
+      /* margin-right: -1.0rem; */
+      margin-top: 0.3rem; 
     }
   }

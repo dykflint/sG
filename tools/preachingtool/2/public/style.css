@@ -1,7 +1,9 @@
-html {
+@media (min-width: 40.0rem){
+
+  html {
     font-size: 10px;
   }
-
+  
   body {
     /* background: #ffc600; */
     font-family: 'helvetica neue';
@@ -10,15 +12,22 @@ html {
     background: white;
     /* background: #141414 url(img/wave.gif); */
   }
+  /* .preaching-section-konstantin {
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+  } */
   .preaching-container {
     display: flex;
     flex-direction: column;
     position: relative;
   }
-  .content {
+  .content, .triggers, .correct-answers {
     margin: auto;
   }
-
+  .triggers {
+    font-weight: bold;
+  }
   .img-container {
     position: absolute;
     left: 59.0rem;
@@ -45,7 +54,7 @@ html {
   p {
     margin: 0 0 1rem;
   }
-
+  
   .words:before {
     content: '';
     position: absolute;
@@ -56,3 +65,41 @@ html {
     border: 1px solid;
     border-color: transparent #efe4e4;
   }
+  /* COVER */ 
+  .starting-box-konstantin {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFECE2;
+    font-weight: 500;
+    font-size: 2.0rem;
+    margin: auto;
+    padding: 2.0rem 1.2rem 1.2rem 1.2rem;
+    width: 50%;
+    min-height: 200px;
+    color: #8F8F8F;
+    border-radius: 10px 10px 10px 10px;  
+    text-align: center;
+  }
+
+  .start-preaching-button-konstantin{
+    font-weight: 500;
+    border: none;
+    color: white;
+    height: 10%;
+    width: 12.0rem;
+    margin: 8px;
+    padding: 12px;
+    font-size: 2.0rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1.2rem;
+    /* box-shadow: grey 5px 8px 5px; */
+  }
+
+  .start-preaching-button-konstantin {
+    background-color: #F1A246;
+  }
+
+  .hide-konstantin {
+    display:none;
+  }
+}

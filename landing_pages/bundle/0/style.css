@@ -1,4 +1,4 @@
-    :root {
+:root {
   /* Colors */
   --clr-primary-100: #fff;
   --clr-primary-200: #ffdcd4;
@@ -753,15 +753,8 @@ span.coupon-price {
   font-weight: 500;
 }
 
-@media (max-width: 80rem) {
-   .course-hero-img-container {
-    display: none;
-  }
-}
-
-/* Remove Img from List Container below 40rem width */ 
-@media (max-width: 60rem) {
-  .list-hero-img img{
+@media (max-width: 40rem) {
+  .section-bundle-hero .course-hero-img-container {
     display: none;
   }
 }
@@ -2503,12 +2496,6 @@ button.hello-bar-close {
   background: white;
   border-radius: 2rem;
   padding: 2rem;
-  position: relative;
-}
-.money-back-guarantee {
-  position: absolute;
-  bottom: -2%;
-  left: 50%;
 }
 .home-hero-text-k {
   margin-left: 0;
@@ -2827,17 +2814,14 @@ button.hello-bar-close {
 }
 
 /* Pay as you can: Options 1, 2 and 3 */
-.gray-options-container-k, .gold-options-container-k  {
+.pink-options-container-k {
   border-radius: 40px;
-  background: url(https://www.filepicker.io/api/file/YcUUxQKKTKq4cILLQCzh),#DFDDDF;
+  background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd),#FFC7DB;
   width: min(80%, 70rem);
   margin-inline: auto;
   padding: 1.2rem;
   margin: 2.5rem auto 0 auto;  
   position: relative;
-}
-.gold-options-container-k {
-  background: url(https://www.filepicker.io/api/file/acvxsxDrS1KwzTgrLSEn), #FDE6CC;
 }
 .options-container-k2 {
   background-size: 100% !important;
@@ -2845,14 +2829,14 @@ button.hello-bar-close {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding-bottom: 0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k, .gold-option {
+.option1-k, .option2-k, .option3-k, .option4-k {
     height: 15rem;
     padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
-    background: #E9F3F3;
+    background: #FCF5FF;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -2861,19 +2845,16 @@ button.hello-bar-close {
     justify-content: center;
     width: 25%;
 }
-.gold-option {
-  width: 75%;
-  background: #F0C945;
-}
-.option1-k p, .option2-k p, .option3-k p, .option4-k p, .gold-option p {
+
+.option1-k p, .option2-k p, .option3-k p, .option4-k p {
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-family: Roboto, sans-serif;
     margin-bottom: 2.5rem;
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a, .gold-option a {
+.option1-k a, .option2-k a, .option3-k a, .option4-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
@@ -2983,10 +2964,7 @@ button.hello-bar-close {
     z-index: 2;
   }
   .dropdown-content-k.buy-konstantin {
-    top: 16.1rem;
-  }
-  .dropdown-content-k.go-price-tag {
-    left: 38.5%;
+    top: 7.1rem;
   }
   .dropdown-content-k.try-konstantin {
     top: 3.9rem;
@@ -3025,19 +3003,11 @@ button.hello-bar-close {
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a, .gold-option .dropdown-k a {
+.option3-k .dropdown-k a, .option4-k .dropdown-k a {
   max-width: 100%;
   margin-right: -2.5rem;
   font-size: 1.5rem; 
   font-weight: bold;
-}
-.gold-option .dropdown-k a {
-  max-width: 50%;
-  margin: auto;
-}
-.gold-option .dropdown-content-k a {
-  max-width: 100%;
-  margin-bottom: 0.5rem;
 }
 .dropdown-content-pink-white-k {
   margin: auto;
@@ -3409,26 +3379,12 @@ a {
 .row-k {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: max-content;
-  background: white;
-  border-radius: 2rem;
-  padding: 2rem;
-  max-width: min(90%,70rem);
-  position: relative;
-}
-.money-back-guarantee {
-  position: absolute;
-  bottom: -2%;
-  left: 50%;
+  margin: 0;
 }
 .home-hero-text-k {
   margin-left: 0;
 }
-.home-hero-text {
-  margin: auto;
-  text-align: center;
-}
+
 .card-k {
   display: flex;
   justify-content: center;
@@ -3742,17 +3698,14 @@ a {
 }
 
 /* Pay as you can: Options 1, 2 and 3 */
-.gray-options-container-k, .gold-options-container-k {
+.pink-options-container-k {
   border-radius: 40px;
-  background: url(https://www.filepicker.io/api/file/YcUUxQKKTKq4cILLQCzh),#DFDDDF;
+  background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd),#FFC7DB;
   width: min(80%, 30rem);
   margin-inline: auto;
   padding: 1.2rem;
   margin: 2.5rem auto 0 auto; 
   position: relative;
-}
-.gold-options-container-k {
-  background: url(https://www.filepicker.io/api/file/acvxsxDrS1KwzTgrLSEn), #FDE6CC;
 }
 .options-container-k2 {
   background-size: 100% !important;
@@ -3760,15 +3713,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding-bottom: 0rem;
   padding-left: 3.0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k, .gold-option {
+.option1-k, .option2-k, .option3-k, .option4-k {
     height: 15rem;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
-    background: #E9F3F3;
+    background: #FCF5FF;
     display: flex;
     /* overflow: hidden; */
     flex-direction: column;
@@ -3777,19 +3730,16 @@ a {
     justify-content: center;
     width: 75%;
 }
-.gold-option {
-  background: #F0C945;
-}
 
-.option1-k p, .option2-k p, .option3-k p, .option4-k p, .gold-option p {
+.option1-k p, .option2-k p, .option3-k p, .option4-k p {
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-family: Roboto, sans-serif;
     margin-bottom: 2.5rem;
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a, .gold-option a {
+.option1-k a, .option2-k a, .option3-k a, .option4-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
@@ -3915,8 +3865,8 @@ because there was some issue with the alignment of the dropups */
 .dropdown-content-k.no-income-price-tag {
   top: 7.2rem;
 }
-.dropdown-content-k.go-price-tag {
-  top: 16.2rem;
+.dropdown-content-k.low-price-tag {
+  top: 25.2rem;
 }
 .dropdown-content-k.regular-price-tag {
   top: 43.2rem;
@@ -3956,7 +3906,7 @@ because there was some issue with the alignment of the dropups */
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a, .gold-option .dropdown-k a {
+.option3-k .dropdown-k a, .option4-k .dropdown-k a {
   max-width: 100%;
   margin-right: -1.0rem;
   font-size: 2.0rem; 
@@ -3969,7 +3919,7 @@ because there was some issue with the alignment of the dropups */
 .dropdown-content-pink-white-k a{
   background: #F4618C;
   color: white;
-  width: 14.7rem;
+  width: 15.0rem;
   font-size: 2.0rem;
   padding: 1.0rem 0 !important;
   font-weight: bold !important;
@@ -3981,7 +3931,7 @@ because there was some issue with the alignment of the dropups */
 /* CONTAINER PART */
 .container-k {
     margin-inline: auto;
-    width: min(90%, 70rem);
+    width: min(80%, 70rem);
     border-radius: var(--border-radius-container);
     padding: 3rem 1.5rem;
     position: relative;
@@ -4016,7 +3966,7 @@ because there was some issue with the alignment of the dropups */
       width: min(90%, 76rem);
     }
     .container-k {
-      /* padding: 2.5rem 7rem; */
+      padding: 2.5rem 7rem;
     }
   
     .container-k .container-k {
@@ -4321,17 +4271,7 @@ a {
 .row-k {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  background: white;
-  border-radius: 2rem;
-  padding: 2rem;
-  max-width: min(90%,70rem);
-  position: relative;
-}
-.money-back-guarantee {
-  position: absolute;
-  bottom: -2%;
-  left: 17%;
+  margin: 0;
 }
 .home-hero-text-k {
   margin-left: 0;
@@ -4650,17 +4590,14 @@ a {
 }
 
 /* Pay as you can: Options 1, 2 and 3 */
-.gray-options-container-k, .gold-options-container-k {
+.pink-options-container-k {
   border-radius: 40px;
-  background: url(https://www.filepicker.io/api/file/YcUUxQKKTKq4cILLQCzh),#DFDDDF;
+  background: url(https://www.filepicker.io/api/file/N3clpPxR9y99cTC9k8Yd),#FFC7DB;
   width: min(80%, 70rem);
   margin-inline: auto;
   padding: 1.2rem;
   margin: 2.5rem auto 0 auto; 
   position: relative;
-}
-.gold-options-container-k {
-  background: url(https://www.filepicker.io/api/file/acvxsxDrS1KwzTgrLSEn), #FDE6CC;
 }
 .options-container-k2 {
   background-size: 100% !important;
@@ -4668,14 +4605,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding-bottom: 0rem;
 }
-.option1-k, .option2-k, .option3-k, .option4-k, .gold-option {
+.option1-k, .option2-k, .option3-k, .option4-k {
     height: 15rem;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     border-radius: 20px;
-    background: #E9F3F3;
+    background: #FCF5FF;
     display: flex;
     /* overflow: hidden; */
     flex-direction: column;
@@ -4684,11 +4621,8 @@ a {
     justify-content: center;
     width: 90%;
 }
-.gold-option {
-  background: #F0C945;
-}
 
-.option1-k p, .option2-k p, .option3-k p, .option4-k p, .gold-option p {
+.option1-k p, .option2-k p, .option3-k p, .option4-k p {
     font-weight: bold;
     font-size: 2.0rem;
     font-family: Roboto, sans-serif;
@@ -4696,7 +4630,7 @@ a {
     line-height: 1.05;
 }
 
-.option1-k a, .option2-k a, .option3-k a, .option4-k a, .gold-option a {
+.option1-k a, .option2-k a, .option3-k a, .option4-k a {
     text-decoration: none;
     background: #F4618C;
     border-radius: 10px;;
@@ -4804,7 +4738,7 @@ a {
   z-index: 2;
 }
 .dropdown-content-k.buy-konstantin {
-  top: 5.0rem;
+  top: -3.9rem;
 }
 .dropdown-content-k.try-konstantin {
   top: 3.9rem;
@@ -4840,7 +4774,7 @@ a {
 
 /* DROPDOWN FOR THE OPTION PRICES */
 .option1-k .dropdown-k a, .option2-k .dropdown-k a,
-.option3-k .dropdown-k a, .option4-k .dropdown-k a, .gold-option .dropdown-k a {
+.option3-k .dropdown-k a, .option4-k .dropdown-k a {
   max-width: 100%;
   /* margin-right: -1.0rem; */
   font-size: 1.5rem; 
@@ -4859,7 +4793,7 @@ a {
 
 @media (min-width: 30rem) {
   .dropdown-content-pink-white-k a{
-    width: 15.5rem;
+    width: 18.5rem;
   }
 }
 @media (max-width: 30rem) {
@@ -4891,8 +4825,8 @@ a {
   text-align: center; 
 }
 .video_holder video {
-  width: 420px;
-  height: 240px;
+  width: 235px;
+  height: 130px;
 }
 .container-k .container-k {
     padding: 1.5rem 2rem;
@@ -4909,7 +4843,7 @@ a {
       width: min(90%, 76rem);
     }
     .container-k {
-      /* padding: 2.5rem 7rem; */
+      padding: 2.5rem 7rem;
     }
   
     .container-k .container-k {
@@ -5077,3 +5011,4 @@ a {
   font-size: 2.2rem;
 }
 }
+

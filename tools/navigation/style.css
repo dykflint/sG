@@ -16,7 +16,7 @@ body {
 .main-header {
     width: 100%;
     background: white;
-	box-shadow: 0px 3px 4px 0px rgba(0,0,0,.4);
+	/* box-shadow: 0px 3px 4px 0px rgba(0,0,0,.4); */
     position: fixed;
 }
 .menu-wrap {

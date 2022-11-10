@@ -130,9 +130,11 @@
 
 @media (max-width: 30.0rem){
   .words {
-    width: 280px !important
+    min-width: 280px;
+    max-width: 280px;
   }
   .starting-box-konstantin {
-    width: 280px !important;
+    min-width: 280px;
+    max-width: 280px;
   }
 }

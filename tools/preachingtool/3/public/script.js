@@ -1,3 +1,9 @@
+// TODO: Buttons bigger 
+// TODO: Microphone Button in the middle 
+// TODO: Let the tool begin 
+// TODO: remove example when talking starts 
+// TODO: Randomize Triggers (v2)
+// TODO: Then switch places => let the user start the talking 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 Element.prototype.remove = function() {
   this.parentElement.removeChild(this);
@@ -224,3 +230,9 @@ function startPreaching(){
   function turnOnMicro(){
     recognition.start();
   }
+  // Key command to go to next trigger 
+  window.addEventListener("keydown", (event) => {
+    if(event.isComposing || event.keyCode === 39){
+      nextTrigger();
+    }
+  });

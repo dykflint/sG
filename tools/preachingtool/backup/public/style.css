@@ -30,21 +30,23 @@
     display: flex;
     flex-direction: row;
   }
-  .next-button, .delete-button, .mic-container {
+  .next-button, .delete-button, .mic-container, .tutorial-button {
     border: none;
     background-color: transparent;
     width: max-content;
     height: max-content;
   }
-  .next-button:hover, .delete-button:hover {
+  .next-button:hover, .delete-button:hover, .tutorial-button:hover {
     cursor: pointer; 
     transform: scale(1.05);
   }
-  .next-button img, .delete-button img, .mic-container img {
+  .next-button img, .delete-button img, .mic-container img, 
+  .tutorial-button img {
     width: 25px;
     height: 25px;
   }
-  .trigger-content, .next-button, .delete-button, .mic-container {
+  .trigger-content, .next-button, .delete-button, .mic-container, 
+  .tutorial-button {
     margin-right: 1.0rem;
   }
   .words {

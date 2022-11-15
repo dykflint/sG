@@ -1,3 +1,4 @@
+/* Based on the Easy Infinite Scroll by Milad, see: https://codepen.io/miladxdev */
 let slideIndex = 0;
 showSlides();
 

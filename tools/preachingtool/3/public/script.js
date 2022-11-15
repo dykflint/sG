@@ -1,9 +1,13 @@
-// TODO: Buttons bigger 
-// TODO: Microphone Button in the middle 
-// TODO: Let the tool begin 
-// TODO: remove example when talking starts 
+// TODO: Buttons bigger (DONE)
+// TODO: Microphone Button in the middle (move it to the right instead)
+// TODO: remove example when talking starts (DONE) 
 // TODO: Randomize Triggers (v2)
+// TODO: Let the tool begin 
 // TODO: Then switch places => let the user start the talking 
+// ! IDEA: put recognition("result"){} content inside two if statements 
+// ! One with the tool talking first and the other with the user talking first 
+// ! Use a counter for the if statements that you can attach to a "Switch 
+// ! Places" Button
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 Element.prototype.remove = function() {
   this.parentElement.removeChild(this);
@@ -135,12 +139,12 @@ function startPreaching(){
   // TODO: User input not to be deleted or as popup
   // This goes inside startTutorial() 
   let tutorial_counter = 0;
-  function tutorialExample(index){
-    p.innerText = example_preaching[index];
-    console.log(example_preaching[index]);
-    p = document.createElement('p');
-    words.appendChild(p);
-}
+//   function tutorialExample(index){
+//     p.innerText = example_preaching[index];
+//     console.log(example_preaching[index]);
+//     p = document.createElement('p');
+//     words.appendChild(p);
+// }
   let example_preaching = ["This is an example conversation.",
   "The tool will show you what an ideal example looks like.",
   "Feel free to talk along.", "Got it?"]
@@ -224,6 +228,11 @@ function startPreaching(){
       //   play_pause_counter++;
       // }
       recognition.start();
+      console.log(tutorial_counter);
+      if(tutorial_counter % 2 == 1){
+        deleteEverything();
+        tutorial_counter++;
+      }
     }
   });
   // Button to start the microphone 

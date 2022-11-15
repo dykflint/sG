@@ -44,12 +44,15 @@
   .next-button:hover, .delete-button:hover, .tutorial-button:hover, 
   .mic-container:hover {
     cursor: pointer; 
-    transform: scale(1.05);
+    transform: scale(1.1);
+  }
+  .mic-container {
+    margin-left: 80px;
   }
   .next-button img, .delete-button img, .mic-container img, 
   .tutorial-button img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
   .trigger-content, .next-button, .delete-button, .mic-container, 
   .tutorial-button {

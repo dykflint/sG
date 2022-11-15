@@ -1231,10 +1231,10 @@
     }
   
     .section-personal-hero .container {
-      padding-block: 10rem;
+      padding-block: 2rem;
     }
     .section-personal-hero img {
-      width: min(30vw, 60%);
+      width: min(30vw, 40%);
       pointer-events: none;
       z-index: 0;
     }
@@ -2324,10 +2324,10 @@
   }
 
   .section-personal-hero .container-k {
-    padding-block: 10rem;
+    padding-block: 2rem;
   }
   .section-personal-hero img {
-    width: min(30vw, 60%);
+    width: min(30vw, 40%);
     pointer-events: none;
     z-index: 0;
   }
@@ -2393,7 +2393,7 @@
   .btn-color-pink-k:active a{
     border-radius: 0.625rem !important;
     padding: 0.8rem 1.5rem !important;
-    font-weight: 500 !important;
+    font-weight: 700 !important;
     display: block;
     max-width: fit-content;
     align-self: center;
@@ -2405,7 +2405,12 @@
     margin: auto;
     min-width: max-content;
   }
-
+  .btn-color-pink-k.gotoallcourses {
+    margin-left: 1.0rem;
+  }
+  .btn.learnmoreabout {
+    font-weight: 700 !important;
+  }
   .flex-row-k {
     display: flex;
     flex-direction: row;
@@ -2529,10 +2534,10 @@
     flex-basis: 18.5rem;
     flex-shrink: 0;
     /* overflow: hidden; */
-    height: 13rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
-    margin: 3.0rem 0.75rem 5.5rem 0.75rem;
+    margin: 3.0rem 0.75rem 3.0rem 0.75rem;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
     /* border: 0.3rem solid #2A405C; */
   }
@@ -2565,7 +2570,7 @@
     transition: none;
   }
   .course-cards-title-k {
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
   }
 
   .course-listing-k .course-listing-extra-info-k .course-price-k:hover {
@@ -2634,7 +2639,7 @@
   }
 
   .course-card-text-k p {
-    margin: 1rem 0 !important;
+    margin: 2rem 0 !important;
   }
 
   .course-card-options-k {
@@ -2860,7 +2865,7 @@
 .dropbtn-k {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.5rem !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   display: block;
   max-width: fit-content;
   align-self: center;
@@ -2868,7 +2873,7 @@
   color: white !important;
   position: relative;
   /* margin: auto; */
-  margin-right: 1.0rem;
+  /* margin-right: 1.0rem; */
   min-width: max-content;
 }
 .course-card-text-k .dropdown-k .dropbtn-k {
@@ -3123,7 +3128,7 @@
         padding-block: 10rem;
       }
       .section-personal-hero img {
-        width: min(30vw, 60%);
+        width: min(30vw, 34%);
         pointer-events: none;
         z-index: 0;
       }
@@ -3242,7 +3247,7 @@
   .btn-color-pink-k:active a{
     border-radius: 0.625rem !important;
     padding: 0.8rem 1.5rem !important;
-    font-weight: 500 !important;
+    font-weight: 700 !important;
     display: block;
     max-width: fit-content;
     align-self: center;
@@ -3255,7 +3260,9 @@
     margin-top: 0.5rem;
     min-width: max-content;
   }
-
+  .btn.learnmoreabout {
+    font-weight: 700 !important;
+  }
   .flex-row-k {
     display: flex;
     flex-direction: column;
@@ -3412,7 +3419,7 @@
     transition: none;
   }
   .course-cards-title-k {
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
   }
 
   .course-listing-k .course-listing-extra-info-k .course-price-k:hover {
@@ -3706,7 +3713,7 @@
 .dropbtn-k {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.5rem !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   display: block;
   max-width: fit-content;
   align-self: center;
@@ -3970,7 +3977,7 @@
         padding-block: 10rem;
       }
       .section-personal-hero img {
-        width: min(30vw, 60%);
+        width: min(30vw, 40%);
         pointer-events: none;
         z-index: 0;
       }
@@ -4090,7 +4097,7 @@
   .btn-color-pink-k:active a{
     border-radius: 0.625rem !important;
     padding: 0.8rem 1.45rem !important;
-    font-weight: 500 !important;
+    font-weight: 700 !important;
     display: block;
     max-width: fit-content;
     align-self: center;
@@ -4103,7 +4110,9 @@
     margin-top: 0.5rem;
     min-width: max-content;
   }
-
+  .btn.learnmoreabout {
+    font-weight: 700 !important;
+  }
   .flex-row-k {
     display: flex;
     flex-direction: column;
@@ -4260,7 +4269,7 @@
     transition: none;
   }
   .course-cards-title-k {
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
   }
 
   .course-listing-k .course-listing-extra-info-k .course-price-k:hover {
@@ -4554,7 +4563,7 @@
 .dropbtn-k {
   border-radius: 0.625rem !important;
   padding: 0.8rem 1.5rem !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   display: block;
   max-width: fit-content;
   align-self: center;
@@ -4818,7 +4827,7 @@
         padding-block: 10rem;
       }
       .section-personal-hero img {
-        width: min(30vw, 60%);
+        width: min(30vw, 34%);
         pointer-events: none;
         z-index: 0;
       }

@@ -1,9 +1,7 @@
-// TODO: Buttons bigger (DONE)
-// TODO: Microphone Button in the middle (move it to the right instead)
-// TODO: remove example when talking starts (DONE) 
-// TODO: Randomize Triggers (v2)
-// TODO: Let the tool begin 
-// TODO: Then switch places => let the user start the talking 
+// TODO: 2 second delay after last correct answer and then automatically next 
+// TODO: Show the last preaching below the box 
+// TODO: Switch automatically (no button) - only after 10 each 
+// TODO: Show next answer below on button press 
 // ! IDEA: put recognition("result"){} content inside two if statements 
 // ! One with the tool talking first and the other with the user talking first 
 // ! Use a counter for the if statements that you can attach to a "Switch 
@@ -54,8 +52,15 @@ function toolAnswer(){
   p = document.createElement('p');
   words.appendChild(p)
 }
+function computerFirst(){
+  current_trigger = current_trigger.replace(/\n/g,"");
+  p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
+  current_trigger_index += 1;
+  p = document.createElement('p');
+  words.appendChild(p)
+}
 
-// START PREACHING 
+// ! START PREACHING 
 function startPreaching(){
   preaching_section.classList.remove("hide-konstantin");
   starting_box.classList.add("hide-konstantin");
@@ -68,13 +73,23 @@ function startPreaching(){
   recognition.lang = 'de-DE';
   
   // TRIGGERS AND ANSWERS 
-  // Remove triggers from HTML 
-  const triggers = ["bleiben (=ist geblieben) - to stay/to remain \n zu Hause (fixed expression) - at home", "Garten (m) - garden"];
-  const trigger_answers = ["Bist du zu Hause geblieben?", "Ich bin nicht zu Hause geblieben.", "Warum bist du nicht zu Hause geblieben?", "Weil ich nicht zu Hause geblieben bin."];
+  const triggers = ["bestrafen - to punish", "betrügen - to cheat",
+  "enttäuschen - to disappoint", "erklären - to explain","erzählen - to tell",
+  "erziehen - to educate","verlieren - to lose","zerstören - to destroy",
+  "gewinnen - to win","übertreiben - to exaggerate"];
+  // const trigger_answers = ["Bist du zu Hause geblieben?", "Ich bin nicht zu Hause geblieben.", "Warum bist du nicht zu Hause geblieben?", "Weil ich nicht zu Hause geblieben bin."];
 
   let allTriggerAnswersJSON = `[
-    {"bleiben (=ist geblieben) - to stay/to remain  zu Hause (fixed expression) - at home" : ["Bist du zu Hause geblieben?","Ich bin nicht zu Hause geblieben.", "Warum bist du nicht zu Hause geblieben?", "Weil ich nicht zu Hause geblieben bin."],
-    "Garten (m) - garden" : ["Kaufst du einen Garten?", "Ich kaufe einen Garten.", "Kaufst du einen großen Garten?", "Ich kaufe einen großen Garten."]}
+    {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."],
+    "betrügen - to cheat" : ["Betrügst du gern?", "Ich betrüge nicht gern.", "Warum betrügst du nicht gern?", "Weil ich einfach nicht gern betrüge."],
+    "enttäuschen - to disappoint" : ["Enttäuschst du gern?", "Ich enttäusche nicht gern.", "Warum enttäuschst du nicht gern?", "Weil ich einfach nicht gern enttäusche."],
+    "erklären - to explain" : ["Erklärst du gern?", "Ich erkläre nicht gern.", "Warum erklärst du nicht gern?", "Weil ich einfach nicht gern erkläre."],
+    "erzählen - to tell" : ["Erzählst du gern?", "Ich erzähle nicht gern.", "Warum erzählst du nicht gern?", "Weil ich einfach nicht gern erzähle."],
+    "erziehen - to educate" : ["Erziehst du gern?", "Ich erziehe nicht gern.", "Warum erziehst du nicht gern?", "Weil ich einfach nicht gern erziehe."],
+    "verlieren - to lose" : ["Verlierst du gern?", "Ich verliere nicht gern.", "Warum verlierst du nicht gern?", "Weil ich einfach nicht gern verliere."],
+    "zerstören - to destroy" : ["Zerstörst du gern?", "Ich zerstöre nicht gern.", "Warum zerstörst du nicht gern?", "Weil ich einfach nicht gern zerstöre."],
+    "gewinnen - to win" : ["Gewinnst du gern?", "Ich gewinne nicht gern.", "Warum gewinnst du nicht gern?", "Weil ich einfach nicht gern gewinne."],
+    "übertreiben - to exaggerate" : ["Übertreibst du gern?", "Ich übertreibe nicht gern.", "Warum übertreibst du nicht gern?", "Weil ich einfach nicht gern übertreibe."]}
 ]`;
   allTriggerAnswersData = JSON.parse(allTriggerAnswersJSON);
   // console.log(allTriggerAnswersData[0][0][0].toLowerCase().replace(/[.,?!;:]/g,"") == "bist du zuhause geblieben");
@@ -109,6 +124,7 @@ function startPreaching(){
   let current_trigger_index = 0;
   let next_index = 0;
   let paragraphs = words.getElementsByTagName("p");
+  // ! NEXT TRIGGER FUNCTION
   function nextTrigger() {
     if (next_index + 1 < triggers.length){
       next_index++; 
@@ -122,9 +138,13 @@ function startPreaching(){
     deleteEverything();
     correct_answers_div.innerText = "";
     triggerFocus(words);
-    console.log(next_index);
+    computerSpeakingFirst = true;
+    if(computerSpeakingFirst && switchPlaces % 2 == 0){
+      computerFirst();
+      computerSpeakingFirst = false;
+    }
   }
-  
+  // ! DELETE EVERYTHING FUNCTION 
   function deleteEverything() {
     for(i=paragraphs.length - 2; i > 0; i--){
       if(i >= 0){
@@ -133,21 +153,23 @@ function startPreaching(){
     }
     paragraphs[0].innerText = "";
     current_trigger_index = 0;
+    computerSpeakingFirst = true;
+    if(computerSpeakingFirst && switchPlaces % 2 == 0 && 
+      tutorial_counter != 0){
+      computerFirst();
+      computerSpeakingFirst = false;
+    }
+  }
+  function otherPerson(){
+    switchPlaces++; 
+    console.log(switchPlaces);
+    deleteEverything();
   }
   // ! Tutorial Button 
-  // TODO: Show it at the beginning 
-  // TODO: User input not to be deleted or as popup
-  // This goes inside startTutorial() 
   let tutorial_counter = 0;
-//   function tutorialExample(index){
-//     p.innerText = example_preaching[index];
-//     console.log(example_preaching[index]);
-//     p = document.createElement('p');
-//     words.appendChild(p);
-// }
-  let example_preaching = ["This is an example conversation.",
-  "The tool will show you what an ideal example looks like.",
-  "Feel free to talk along.", "Got it?"]
+  let example_preaching = ["Bestrafst du gern?",
+  "Ich bestrafe nicht gern.",
+  "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."]
   function startTutorial(){
     if(tutorial_counter % 2 == 0){
       deleteEverything();
@@ -166,37 +188,44 @@ function startPreaching(){
     }
   }
 
-  
+  let switchPlaces = 0;
+  let computerSpeakingFirst = true;
   // recognition.start();
-  recognition.addEventListener('result', e => {
-    // Reset correct answer div 
-    correct_answers_div.innerText = "";
 
-    audio_img.src = "public/img/speaking_microphone.png"
-    const transcript = Array.from(e.results)
-    .map(result => result[0])
-    .map(result => result.transcript)
-    .join('');
-    
-    const poopScript = transcript.replace(/Baum|poo|shit|dump/gi, '💩');
-    const deleteScript = transcript.match("löschen");
-    if (deleteScript == "löschen" && counter == 0) {
-      deleteEverything();
-      $('.words').children().last().remove();
-    }
-    
-    if(paragraphs.length > 1){
-      paragraphs[paragraphs.length - 1].style.color = "black";
-    }
-    p.textContent = poopScript;
-    if (e.results[0].isFinal) {
-      p = document.createElement('p');
-      words.appendChild(p);
-      // Remove special characters from current_trigger 
-      current_trigger = current_trigger.replace(/\n/g,"");
-      if(paragraphs.length > 1) {
-        if(paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"") == allTriggerAnswersData[0][current_trigger][current_trigger_index].toLowerCase().replace(/[.,?!;:]/g,"")){
-          paragraphs[paragraphs.length - 2].style.color = "green";
+  recognition.addEventListener('result', e => {
+    if (switchPlaces % 2 == 0){
+      // Reset correct answer div 
+      correct_answers_div.innerText = "";
+      
+      audio_img.src = "public/img/speaking_microphone.png"
+      const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('');
+      
+      const poopScript = transcript.replace(/Baum|poo|shit|dump/gi, '💩');
+      const deleteScript = transcript.match("löschen");
+      if (deleteScript == "löschen" && counter == 0) {
+        deleteEverything();
+        $('.words').children().last().remove();
+      }
+      
+      if(paragraphs.length > 1){
+        paragraphs[paragraphs.length - 1].style.color = "black";
+      }
+      p.textContent = poopScript;
+      // Here is where stuff is being written 
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+        // Remove special characters from current_trigger 
+        current_trigger = current_trigger.replace(/\n/g,"");
+        if(paragraphs.length > 1) {
+          if(paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"") == allTriggerAnswersData[0][current_trigger][current_trigger_index].toLowerCase().replace(/[.,?!;:]/g,"")){
+            paragraphs[paragraphs.length - 2].style.color = "green";
+            if(current_trigger_index == 3){
+              correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
+            }
           if(allTriggerAnswersData[0][current_trigger][current_trigger_index + 1]){
             sleepFor(2, toolAnswer);
           }
@@ -207,37 +236,89 @@ function startPreaching(){
         }
       }
     }
-    if(paragraphs.length > 4){
+    if(paragraphs.length > 5){
       paragraphs[0].remove();
     }
     recognition.addEventListener('end', () => {
       audio_img.src = "public/img/not_speaking_microphone.png"
     });
+  } else {
+// Reset correct answer div 
+      correct_answers_div.innerText = "";
+      
+      audio_img.src = "public/img/speaking_microphone.png"
+      const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('');
+      
+      const poopScript = transcript.replace(/Baum|poo|shit|dump/gi, '💩');
+      const deleteScript = transcript.match("löschen");
+      if (deleteScript == "löschen" && counter == 0) {
+        deleteEverything();
+        $('.words').children().last().remove();
+      }
+      
+      if(paragraphs.length > 1){
+        paragraphs[paragraphs.length - 1].style.color = "black";
+      }
+      p.textContent = poopScript;
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+        // Remove special characters from current_trigger 
+        current_trigger = current_trigger.replace(/\n/g,"");
+        if(paragraphs.length > 1) {
+          if(paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"") == allTriggerAnswersData[0][current_trigger][current_trigger_index].toLowerCase().replace(/[.,?!;:]/g,"")){
+            paragraphs[paragraphs.length - 2].style.color = "green";
+          if(allTriggerAnswersData[0][current_trigger][current_trigger_index + 1]){
+            sleepFor(2, toolAnswer);
+          }
+        }
+        else {
+          paragraphs[paragraphs.length - 2].style.color = "red";
+          correct_answers_div.innerText = "Correct Answer:" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
+        }
+      }
+    }
+    if(paragraphs.length > 5){
+      paragraphs[0].remove();
+    }
+    recognition.addEventListener('end', () => {
+      audio_img.src = "public/img/not_speaking_microphone.png"
+    });
+  }
   });
   // Key command to pause and start the audio 
   window.addEventListener("keydown", (event) => {
     if(event.isComposing || event.keyCode === 32){
-      // if (play_pause_counter % 2 == 0){
-      //   recognition.start();
-      //   console.log("Speech started");
-      //   play_pause_counter++;
-      // }
-      // else {
-      //   recognition.stop();
-      //   console.log("Speech stopped");
-      //   play_pause_counter++;
-      // }
       recognition.start();
       console.log(tutorial_counter);
       if(tutorial_counter % 2 == 1){
         deleteEverything();
         tutorial_counter++;
       }
+      if (computerSpeakingFirst && switchPlaces % 2 == 0) {
+        computerFirst();
+        computerSpeakingFirst = false;
+      } else {
+        // deleteEverything();
+      }
     }
   });
   // Button to start the microphone 
   function turnOnMicro(){
     recognition.start();
+    if(tutorial_counter % 2 == 1){
+      deleteEverything();
+      tutorial_counter++;
+    }
+    if (computerSpeakingFirst && switchPlaces % 2 == 0) {
+      computerFirst();
+      computerSpeakingFirst = false;
+    } else {
+      // deleteEverything();
+    }
   }
   // Key command to go to next trigger 
   window.addEventListener("keydown", (event) => {

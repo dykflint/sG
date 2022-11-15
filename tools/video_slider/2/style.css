@@ -7,7 +7,7 @@
   }
   
   body {
-    font-family: "@Microsoft YaHei Light";
+    font-family: "Roboto";
     background: #fafafa;
     display: flex;
     justify-content: center;
@@ -46,9 +46,9 @@
     padding: 20px;
     color: white;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 72px;
     border-radius: 0 8px 8px 0;
-    background: rgba(173, 216, 230, 0.1);
+    background: #F4628C;
     user-select: none;
   }
   .next {
@@ -57,7 +57,7 @@
   }
   .prev:hover,
   .next:hover {
-    background-color: rgba(173, 216, 230, 0.3);
+    background-color: #F4628C;
   }
   
   /* Caption text */
@@ -78,7 +78,7 @@
   /* Number text (1/3 etc) */
   .number {
     color: #f2f2f2;
-    font-size: 16px;
+    font-size: 32px;
     background-color: rgba(173, 216, 230, 0.15);
     backdrop-filter: blur(6px);
     border-radius: 10px;

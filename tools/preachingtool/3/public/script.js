@@ -2,10 +2,6 @@
 // TODO: Show the last preaching below the box 
 // TODO: Switch automatically (no button) - only after 10 each 
 // TODO: Show next answer below on button press 
-// ! IDEA: put recognition("result"){} content inside two if statements 
-// ! One with the tool talking first and the other with the user talking first 
-// ! Use a counter for the if statements that you can attach to a "Switch 
-// ! Places" Button
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 Element.prototype.remove = function() {
   this.parentElement.removeChild(this);
@@ -25,6 +21,7 @@ const body = document.querySelector("body");
 const audio_img = document.getElementById("audio-img");
 const trigger_content = document.querySelector(".trigger-content");
 const correct_answers_div = document.querySelector(".correct-answers"); 
+const previous_answers_div = document.querySelector(".previous-answers");
 const preaching_section = document.querySelector(".preaching-container");
 const starting_box = document.querySelector(".starting-box-konstantin");
 const counter = 0;
@@ -54,6 +51,7 @@ function toolAnswer(){
 }
 function computerFirst(){
   current_trigger = current_trigger.replace(/\n/g,"");
+  console.log("current trigger: "+current_trigger);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
   current_trigger_index += 1;
   p = document.createElement('p');
@@ -135,14 +133,15 @@ function startPreaching(){
     }
     current_trigger = triggers[next_index];
     trigger_content.innerText = current_trigger;
+    console.log("Before Delete Call in Next");
     deleteEverything();
     correct_answers_div.innerText = "";
     triggerFocus(words);
     computerSpeakingFirst = true;
-    if(computerSpeakingFirst && switchPlaces % 2 == 0){
-      computerFirst();
-      computerSpeakingFirst = false;
-    }
+    // if(computerSpeakingFirst && switchPlaces % 2 == 0){
+    //   computerFirst();
+    //   computerSpeakingFirst = false;
+    // }
   }
   // ! DELETE EVERYTHING FUNCTION 
   function deleteEverything() {
@@ -156,6 +155,7 @@ function startPreaching(){
     computerSpeakingFirst = true;
     if(computerSpeakingFirst && switchPlaces % 2 == 0 && 
       tutorial_counter != 0){
+      console.log("Within Delete Computer Call");
       computerFirst();
       computerSpeakingFirst = false;
     }
@@ -194,6 +194,7 @@ function startPreaching(){
 
   recognition.addEventListener('result', e => {
     if (switchPlaces % 2 == 0){
+      // TOOL SPEAKS FIRST 
       // Reset correct answer div 
       correct_answers_div.innerText = "";
       
@@ -229,6 +230,16 @@ function startPreaching(){
           if(allTriggerAnswersData[0][current_trigger][current_trigger_index + 1]){
             sleepFor(2, toolAnswer);
           }
+          if(current_trigger_index == 3){
+            console.log("Last Trigger Answer");
+            sleepFor(2, nextTrigger);
+            previous_answers_div.innerHTML = "";
+            for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
+              p = document.createElement('p');
+              p.innerText = allTriggerAnswersData[0][current_trigger][i];
+              previous_answers_div.appendChild(p);
+            }
+          }
         }
         else {
           paragraphs[paragraphs.length - 2].style.color = "red";
@@ -243,6 +254,7 @@ function startPreaching(){
       audio_img.src = "public/img/not_speaking_microphone.png"
     });
   } else {
+    // STUDENT SPEAKS FIRST
 // Reset correct answer div 
       correct_answers_div.innerText = "";
       

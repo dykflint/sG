@@ -22,11 +22,15 @@
     flex-direction: column;
     position: relative;
   }
-  .content, .triggers, .correct-answers {
+  .content, .triggers, .correct-answers, .previous-answers {
     margin: auto;
     font-size: 12px;
     max-width: 300px;
+    min-width: 300px;
     text-align: justify;
+  }
+  .previous-answers {
+    font-size: 20px;
   }
   .triggers {
     font-weight: bold;

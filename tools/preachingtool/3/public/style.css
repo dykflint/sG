@@ -40,14 +40,14 @@
     max-height: 50px;
   }
   .next-button, .delete-button, .mic-container, .tutorial-button, 
-  .switchPlaces-button {
+  .switchPlaces-button, .reset-button {
     border: none;
     background-color: transparent;
     width: max-content;
     height: max-content;
   }
   .next-button:hover, .delete-button:hover, .tutorial-button:hover, 
-  .switchPlaces-button:hover, .mic-container:hover {
+  .switchPlaces-button:hover, .mic-container:hover, .reset-button:hover {
     cursor: pointer; 
     transform: scale(1.1);
   }
@@ -55,7 +55,7 @@
     margin-left: 30px;
   }
   .next-button img, .delete-button img, .mic-container img, 
-  .tutorial-button img, .switchPlaces-button img {
+  .tutorial-button img, .switchPlaces-button img, .reset-button img {
     width: 40px;
     height: 40px;
   }
@@ -78,7 +78,9 @@
     position: relative;
     line-height: 2rem;
   }
-  
+  .words img {
+    width: 100%;
+  }
   p {
     margin: 0 0 1rem;
   }

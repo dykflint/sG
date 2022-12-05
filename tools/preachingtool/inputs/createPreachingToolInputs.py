@@ -39,11 +39,12 @@ with open(triggers+"Variable", "a") as out:
 
 with open(content+"Variable", "a") as out:
     out.write("let allTriggerAnswersJSON = `[\n")
+    out.write("{")
     for i in range(len(triggersArr)):
         if i < len(triggersArr) - 1:
-            out.write("{\'"+triggersArr[i] + "\' : " + str(contentArr[i]) + ",\n")
+            out.write("\""+triggersArr[i] + "\" : " + str(contentArr[i]) + ",\n")
         else: 
-            out.write("{\'"+triggersArr[i] + "\' : " + str(contentArr[i]) + "}\n")
+            out.write("\""+triggersArr[i] + "\" : " + str(contentArr[i]) + "}\n")
             out.write("]`;")
 # Create the array for the Normal Difficulty whose sentences are divided in two
 # normal_sentences_arr_tmp = []

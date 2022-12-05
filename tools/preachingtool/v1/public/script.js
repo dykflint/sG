@@ -96,12 +96,12 @@ function finishGame(){
   recognition.lang = 'de-DE';
   
   // TRIGGERS AND ANSWERS 
-//   const triggers = ["bestrafen - to punish", "betrügen - to cheat"];
-
+  // const triggers = ["bestrafen - to punish", "betrügen - to cheat"];
 //   let allTriggerAnswersJSON = `[
 //     {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."],
 //     "betrügen - to cheat" : ["Betrügst du gern?", "Ich betrüge nicht gern.", "Warum betrügst du nicht gern?", "Weil ich einfach nicht gern betrüge."]}
 // ]`;
+
   allTriggerAnswersData = JSON.parse(allTriggerAnswersJSON);
   trigger_content.innerText = triggers[0];
   
@@ -268,13 +268,13 @@ function finishGame(){
             console.log("I am about to call the timer nextTrigger");
             sleepFor(2, nextTrigger);
             console.log("Was it called before?");
-            previous_answers_div.innerHTML = "";
-            for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
-              p = document.createElement('p');
-              p.innerText = allTriggerAnswersData[0][current_trigger][i];
-              previous_answers_div.appendChild(p);
-              p = document.createElement('p');
-            }
+            // previous_answers_div.innerHTML = "";
+            // for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
+            //   p = document.createElement('p');
+            //   p.innerText = allTriggerAnswersData[0][current_trigger][i];
+            //   previous_answers_div.appendChild(p);
+            //   p = document.createElement('p');
+            // }
           }
         }
         else {
@@ -336,16 +336,16 @@ function finishGame(){
             } else {
               sleepFor(3, nextTrigger);
             }
-            previous_answers_div.innerHTML = "";
-              sleepFor(2, () => {
-                for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
-                  p = document.createElement('p');
-                  p.innerText = allTriggerAnswersData[0][current_trigger][i];
-                  previous_answers_div.appendChild(p);
-                  p = document.createElement('p');
-                  words.appendChild(p);
-                }
-              })
+            // previous_answers_div.innerHTML = "";
+            //   sleepFor(2, () => {
+            //     for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
+            //       p = document.createElement('p');
+            //       p.innerText = allTriggerAnswersData[0][current_trigger][i];
+            //       previous_answers_div.appendChild(p);
+            //       p = document.createElement('p');
+            //       words.appendChild(p);
+            //     }
+              // })
           }
         }
         else {

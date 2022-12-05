@@ -31,9 +31,9 @@
   }
    .correct-answers {
     margin: auto;
-    font-size: 15px;
-    max-width: 100%;
-    min-width: 100%;
+    font-size: 20px;
+    max-width: 90%;
+    min-width: 90%;
     text-align: justify;
   }
   .previous-answers {
@@ -146,7 +146,7 @@
     border-color: transparent #efe4e4;
   }
   /* COVER */ 
-  .starting-box-konstantin {
+  .starting-box-konstantin, .finish-screen-konstantin {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,18 +154,19 @@
     font-weight: 500;
     font-size: 2.0rem;
     margin: auto;
-    padding: 2.0rem 1.2rem 1.2rem 1.2rem;
+    margin-top: 35px;
+    padding: 25px;
     /* width: 300px; */
     width: 90%;
     box-shadow: 0px 0px 20px #EBEBEB;
     border: 1px solid #EBEBEB;
     min-height: 200px;
     color: #F4628C;
-    border-radius: 10px 10px 10px 10px;  
+    border-radius: 25px;  
     text-align: center;
   }
 
-  .start-preaching-button-konstantin{
+  .start-preaching-button-konstantin, .restart-preaching-button-konstantin{
     font-weight: 500;
     border: none;
     color: white;
@@ -179,7 +180,11 @@
     /* margin-bottom: 1.2rem; */
     background-color: #F4628C;
   }
-  .start-preaching-button-konstantin:hover {
+  .finish-screen-konstantin p {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .start-preaching-button-konstantin:hover, .restart-preaching-button-konstantin:hover {
     cursor: pointer;
     transform: scale(1.05);
   }

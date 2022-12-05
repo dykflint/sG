@@ -26,7 +26,8 @@ const starting_box = document.querySelector(".starting-box-konstantin");
 const mic_container = document.querySelector(".mic-container");
 const tutorialContainer = document.querySelector(".tutorial-container");
 const navigationContainer = document.querySelector(".navigation");
-const triggerTutorialContaienr = document.querySelector(".triggers");
+const triggerTutorialContainer = document.querySelector(".triggers");
+const finishBox = document.querySelector(".finish-screen-konstantin");
 const counter = 0;
 let play_pause_counter = 0;
 // ! DELAY FUNCTION
@@ -82,10 +83,11 @@ function startPreaching(){
 let gameIsFinished = true;
 function finishGame(){
   recognition.stop();
-  words.innerHTML = "<img src='https://www.filepicker.io/api/file/Qf8Um3rTJihrNb0j2bCg'>";
-  words.style.background = "#FFECE2";
-  triggerTutorialContaienr.classList.add("hide-konstantin");
+  // words.innerHTML = "<img src='https://www.filepicker.io/api/file/Qf8Um3rTJihrNb0j2bCg'>";
+  // words.style.background = "#FFECE2";
+  triggerTutorialContainer.classList.add("hide-konstantin");
   navigationContainer.classList.add("hide-konstantin");
+  finishBox.classList.remove("hide-konstantin");
   correct_answers_div.innerText = ""
   gameIsFinished = true;
 }
@@ -230,7 +232,7 @@ function finishGame(){
       // Reset correct answer div 
       correct_answers_div.innerText = "";
       // MIC ON
-      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
+      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ";
       const transcript = Array.from(e.results)
       .map(result => result[0])
       .map(result => result.transcript)
@@ -279,7 +281,7 @@ function finishGame(){
         }
         else {
           paragraphs[paragraphs.length - 2].style.color = "red";
-          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct your mistakes: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
+          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
         }
       }
     }
@@ -350,7 +352,7 @@ function finishGame(){
         }
         else {
           paragraphs[paragraphs.length - 2].style.color = "red";
-          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct your mistakes: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
+          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
         }
       }
     }
@@ -368,6 +370,7 @@ function finishGame(){
     if(event.isComposing || event.keyCode === 13 && 
       (event.ctrlKey ||event.metaKey) && !gameIsFinished){
       recognition.start();
+      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
       // console.log(tutorial_counter);
       // if(tutorial_counter % 2 == 1 && test){
       //   deleteEverything();
@@ -384,6 +387,7 @@ function finishGame(){
   // Button to start the microphone 
   function turnOnMicro(){
     recognition.start();
+    audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
     // if(tutorial_counter % 2 == 1 && test){
     //   deleteEverything();
     //   tutorial_counter++;

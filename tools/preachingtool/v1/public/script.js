@@ -268,7 +268,7 @@ function finishGame(){
           if(current_trigger_index == 3){
             // console.log("Last Trigger Answer");
             console.log("I am about to call the timer nextTrigger");
-            sleepFor(2, nextTrigger);
+            sleepFor(3, nextTrigger);
             console.log("Was it called before?");
             // previous_answers_div.innerHTML = "";
             // for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){

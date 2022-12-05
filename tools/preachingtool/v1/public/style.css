@@ -21,14 +21,17 @@
     margin: 0;
     padding: 0;
   } */
+  .preaching-section-konstantin {
+    position: relative;
+  }
   .preaching-container {
     display: flex;
     flex-direction: column;
     position: relative;
   }
-  .content, .triggers, .correct-answers, .previous-answers {
+   .correct-answers {
     margin: auto;
-    font-size: 12px;
+    font-size: 15px;
     max-width: 300px;
     min-width: 300px;
     text-align: justify;
@@ -40,44 +43,82 @@
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    min-height: 50px;
-    max-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
   }
-  .next-button, .delete-button, .mic-container, .tutorial-button, 
-  .switchPlaces-button, .reset-button {
+  .trigger-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    background: #F4628C;
+    color: white;
+    padding: 0 15px;
+    min-height: 30px;
+    border-radius: 25px;
+    font-size: 15px;
+  }
+  .tutorial-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    min-height: 200px;
+    min-width: max-content;
+    /* overflow: hidden; */
+    background-color: #FFECE2;
+    border-radius: 25px;
+    padding: 25px;
+    top: 20%;
+    left: 33%;
+  }
+  .tutorial-container p {
+    margin: 0 0 1rem;
+    width: 200px;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .next-button, .mic-container, .tutorial-button {
     border: none;
     background-color: transparent;
     width: max-content;
     height: max-content;
   }
-  .next-button:hover, .delete-button:hover, .tutorial-button:hover, 
-  .switchPlaces-button:hover, .mic-container:hover, .reset-button:hover {
+  .next-button:hover, .tutorial-button:hover, .mic-container:hover{
     cursor: pointer; 
     transform: scale(1.1);
   }
   .mic-container {
-    margin-left: 30px;
+    margin-left: 69px;
+    margin-right: 20px;
   }
-  .next-button img, .delete-button img, .mic-container img, 
-  .tutorial-button img, .switchPlaces-button img, .reset-button img {
-    width: 40px;
-    height: 40px;
+  .mic-container img, .next-button img {
+    width: 60px;
+    height: 60px;
   }
-  .trigger-content, .next-button, .delete-button, .mic-container, 
-  .tutorial-button {
-    margin-right: 1.0rem;
+  .tutorial-button img {
+    width: 30px;
+    height: 30px;
   }
   .words {
     max-width: 300px;
     min-width: 300px;
     min-height: 150px;
     margin: 20px auto;
-    background: #FFECE2;
-    border-radius: 5px;
-    border: 3px solid black;
-    /* box-shadow: 10px 10px 0 rgba(0,0,0,0.1); */
-    padding: 1rem 2rem 1rem 1rem;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#BCE4DA), color-stop(4%, #FFECE2)) 0 4px;
+    background: white;
+    border-radius: 25px;
+    /* border: 1px solid #EBEBEB; */
+    box-shadow: 0px 0px 20px #EBEBEB;
+    border: 1px solid #EBEBEB;
+    /* padding: 1rem 2rem 1rem 1rem; */
+    padding: 25px;
     background-size: 100% 3rem;
     position: relative;
     line-height: 2rem;
@@ -85,9 +126,9 @@
   .words img {
     width: 100%;
   }
-  p {
-    /* margin: 0 0 1rem !important; */
-    margin: 0.0rem !important;
+  .words p {
+    margin: 0 0 1rem !important;
+    /* margin: 0.0rem !important; */
   }
   
   .words:before {
@@ -104,20 +145,19 @@
   .starting-box-konstantin {
     display: flex;
     flex-direction: column;
-    background-color: #FFECE2;
+    justify-content: center;
+    background-color: white;
     font-weight: 500;
     font-size: 2.0rem;
     margin: auto;
     padding: 2.0rem 1.2rem 1.2rem 1.2rem;
     width: 300px;
-    /* max-width: 500px; */
+    box-shadow: 0px 0px 20px #EBEBEB;
+    border: 1px solid #EBEBEB;
     min-height: 200px;
-    color: #8F8F8F;
+    color: #F4628C;
     border-radius: 10px 10px 10px 10px;  
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .start-preaching-button-konstantin{
@@ -125,21 +165,25 @@
     border: none;
     color: white;
     height: 10%;
-    width: 12.0rem;
+    width: 75%;
     margin: 8px;
     padding: 12px;
     font-size: 2.0rem;
-    border-radius: 0.4rem;
+    border-radius: 1.5rem;
+    margin-top: 2.0rem;
     margin-bottom: 1.2rem;
-    /* box-shadow: grey 5px 8px 5px; */
+    background-color: #F4628C;
   }
-
-  .start-preaching-button-konstantin {
-    background-color: #F1A246;
+  .start-preaching-button-konstantin:hover {
+    cursor: pointer;
+    transform: scale(1.05);
   }
 
   .hide-konstantin {
     display:none;
+  }
+  .blur-konstantin {
+    filter: blur(5px);
   }
 /* } */
 

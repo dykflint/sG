@@ -24,6 +24,9 @@ const previous_answers_div = document.querySelector(".previous-answers");
 const preaching_section = document.querySelector(".preaching-container");
 const starting_box = document.querySelector(".starting-box-konstantin");
 const mic_container = document.querySelector(".mic-container");
+const tutorialContainer = document.querySelector(".tutorial-container");
+const navigationContainer = document.querySelector(".navigation");
+const triggerTutorialContaienr = document.querySelector(".triggers");
 const counter = 0;
 let play_pause_counter = 0;
 // ! DELAY FUNCTION
@@ -41,23 +44,6 @@ async function sleepFor(seconds, whattodo, index) {
 
 // ! RESET GAME 
 function resetGame(){
-  // preaching_section.classList.add("hide-konstantin");
-  // starting_box.classList.remove("hide-konstantin");
-  // recognition.stop();
-  // tutorial_counter = 0;
-  // switchPlaces = 0;
-  // current_trigger = triggers[0];
-  // trigger_content.innerText = triggers[0];
-  // computerSpeakingFirst = true;
-  // test = true; 
-  // words.innerHTML = "";
-  // p = document.createElement('p');
-  // words.appendChild(p);
-  // previous_answers_div.innerHTML = "";
-  // words.style.background = "-webkit-gradient(linear, 0 0, 0 100%, from(#BCE4DA), color-stop(4%,#FFECE2)) 0 4px";
-  // words.style.backgroundSize = "100% 3rem";
-
-  // Reload the page instead 
   location.reload();
 }
 // Let computer give its answer function 
@@ -75,8 +61,6 @@ function toolAnswer(){
 function computerFirst(){
   console.log("Computer writes");
   current_trigger = current_trigger.replace(/\n/g,"");
-  // console.log("current trigger: "+current_trigger);
-  // console.log(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
   p = document.createElement('p');
   words.appendChild(p);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
@@ -92,7 +76,7 @@ function startPreaching(){
   trigger_content.classList.remove("hide-konstantin");
   mic_container.classList.remove("hide-konstantin");
   gameIsFinished = false;
-  startTutorial();
+  // startTutorial();
 }
 // ! FINISHED PREACHING 
 let gameIsFinished = true;
@@ -100,8 +84,8 @@ function finishGame(){
   recognition.stop();
   words.innerHTML = "<img src='https://www.filepicker.io/api/file/Qf8Um3rTJihrNb0j2bCg'>";
   words.style.background = "#FFECE2";
-  trigger_content.classList.add("hide-konstantin");
-  mic_container.classList.add("hide-konstantin");
+  triggerTutorialContaienr.classList.add("hide-konstantin");
+  navigationContainer.classList.add("hide-konstantin");
   correct_answers_div.innerText = ""
   gameIsFinished = true;
 }
@@ -112,25 +96,13 @@ function finishGame(){
   recognition.lang = 'de-DE';
   
   // TRIGGERS AND ANSWERS 
-  // const triggers = ["bestrafen - to punish", "betrügen - to cheat",
-  // "enttäuschen - to disappoint", "erklären - to explain","erzählen - to tell",
-  // "erziehen - to educate","verlieren - to lose","zerstören - to destroy",
-  // "gewinnen - to win","übertreiben - to exaggerate"];
-  const triggers = ["bestrafen - to punish", "betrügen - to cheat"];
-  // const triggers = ["bestrafen - to punish"];
-  // const trigger_answers = ["Bist du zu Hause geblieben?", "Ich bin nicht zu Hause geblieben.", "Warum bist du nicht zu Hause geblieben?", "Weil ich nicht zu Hause geblieben bin."];
+//   const triggers = ["bestrafen - to punish", "betrügen - to cheat"];
 
-  let allTriggerAnswersJSON = `[
-    {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."],
-    "betrügen - to cheat" : ["Betrügst du gern?", "Ich betrüge nicht gern.", "Warum betrügst du nicht gern?", "Weil ich einfach nicht gern betrüge."]}
-]`;
-  // let allTriggerAnswersJSON = `[
-  //   {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."]}
-  // ]`;
+//   let allTriggerAnswersJSON = `[
+//     {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."],
+//     "betrügen - to cheat" : ["Betrügst du gern?", "Ich betrüge nicht gern.", "Warum betrügst du nicht gern?", "Weil ich einfach nicht gern betrüge."]}
+// ]`;
   allTriggerAnswersData = JSON.parse(allTriggerAnswersJSON);
-  // console.log(allTriggerAnswersData[0][0][0].toLowerCase().replace(/[.,?!;:]/g,"") == "bist du zuhause geblieben");
-  // console.log(allTriggerAnswersData[0]);
-  // Initialize the shown trigger 
   trigger_content.innerText = triggers[0];
   
   let p = document.createElement('p');
@@ -176,7 +148,7 @@ function finishGame(){
     trigger_content.innerText = current_trigger;
     deleteEverything();
     correct_answers_div.innerText = "";
-    triggerFocus(words);
+    // triggerFocus(words);
     computerSpeakingFirst = true;
   }
   // ! DELETE EVERYTHING FUNCTION 
@@ -203,8 +175,7 @@ function finishGame(){
     current_trigger_index = 0;
     computerSpeakingFirst = true;
     // console.log("Before the if statement in DELETE");
-    if(computerSpeakingFirst && 
-      tutorial_counter != 0 && switchPlaces % 2 == 0){
+    if(computerSpeakingFirst && switchPlaces % 2 == 0){
       console.log("Is the computerFirst function being called?");
       computerFirst();
       computerSpeakingFirst = false;
@@ -222,25 +193,29 @@ function finishGame(){
   "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."]
   function startTutorial(){
     if(tutorial_counter % 2 == 0){
-      deleteEverything();
+      // deleteEverything();
       if(switchPlaces % 2 == 0){
-        console.log("Should remove");
-        words.innerHTML = "";
+        tutorialContainer.innerHTML = "";
         p = document.createElement('p');
-        words.appendChild(p);
+        tutorialContainer.appendChild(p);
       }
       for(i = 0; i < example_preaching.length; i++){
-        // sleepFor(2, tutorialExample, i);
         p.innerText = example_preaching[i];
-        // console.log(example_preaching[i]);
         p = document.createElement('p');
-        words.appendChild(p);
+        tutorialContainer.appendChild(p);
       }
+      tutorialContainer.classList.remove("hide-konstantin")
+      words.classList.add("blur-konstantin");
+      navigationContainer.classList.add("blur-konstantin");
       tutorial_counter++;
     }
     else {
-      deleteEverything();
+      // deleteEverything();
+      tutorialContainer.innerHTML = "";
+      words.classList.remove("blur-konstantin");
+      navigationContainer.classList.remove("blur-konstantin");
       tutorial_counter++;
+      tutorialContainer.classList.add("hide-konstantin")
     }
   }
 
@@ -254,8 +229,8 @@ function finishGame(){
       // TOOL SPEAKS FIRST 
       // Reset correct answer div 
       correct_answers_div.innerText = "";
-      
-      audio_img.src = "https://www.filepicker.io/api/file/tXVHaGCIRvelYf8ArpYz"
+      // MIC ON
+      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
       const transcript = Array.from(e.results)
       .map(result => result[0])
       .map(result => result.transcript)
@@ -304,7 +279,7 @@ function finishGame(){
         }
         else {
           paragraphs[paragraphs.length - 2].style.color = "red";
-          correct_answers_div.innerText = "Correct Answer:" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
+          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct your mistakes: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
         }
       }
     }
@@ -312,7 +287,8 @@ function finishGame(){
       paragraphs[0].remove();
     }
     recognition.addEventListener('end', () => {
-      audio_img.src = "https://www.filepicker.io/api/file/2QzdCJB8TlaKqchsUOzV"
+      // MIC OFF 
+      audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5"
     });
     test = false; 
   } else {
@@ -320,8 +296,8 @@ function finishGame(){
 // Reset correct answer div 
 
       correct_answers_div.innerText = "";
-      
-      audio_img.src = "https://www.filepicker.io/api/file/tXVHaGCIRvelYf8ArpYz"
+      // MIC ON 
+      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
       const transcript = Array.from(e.results)
       .map(result => result[0])
       .map(result => result.transcript)
@@ -374,28 +350,29 @@ function finishGame(){
         }
         else {
           paragraphs[paragraphs.length - 2].style.color = "red";
-          correct_answers_div.innerText = "Correct Answer:" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
+          correct_answers_div.innerHTML = "<span style=\"color: red; font-weight: 500;\">Correct your mistakes: </span>" + allTriggerAnswersData[0][current_trigger][current_trigger_index];
         }
       }
     }
     if(paragraphs.length > 5){
       paragraphs[0].remove();
     }
-    recognition.addEventListener('end', () => {
-      audio_img.src = "https://www.filepicker.io/api/file/2QzdCJB8TlaKqchsUOzV"
+    recognition.addEventListener('end', () => { 
+      // MIC OFF
+      audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5"
     });
   }
   });
   // Key command to pause and start the audio 
   window.addEventListener("keydown", (event) => {
-    if(event.isComposing || event.keyCode === 32 &&
-      !gameIsFinished){
+    if(event.isComposing || event.keyCode === 13 && 
+      (event.ctrlKey ||event.metaKey) && !gameIsFinished){
       recognition.start();
       // console.log(tutorial_counter);
-      if(tutorial_counter % 2 == 1 && test){
-        deleteEverything();
-        tutorial_counter++;
-      }
+      // if(tutorial_counter % 2 == 1 && test){
+      //   deleteEverything();
+      //   tutorial_counter++;
+      // }
       if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
         computerFirst();
         computerSpeakingFirst = false;
@@ -407,13 +384,23 @@ function finishGame(){
   // Button to start the microphone 
   function turnOnMicro(){
     recognition.start();
-    if(tutorial_counter % 2 == 1 && test){
-      deleteEverything();
-      tutorial_counter++;
-    } else if(tutorial_counter)
-    if (computerSpeakingFirst && switchPlaces % 2 == 0 
-      && test) {
-      console.log(test);
+    // if(tutorial_counter % 2 == 1 && test){
+    //   deleteEverything();
+    //   tutorial_counter++;
+    // } else if(tutorial_counter)
+    // if (computerSpeakingFirst && switchPlaces % 2 == 0 
+    //   && test) {
+    //   console.log(test);
+    //   computerFirst();
+    //   computerSpeakingFirst = false;
+    // } else {
+    //   // deleteEverything();
+    // }
+    // if(tutorial_counter % 2 == 1 && test){
+    //   deleteEverything();
+    //   tutorial_counter++;
+    // }
+    if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
       computerFirst();
       computerSpeakingFirst = false;
     } else {

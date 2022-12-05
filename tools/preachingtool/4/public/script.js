@@ -311,7 +311,7 @@ function finishGame(){
     if(paragraphs.length > 5){
       paragraphs[0].remove();
     }
-    recognition.addEventListener('end', () => {
+    recognition.addEventListener('audioend', () => {
       audio_img.src = "https://www.filepicker.io/api/file/2QzdCJB8TlaKqchsUOzV"
     });
     test = false; 
@@ -381,7 +381,7 @@ function finishGame(){
     if(paragraphs.length > 5){
       paragraphs[0].remove();
     }
-    recognition.addEventListener('end', () => {
+    recognition.addEventListener('audioend', () => {
       audio_img.src = "https://www.filepicker.io/api/file/2QzdCJB8TlaKqchsUOzV"
     });
   }

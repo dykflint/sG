@@ -170,8 +170,8 @@
     padding: 12px;
     font-size: 2.0rem;
     border-radius: 1.5rem;
-    margin-top: 2.0rem;
-    margin-bottom: 1.2rem;
+    /* margin-top: 2.0rem; */
+    /* margin-bottom: 1.2rem; */
     background-color: #F4628C;
   }
   .start-preaching-button-konstantin:hover {

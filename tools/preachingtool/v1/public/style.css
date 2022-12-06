@@ -60,7 +60,7 @@
     padding: 0 15px;
     min-height: 30px;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 20px;
   }
   .tutorial-container {
     display: flex;
@@ -134,7 +134,6 @@
     margin: 0 0 1rem !important;
     /* margin: 0.0rem !important; */
   }
-  
   .words:before {
     content: '';
     position: absolute;
@@ -145,6 +144,15 @@
     /* border: 1px solid; */
     border-color: transparent #efe4e4;
   }
+  /*  Trigger Counter */ 
+  .trigger-counter {
+    position: absolute;
+    left: 90%;
+    bottom: 10%;
+    font-weight: bold;
+    color: black;
+  }
+
   /* COVER */ 
   .starting-box-konstantin, .finish-screen-konstantin {
     display: flex;
@@ -167,7 +175,7 @@
   }
 
   .start-preaching-button-konstantin, .restart-preaching-button-konstantin{
-    font-weight: 500;
+    font-weight: 700;
     border: none;
     color: white;
     height: 10%;

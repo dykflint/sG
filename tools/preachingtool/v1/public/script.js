@@ -1,6 +1,9 @@
 // ! CURRENT ISSUES: 
 // ! TUTORIAL BUTTON SHOWS FIRST INPUT 
 // TODO: Let the user know that its his/her turn 
+// TODO: Remove "Good job ...."
+// TODO: Make trigger font size the same as the words font size   
+// TODO: Hide the tool for mobiles 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 Element.prototype.remove = function() {
   this.parentElement.removeChild(this);
@@ -28,6 +31,7 @@ const tutorialContainer = document.querySelector(".tutorial-container");
 const navigationContainer = document.querySelector(".navigation");
 const triggerTutorialContainer = document.querySelector(".triggers");
 const finishBox = document.querySelector(".finish-screen-konstantin");
+const triggerCounterDiv = document.querySelector(".trigger-counter");
 const counter = 0;
 let play_pause_counter = 0;
 // ! DELAY FUNCTION
@@ -51,9 +55,9 @@ function resetGame(){
 function toolAnswer(){
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index +1];
   // console.log("current index" + current_trigger_index);
-  if (current_trigger_index == 2) {
-    correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
-  }
+  // if (current_trigger_index == 2) {
+  //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
+  // }
   current_trigger_index += 2; 
   console.log("Trigger Index: " + current_trigger_index);
   p = document.createElement('p');
@@ -85,6 +89,7 @@ function finishGame(){
   recognition.stop();
   // words.innerHTML = "<img src='https://www.filepicker.io/api/file/Qf8Um3rTJihrNb0j2bCg'>";
   // words.style.background = "#FFECE2";
+  words.classList.add("hide-konstantin");
   triggerTutorialContainer.classList.add("hide-konstantin");
   navigationContainer.classList.add("hide-konstantin");
   finishBox.classList.remove("hide-konstantin");
@@ -134,16 +139,27 @@ function finishGame(){
   let current_trigger_index = 0;
   let next_index = 0;
   let paragraphs = words.getElementsByTagName("p");
+
+  let initialCounter = true;
+  function countTrigger(){
+    triggerCounterDiv.textContent = triggers.indexOf(current_trigger) + 1 + "/" + triggers.length;
+  }
   // ! NEXT TRIGGER FUNCTION
+  let secondHalf = false;
+  let nextCounter = 0;
   function nextTrigger() {
+    nextCounter++;
     if (next_index + 1 < triggers.length){
       next_index++; 
       // console.log("index: " + next_index);
     }
     else{
-      console.log("I am in else within nextTrigger");
-      next_index = 0;
-      switchPlaces++; 
+      if(nextCounter >= (triggers.length*2-1) || secondHalf){
+        finishGame();
+      } else{
+        next_index = 0;
+        switchPlaces++; 
+      }
     }
     current_trigger = triggers[next_index];
     // console.log(current_trigger);
@@ -152,6 +168,7 @@ function finishGame(){
     correct_answers_div.innerText = "";
     // triggerFocus(words);
     computerSpeakingFirst = true;
+    countTrigger();
   }
   // ! DELETE EVERYTHING FUNCTION 
   function deleteEverything() {
@@ -259,9 +276,9 @@ function finishGame(){
           if(paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"") == allTriggerAnswersData[0][current_trigger][current_trigger_index].toLowerCase().replace(/[.,?!;:]/g,"")){
             console.log("I am in the TOOL LOOP");
             paragraphs[paragraphs.length - 2].style.color = "green";
-            if(current_trigger_index == 3){
-              correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
-            }
+            // if(current_trigger_index == 3){
+            //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
+            // }
           if(allTriggerAnswersData[0][current_trigger][current_trigger_index + 1]){
             sleepFor(2, toolAnswer);
           }
@@ -295,6 +312,8 @@ function finishGame(){
     test = false; 
   } else {
     // STUDENT SPEAKS FIRST
+    // set secondHalf = true so that the finish screen is shown
+    secondHalf = true;
 // Reset correct answer div 
 
       correct_answers_div.innerText = "";
@@ -386,6 +405,10 @@ function finishGame(){
   });
   // Button to start the microphone 
   function turnOnMicro(){
+    if(initialCounter){
+      countTrigger();
+      initialCounter = false;
+    }
     recognition.start();
     audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
     // if(tutorial_counter % 2 == 1 && test){

@@ -1,5 +1,6 @@
 const triggers = ["für jemanden kochen", "für jemanden zahlen", "für jemanden bügeln", "für jemanden singen", "für jemanden putzen", "für jemanden tanzen", "für jemanden kämpfen", "für jemanden beten", "für jemanden sorgen", "für jemanden backen"];
 
+
 let allTriggerAnswersJSON = `[
     {"für jemanden kochen" : ["Für wen kochst du?", "Ich koche für dich!", "Für mich? Warum denn für mich?", "Ach, einfach nur so."],
     "für jemanden zahlen" : ["Für wen zahlst du?", "Ich zahle für dich!", "Für mich? Warum denn für mich?", "Ach, einfach nur so."],

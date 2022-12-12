@@ -3,7 +3,13 @@
       margin-bottom: 100px;
       text-align: center;
       /* background-color: #FFBD58; */
-      background-color: #F0BA53;
+      background: linear-gradient(
+        to right,
+        #F4608C 0%,
+        #F4608C 50%,
+        white 50%,
+        white 100%
+      );
       position: fixed;
       top: 0;
       left: 0;
@@ -14,7 +20,7 @@
       z-index: 500;
     }
     
-    .top-banner-konstantin img {
+    .top-banner-konstantin a img {
       height: 100px;
       aspect-ratio: 7.31/1;
     }
@@ -24,7 +30,13 @@
     .top-banner-konstantin {
       margin-bottom: 30px;
       text-align: center;
-      background-color: #F0BA53;
+      background: linear-gradient(
+        to right,
+        #F4608C 0%,
+        #F4608C 50%,
+        white 50%,
+        white 100%
+      );
       position: fixed;
       top: 0;
       left: 0;
@@ -35,7 +47,7 @@
       margin-bottom: 2.0rem;
       z-index: 500;
     }
-    .top-banner-konstantin img {
+    .top-banner-konstantin a img {
       height: 50px;
       aspect-ratio: 7.31/1;
     }

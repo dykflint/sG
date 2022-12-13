@@ -1,5 +1,3 @@
-const triggers = ['Stuhl', 'Handy', 'Tasse', 'Boden', 'Decke', 'Kreditkarte', 'Lampe', 'Glas', 'Auto', 'Pullover'];
-
 let allTriggerAnswersJSON = `[
 {"Stuhl" : ["Ich sehe einen Stuhl.", "Ich sehe keinen Stuhl.", "Ich sehe einen Stuhl.", "Ich sehe keinen Stuhl."],
 "Handy" : ["Ich sehe ein Handy.", "Ich sehe kein Handy.", "Ich sehe ein Handy.", "Ich sehe kein Handy."],
@@ -12,3 +10,5 @@ let allTriggerAnswersJSON = `[
 "Auto" : ["Ich sehe ein Auto.", "Ich sehe kein Auto.", "Ich sehe ein Auto.", "Ich sehe kein Auto."],
 "Pullover" : ["Ich sehe einen Pullover.", "Ich sehe keinen Pullover.", "Ich sehe einen Pullover.", "Ich sehe keinen Pullover"]}
 ]`;
+
+const triggers = ['Stuhl', 'Handy', 'Tasse', 'Boden', 'Decke', 'Kreditkarte', 'Lampe', 'Glas', 'Auto', 'Pullover'];

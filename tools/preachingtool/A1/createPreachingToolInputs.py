@@ -26,14 +26,14 @@ with open(content) as f:
         list_tmp = list(filter(None, list_tmp))
         if list_tmp:
             print(list_tmp)
-            print(contentArr)
+           # print(contentArr)
             contentArr[contentIndex].extend(list_tmp)
             counter += 1
             if counter > 3:
                 contentIndex += 1
                 counter = 0
 
-print(contentArr)
+#print(contentArr)
 with open(triggers+"Triggers", "a") as out:
     out.write("const triggers = " + str(triggersArr) + ";")
 

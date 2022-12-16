@@ -8,7 +8,7 @@ let allTriggerAnswersJSON = `[
 "030214802538 (Berlin landline)" : ["Hey, krieg ich deine Nummer?", "Klar. Meine Nummer ist: 030 2148 02538.", "030 2148 02538. Richtig?", "Ja, ruf mich mal kurz an."],
 "021332463890 (Dormagen landline)" : ["Hey, krieg ich deine Nummer?", "Klar. Meine Nummer ist: 02133 2463890.", "02133 2463890. Richtig?", "Ja, ruf mich mal kurz an."],
 "080020033407 (free hotline)" : ["Hey, krieg ich deine Nummer?", "Klar. Meine Nummer ist: 0 800 20033 407.", "0 800 20033 407. Richtig?", "Ja, ruf mich mal kurz an."],
-"0451160897620 (Lübeck landline)" : ["Hey, krieg ich deine Nummer?", "Klar. Meine Nummer ist: 0451160897620.", "0451160897620. Richtig?", "Ja, ruf mich mal kurz an."]}
+"015163498493 (mobile number)" : ["Hey, krieg ich deine Nummer?", "Klar. Meine Nummer ist: 01516 3498 493.", "01516 3498 493. Richtig?", "Ja, ruf mich mal kurz an."]}
 ]`;
 
-const triggers = ['015219211922 (mobile number)', '06920436149 (Frankfurt landline)', '00447868726250 (UK)', '030214802537 (Berlin landline)', '015757885051 (mobile number)', '04087969804 (Hamburg landline)', '030214802538 (Berlin landline)', '021332463890 (Dormagen landline)', '080020033407 (free hotline)', '0451160897620 (Lübeck landline)'];
+const triggers = ['015219211922 (mobile number)', '06920436149 (Frankfurt landline)', '00447868726250 (UK)', '030214802537 (Berlin landline)', '015757885051 (mobile number)', '04087969804 (Hamburg landline)', '030214802538 (Berlin landline)', '021332463890 (Dormagen landline)', '080020033407 (free hotline)', '015163498493 (mobile number)'];

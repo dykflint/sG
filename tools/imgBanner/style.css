@@ -5,10 +5,10 @@
       /* background-color: #FFBD58; */
       background: linear-gradient(
         to right,
-        #F4608C 0%,
-        #F4608C 50%,
-        white 50%,
-        white 100%
+        #F0BA53 0%,
+        #F0BA53 50%,
+        #F0BA53 50%,
+        #F0BA53 100%
       );
       position: fixed;
       top: 0;
@@ -20,7 +20,7 @@
       z-index: 500;
     }
     
-    .top-banner-konstantin a img {
+    .top-banner-konstantin img {
       height: 100px;
       aspect-ratio: 7.31/1;
     }
@@ -32,10 +32,10 @@
       text-align: center;
       background: linear-gradient(
         to right,
-        #F4608C 0%,
-        #F4608C 50%,
-        white 50%,
-        white 100%
+        #F0BA53 0%,
+        #F0BA53 50%,
+        #F0BA53 50%,
+        #F0BA53 100%
       );
       position: fixed;
       top: 0;
@@ -47,7 +47,7 @@
       margin-bottom: 2.0rem;
       z-index: 500;
     }
-    .top-banner-konstantin a img {
+    .top-banner-konstantin img {
       height: 50px;
       aspect-ratio: 7.31/1;
     }

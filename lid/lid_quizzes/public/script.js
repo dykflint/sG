@@ -109,38 +109,38 @@ original_button.addEventListener("click", () => {
 // Show selection for op1
 op1.addEventListener("click", () => {
     op1.style.backgroundColor = "lightgoldenrodyellow";
-    op2.style.backgroundColor = "rgb(250, 250, 250)";
-    op3.style.backgroundColor = "rgb(250, 250, 250)";
-    op4.style.backgroundColor = "rgb(250, 250, 250)";
+    op2.style.backgroundColor = "white";
+    op3.style.backgroundColor = "white";
+    op4.style.backgroundColor = "white";
     selected = op1.value;
     chosenAnswer = op1;
 })
 
 // Show selection for op2
 op2.addEventListener("click", () => {
-    op1.style.backgroundColor = "rgb(250, 250, 250)";
+    op1.style.backgroundColor = "white";
     op2.style.backgroundColor = "lightgoldenrodyellow";
-    op3.style.backgroundColor = "rgb(250, 250, 250)";
-    op4.style.backgroundColor = "rgb(250, 250, 250)";
+    op3.style.backgroundColor = "white";
+    op4.style.backgroundColor = "white";
     selected = op2.value;
     chosenAnswer = op2;
 })
 
 // Show selection for op3
 op3.addEventListener("click", () => {
-    op1.style.backgroundColor = "rgb(250, 250, 250)";
-    op2.style.backgroundColor = "rgb(250, 250, 250)";
+    op1.style.backgroundColor = "white";
+    op2.style.backgroundColor = "white";
     op3.style.backgroundColor = "lightgoldenrodyellow";
-    op4.style.backgroundColor = "rgb(250, 250, 250)";
+    op4.style.backgroundColor = "white";
     selected = op3.value;
     chosenAnswer = op3;
 })
 
 // Show selection for op4
 op4.addEventListener("click", () => {
-    op1.style.backgroundColor = "rgb(250, 250, 250)";
-    op2.style.backgroundColor = "rgb(250, 250, 250)";
-    op3.style.backgroundColor = "rgb(250, 250, 250)";
+    op1.style.backgroundColor = "white";
+    op2.style.backgroundColor = "white";
+    op3.style.backgroundColor = "white";
     op4.style.backgroundColor = "lightgoldenrodyellow";
     selected = op4.value;
     chosenAnswer = op4;

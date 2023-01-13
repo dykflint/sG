@@ -9,17 +9,26 @@
 </head>
 <body>
     <section class="right-wrong-quiz">
-        <h1>Reality Check | Lesen - Teil 01- Aufgabe 01 (1/2)</h1>
-        <!-- <audio controls constrolsList="nodownload">
-            <source src="https://www.dropbox.com/s/8vapfcbdc25j6pf/03-B2-AUDIO-Trinkgeld.mp3?raw=1">
-        </audio> -->
-        <img src="img/Lesen.png" alt="">
-        <div class="question">Der Treffpunkt ist vor dem Kino</div>
-        <div class="right-wrong-options">
-            <button class="right">Richtig</button>
-            <button class="wrong">Falsch</button>
+        <div class="game-screen">
+            <div class="title"></div>
+            <!-- <audio controls constrolsList="nodownload">
+                <source src="https://www.dropbox.com/s/8vapfcbdc25j6pf/03-B2-AUDIO-Trinkgeld.mp3?raw=1">
+            </audio> -->
+            <img src="img/Lesen.png" alt="">
+            <div class="question">Der Treffpunkt ist vor dem Kino</div>
+            <div class="right-wrong-options">
+                <button class="right">Richtig</button>
+                <button class="wrong">Falsch</button>
+            </div>
         </div>
-        <div class="finish-screen hide"></div>
+        <div class="finish-screen hide">
+            <div class="finish-message">
+                <p>Well done!</p>
+                <p>Your Score is</p>
+                <p class="score">30/50</p>
+            </div>
+            <a class="retake" onclick="retakeQuiz();">Retake Quiz</a>
+        </div>
     </section>
 </body>
 <script src="script.js"></script>

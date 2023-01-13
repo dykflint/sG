@@ -79,16 +79,32 @@ audio {
 
 @media (max-width: 40.0rem){
     .right-wrong-quiz {
-        width: 220px;
+        width: 250px;
     }
     .title {
         font-size: 20px;
     }
     audio {
-        width: 220px;
+        width: 250px;
     }
     .option-1, .option-2, .option-3 {
-        width: 220px;
+        width: 250px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 20.0rem){
+    .right-wrong-quiz {
+        width: 200px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    audio {
+        width: 200px;
+    }
+    .option-1, .option-2, .option-3 {
+        width: 200px;
         font-size: 17px;
     }
 }

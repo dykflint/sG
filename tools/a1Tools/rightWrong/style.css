@@ -22,6 +22,11 @@ body > * {
 .right-wrong-quiz img {
     width: 100%;
 }
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2.0rem;
+}
 audio {
     margin-bottom: 2.0rem;
 }
@@ -45,6 +50,24 @@ audio {
 .right:hover, .wrong:hover {
     cursor: pointer;
     background-color: #A6BFDC;
+}
+
+/* Finish Section */
+.retake {
+    background: none;
+    border: none;
+    background-color: #F4628C;
+    padding: 1.0rem 3.0rem;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.finish-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3.0rem;
 }
 
 /* Make something not clickable */

@@ -19,6 +19,7 @@ const option1 = document.querySelector('.option-1');
 const option2 = document.querySelector('.option-2');
 const option3 = document.querySelector('.option-3');
 const scoreMessage = document.querySelector('.score');
+const titleContainer = document.querySelector('.title')
 
 // Necessary variables for points and other values 
 let ncorrect = 0;
@@ -30,6 +31,7 @@ let start = true;
 let id = 0;
 
 // Create data structure of questions with the correct answer highlighted 
+const title = "Reality Check | Hören - Teil 01 "
 const Questions = [
 {
     id: 0,
@@ -68,7 +70,7 @@ function iterate(id) {
     option3.classList.remove('unclickable');
     // Put the current question into the question div
     questionContainer.innerText = Questions[id].q;
-
+    titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
     // Set the options and give them the value to indicate whether correct or incorrect
     option1.innerText = Questions[id].a[0].text;
     option1.value = Questions[id].a[0].isCorrect;
@@ -93,7 +95,7 @@ function retakeQuiz(){
     iterate(0);
 }
 
-// Create event listener for both buttons
+// Create event listener for all buttons
 document.querySelectorAll('button').forEach(item => {
     item.addEventListener('click', event => {
         // Make the right and wrong buttons unclickable

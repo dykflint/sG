@@ -9,17 +9,25 @@ body > * {
     text-align: center;
     background: white;
     border: 2px solid #ECECEC;
-    width: 400px;
+    border-radius: 25px;
+    width: 500px;
     min-height: 400px;
     padding: 2.0rem 4.0rem;
-    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
-audio {
-    margin-bottom: 2.0rem;
+.right-wrong-quiz img {
+    width: 100%;
 }
 .title {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 2.0rem;
+}
+audio {
     margin-bottom: 2.0rem;
 }
 .question {
@@ -28,23 +36,29 @@ audio {
     text-align: center;
     margin-bottom: 2.0rem;
 }
-.options {
+.right-wrong-options {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    text-align: center;
 }
-.option-1, .option-2, .option-3 {
+.right-wrong-options img {
+    width: 40%;
+}
+.right-wrong-options img:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+.right, .wrong {
     background: none;
     border: none;
-    background-color: #D7EBFA;
-    padding: 1.0rem 3.0rem;
-    border-radius: 25px;
+    /* background-color: #D7EBFA; */
+    /* padding: 1.0rem 3.0rem; */
+    border-radius: 15px;
     font-size: 20px;
-    width: 400px;
 }
-
-.option-1:hover, .option-2:hover, .option-3:hover {
+.right:hover, .wrong:hover {
     cursor: pointer;
     background-color: #A6BFDC;
 }
@@ -77,34 +91,3 @@ audio {
     display: none;
 }
 
-@media (max-width: 40.0rem){
-    .right-wrong-quiz {
-        width: 250px;
-    }
-    .title {
-        font-size: 20px;
-    }
-    audio {
-        width: 250px;
-    }
-    .option-1, .option-2, .option-3 {
-        width: 250px;
-        font-size: 17px;
-    }
-}
-
-@media (max-width: 30.0rem){
-    .right-wrong-quiz {
-        width: 180px;
-    }
-    .title {
-        font-size: 20px;
-    }
-    audio {
-        width: 180px;
-    }
-    .option-1, .option-2, .option-3 {
-        width: 180px;
-        font-size: 17px;
-    }
-}

@@ -94,8 +94,8 @@ document.querySelectorAll('img').forEach(item => {
         // Make the right and wrong buttons unclickable
         wrongButton.classList.add('unclickable');
         rightButton.classList.add('unclickable');
-        console.log(item.value);
-        if(item.value == "true"){
+        // console.log(item.value);
+        if(item.value == true){
             ncorrect++;
             sleepFor(1, () => {
                 console.log(item.value);
@@ -114,7 +114,7 @@ document.querySelectorAll('img').forEach(item => {
                 rightButton.classList.remove('unclickable');
                 iterate(id);
             } else {
-                console.log("In the finish screen");
+                // console.log("In the finish screen");
                 gameScreen.classList.add('hide');
                 finishScreen.classList.remove('hide');
                 scoreMessage.innerText = ncorrect + "/" + Questions.length;

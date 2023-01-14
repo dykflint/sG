@@ -32,8 +32,7 @@ const Questions = [{
         { text: '  meine Meinung in Leserbriefen äußern kann.', isCorrect: true},
         { text: ' NaziSymbole tragen darf.', isCorrect: false},
         { text: ' Meine Meinung sagen darf, solange ich der Regierung nicht widerspreche.', isCorrect: false},
-    ],
-    image: "https://www.filepicker.io/api/file/kreELr8ThOthgScnehIZ"
+]
 },
 {
     id: 4,
@@ -88,9 +87,99 @@ const Questions = [{
         { text: ' gesetzestreu.', isCorrect: false},
         { text: '  verfassungswidrig.', isCorrect: true},
 ]
+},
+{
+    id: 10,
+    q: 'Welches ist das Wappen der Bundesrepublik Deutschland?',
+    a: [{ text: '  1', isCorrect: true},
+        { text: ' 2', isCorrect: false},
+        { text: ' 3', isCorrect: false},
+        { text: ' 4', isCorrect: false},
+    ],
+    image: "https://www.filepicker.io/api/file/kreELr8ThOthgScnehIZ"
+},
+{
+    id: 11,
+    q: 'Was für eine Staatsform hat Deutschland?',
+    a: [{ text: ' Monarchie', isCorrect: false},
+        { text: ' Diktatur', isCorrect: false},
+        { text: '  Republik', isCorrect: true},
+        { text: ' Fürstentum', isCorrect: false},
+]
+},
+{
+    id: 12,
+    q: 'In Deutschland sind die meisten Erwerbstätigen …',
+    a: [{ text: '  bei einer Firma oder Behörde beschäftigt.', isCorrect: true},
+        { text: ' in kleinen Familienunternehmen beschäftigt.', isCorrect: false},
+        { text: ' ehrenamtlich für ein Bundesland tätig.', isCorrect: false},
+        { text: ' selbständig mit einer eigenen Firma tätig.', isCorrect: false},
+]
+},
+{
+    id: 13,
+    q: 'Wie viele Bundesländer hat die Bundesrepublik Deutschland?',
+    a: [{ text: ' 14', isCorrect: false},
+        { text: ' 15', isCorrect: false},
+        { text: '  16', isCorrect: true},
+        { text: ' 17', isCorrect: false},
+]
+},
+{
+    id: 14,
+    q: 'Was ist kein Bundesland der Bundesrepublik Deutschland?',
+    a: [{ text: ' NordrheinWestfalen', isCorrect: false},
+        { text: '  ElsassLothringen', isCorrect: true},
+        { text: ' MecklenburgVorpommern', isCorrect: false},
+        { text: ' SachsenAnhalt', isCorrect: false},
+]
+},
+{
+    id: 15,
+    q: 'Deutschland ist …',
+    a: [{ text: ' eine kommunistische Republik.', isCorrect: false},
+        { text: '  ein demokratischer und sozialer Bundesstaat.', isCorrect: true},
+        { text: ' eine kapitalistische und soziale Monarchie.', isCorrect: false},
+        { text: ' ein sozialer und sozialistischer Bundesstaat.', isCorrect: false},
+]
+},
+{
+    id: 16,
+    q: 'Deutschland ist …',
+    a: [{ text: ' ein sozialistischer Staat.', isCorrect: false},
+        { text: '  ein Bundesstaat.', isCorrect: true},
+        { text: ' eine Diktatur.', isCorrect: false},
+        { text: ' eine Monarchie.', isCorrect: false},
+]
+},
+{
+    id: 17,
+    q: 'Wer wählt in Deutschland die Abgeordneten zum Bundestag?',
+    a: [{ text: ' das Militär', isCorrect: false},
+        { text: ' die Wirtschaft', isCorrect: false},
+        { text: '  das wahlberechtigte Volk', isCorrect: true},
+        { text: ' die Verwaltung', isCorrect: false},
+]
+},
+{
+    id: 18,
+    q: 'Welches Tier ist das Wappentier der Bundesrepublik Deutschland?',
+    a: [{ text: ' Löwe', isCorrect: false},
+        { text: '  Adler', isCorrect: true},
+        { text: ' Bär', isCorrect: false},
+        { text: ' Pferd', isCorrect: false},
+]
+},
+{
+    id: 19,
+    q: 'Was ist kein Merkmal unserer Demokratie?',
+    a: [{ text: ' regelmäßige Wahlen', isCorrect: false},
+        { text: '  Pressezensur', isCorrect: true},
+        { text: ' Meinungsfreiheit', isCorrect: false},
+        { text: ' verschiedene Parteien', isCorrect: false},
+]
 }
 ]
-
 // TRANSLATIONS 
 const Translations = [{
     id: 0,
@@ -126,8 +215,7 @@ const Translations = [{
         { text: '  can express my opinion in letters to the editor.', isCorrect: true},
         { text: ' May wear Nazi symbols.', isCorrect: false},
         { text: ' May speak my mind as long as I don\'t contradict the government.', isCorrect: false},
-        ],
-    image: "https://www.filepicker.io/api/file/kreELr8ThOthgScnehIZ"
+]
 },
 {
     id: 4,
@@ -145,42 +233,6 @@ const Translations = [{
         { text: ' when expressing opinions about the Federal Government', isCorrect: false},
         { text: ' in discussions about religions', isCorrect: false},
         { text: ' when criticizing the state', isCorrect: false},
-]
-},
-{
-    id: 6,
-    q: 'The German laws prohibit …',
-    a: [{ text: ' Freedom of expression for residents.', isCorrect: false},
-        { text: ' Citizens\' petitions.', isCorrect: false},
-        { text: ' Freedom of assembly of the inhabitants.', isCorrect: false},
-        { text: '  Unequal treatment of citizens by the state.', isCorrect: true},
-]
-},
-{
-    id: 7,
-    q: 'Which fundamental right is guaranteed in Article 1 of the Basic Law of the Federal Republic of Germany?',
-    a: [{ text: '  the inviolability of human dignity', isCorrect: true},
-        { text: ' the right to live', isCorrect: false},
-        { text: ' freedom of religion', isCorrect: false},
-        { text: ' Freedom of speech', isCorrect: false},
-]
-},
-{
-    id: 8,
-    q: 'What is meant by the right of “freedom of movement” in Germany?',
-    a: [{ text: '  You can choose your own place of residence.', isCorrect: true},
-        { text: ' You can change your job.', isCorrect: false},
-        { text: ' You can choose another religion.', isCorrect: false},
-        { text: ' One may only move in public with light clothing.', isCorrect: false},
-]
-},
-{
-    id: 9,
-    q: 'A party in Germany is pursuing the goal of establishing a dictatorship. She is then...',
-    a: [{ text: ' tolerant.', isCorrect: false},
-        { text: ' constitutionally oriented.', isCorrect: false},
-        { text: ' lawabiding.', isCorrect: false},
-        { text: '  unconstitutional.', isCorrect: true},
 ]
 }
 ]
@@ -301,135 +353,6 @@ const Translations = [{
 //         { text: '  Eagle', isCorrect: true},
 //         { text: ' bear', isCorrect: false},
 //         { text: ' Horse', isCorrect: false},
-// ]
-// },
-// {
-//     id: 19,
-//     q: 'Was ist kein Merkmal unserer Demokratie?',
-//     a: [{ text: ' regelmäßige Wahlen', isCorrect: false},
-//         { text: '  Pressezensur', isCorrect: true},
-//         { text: ' Meinungsfreiheit', isCorrect: false},
-//         { text: ' verschiedene Parteien', isCorrect: false},
-// ]
-// }
-
-// ,
-// {
-//     id: 6,
-//     q: 'Die deutschen Gesetze verbieten …',
-//     a: [{ text: ' Meinungsfreiheit der Einwohner und Einwohnerinnen.', isCorrect: false},
-//         { text: ' Petitionen der Bürger und Bürgerinnen.', isCorrect: false},
-//         { text: ' Versammlungsfreiheit der Einwohner und Einwohnerinnen.', isCorrect: false},
-//         { text: '  Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat.', isCorrect: true},
-// ]
-// },
-// {
-//     id: 7,
-//     q: 'Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?',
-//     a: [{ text: '  die Unantastbarkeit der Menschenwürde', isCorrect: true},
-//         { text: ' das Recht auf Leben', isCorrect: false},
-//         { text: ' Religionsfreiheit', isCorrect: false},
-//         { text: ' Meinungsfreiheit', isCorrect: false},
-// ]
-// },
-// {
-//     id: 8,
-//     q: 'Was versteht man unter dem Recht der „Freizügigkeit“ in Deutschland?',
-//     a: [{ text: '  Man darf sich seinen Wohnort selbst aussuchen.', isCorrect: true},
-//         { text: ' Man kann seinen Beruf wechseln.', isCorrect: false},
-//         { text: ' Man darf sich für eine andere Religion entscheiden.', isCorrect: false},
-//         { text: ' Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.', isCorrect: false},
-// ]
-// },
-// {
-//     id: 9,
-//     q: 'Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …',
-//     a: [{ text: ' tolerant.', isCorrect: false},
-//         { text: ' rechtsstaatlich orientiert.', isCorrect: false},
-//         { text: ' gesetzestreu.', isCorrect: false},
-//         { text: '  verfassungswidrig.', isCorrect: true},
-// ]
-// },
-// {
-//     id: 10,
-//     q: 'Welches ist das Wappen der Bundesrepublik Deutschland?',
-//     a: [{ text: '  1', isCorrect: true},
-//         { text: ' 2', isCorrect: false},
-//         { text: ' 3', isCorrect: false},
-//         { text: ' 4', isCorrect: false},
-//     ],
-//     image: "https://www.filepicker.io/api/file/kreELr8ThOthgScnehIZ"
-// },
-// {
-//     id: 11,
-//     q: 'Was für eine Staatsform hat Deutschland?',
-//     a: [{ text: ' Monarchie', isCorrect: false},
-//         { text: ' Diktatur', isCorrect: false},
-//         { text: '  Republik', isCorrect: true},
-//         { text: ' Fürstentum', isCorrect: false},
-// ]
-// },
-// {
-//     id: 12,
-//     q: 'In Deutschland sind die meisten Erwerbstätigen …',
-//     a: [{ text: '  bei einer Firma oder Behörde beschäftigt.', isCorrect: true},
-//         { text: ' in kleinen Familienunternehmen beschäftigt.', isCorrect: false},
-//         { text: ' ehrenamtlich für ein Bundesland tätig.', isCorrect: false},
-//         { text: ' selbständig mit einer eigenen Firma tätig.', isCorrect: false},
-// ]
-// },
-// {
-//     id: 13,
-//     q: 'Wie viele Bundesländer hat die Bundesrepublik Deutschland?',
-//     a: [{ text: ' 14', isCorrect: false},
-//         { text: ' 15', isCorrect: false},
-//         { text: '  16', isCorrect: true},
-//         { text: ' 17', isCorrect: false},
-// ]
-// },
-// {
-//     id: 14,
-//     q: 'Was ist kein Bundesland der Bundesrepublik Deutschland?',
-//     a: [{ text: ' NordrheinWestfalen', isCorrect: false},
-//         { text: '  ElsassLothringen', isCorrect: true},
-//         { text: ' MecklenburgVorpommern', isCorrect: false},
-//         { text: ' SachsenAnhalt', isCorrect: false},
-// ]
-// },
-// {
-//     id: 15,
-//     q: 'Deutschland ist …',
-//     a: [{ text: ' eine kommunistische Republik.', isCorrect: false},
-//         { text: '  ein demokratischer und sozialer Bundesstaat.', isCorrect: true},
-//         { text: ' eine kapitalistische und soziale Monarchie.', isCorrect: false},
-//         { text: ' ein sozialer und sozialistischer Bundesstaat.', isCorrect: false},
-// ]
-// },
-// {
-//     id: 16,
-//     q: 'Deutschland ist …',
-//     a: [{ text: ' ein sozialistischer Staat.', isCorrect: false},
-//         { text: '  ein Bundesstaat.', isCorrect: true},
-//         { text: ' eine Diktatur.', isCorrect: false},
-//         { text: ' eine Monarchie.', isCorrect: false},
-// ]
-// },
-// {
-//     id: 17,
-//     q: 'Wer wählt in Deutschland die Abgeordneten zum Bundestag?',
-//     a: [{ text: ' das Militär', isCorrect: false},
-//         { text: ' die Wirtschaft', isCorrect: false},
-//         { text: '  das wahlberechtigte Volk', isCorrect: true},
-//         { text: ' die Verwaltung', isCorrect: false},
-// ]
-// },
-// {
-//     id: 18,
-//     q: 'Welches Tier ist das Wappentier der Bundesrepublik Deutschland?',
-//     a: [{ text: ' Löwe', isCorrect: false},
-//         { text: '  Adler', isCorrect: true},
-//         { text: ' Bär', isCorrect: false},
-//         { text: ' Pferd', isCorrect: false},
 // ]
 // },
 // {

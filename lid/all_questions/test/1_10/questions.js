@@ -89,3 +89,96 @@ const Questions = [{
 ]
 }
 ]
+
+
+const Translations = [{
+    id: 0,
+    q: 'In Germany, people are allowed to say something openly against the government because...',
+    a: [{ text: ' Freedom of religion applies here.', isCorrect: false},
+        { text: ' people pay taxes.', isCorrect: false},
+        { text: ' people have the right to vote.', isCorrect: false},
+        { text: '  Freedom of opinion applies here.', isCorrect: true},
+]
+},
+{
+    id: 1,
+    q: 'In Germany, parents up to the age of 14 can decide whether at school their child should  ...',
+    a: [{ text: ' attend history classes.', isCorrect: false},
+        { text: '  participate in religious education.', isCorrect: true},
+        { text: ' attend political classes.', isCorrect: false},
+        { text: ' participate in language classes.', isCorrect: false},
+]
+},
+{
+    id: 2,
+    q: 'Germany is a constitutional state. What does that mean?',
+    a: [{ text: '  All residents and the state must obey the law.', isCorrect: true},
+        { text: ' The state does not have to obey the law.', isCorrect: false},
+        { text: ' Only Germans have to obey the law.', isCorrect: false},
+        { text: ' The courts make the laws.', isCorrect: false},
+]
+},
+{
+    id: 3,
+    q: 'Which right is one of the fundamental rights in Germany?',
+    a: [{ text: ' Gun ownership', isCorrect: false},
+        { text: ' right of fight', isCorrect: false},
+        { text: '  Freedom of expression', isCorrect: true},
+        { text: ' vigilante justice', isCorrect: false},
+]
+},
+{
+    id: 4,
+    q: 'Elections in Germany are free. What does that mean?',
+    a: [{ text: ' You can accept money if you choose a specific candidate for it.', isCorrect: false},
+        { text: '  The voter must not be influenced during the election, nor forced to cast a particular vote, and must not suffer any disadvantages as a result of the election.', isCorrect: true},
+        { text: ' Only people who have never been in prison are allowed to vote.', isCorrect: false},
+        { text: ' All eligible voters must vote.', isCorrect: false},
+]
+},
+{
+    id: 5,
+    q: 'What is the german constitution called?',
+    a: [{ text: ' People's Law', isCorrect: false},
+        { text: ' federal law', isCorrect: false},
+        { text: ' German law', isCorrect: false},
+        { text: '  Basic Law', isCorrect: true},
+]
+},
+{
+    id: 6,
+    q: 'Which right is one of the basic rights guaranteed by the German constitution? The right to …',
+    a: [{ text: '  have freedom of belief and conscience', isCorrect: true},
+        { text: ' have entertainment', isCorrect: false},
+        { text: ' work', isCorrect: false},
+        { text: ' to have an apartment', isCorrect: false},
+]
+},
+{
+    id: 7,
+    q: 'What is not in the Basic Law of Germany?',
+    a: [{ text: ' Human dignity is inviolable.', isCorrect: false},
+        { text: '  Everyone should have the same amount of money.', isCorrect: true},
+        { text: ' Everyone is allowed to express their opinion.', isCorrect: false},
+        { text: ' All are equal before the law.', isCorrect: false},
+]
+},
+{
+    id: 8,
+    q: 'Which basic right only applies to foreigners in Germany? The fundamental right to...',
+    a: [{ text: ' Protection of the family', isCorrect: false},
+        { text: ' Human dignity', isCorrect: false},
+        { text: '  Asylum', isCorrect: true},
+        { text: ' Freedom of speech', isCorrect: false},
+]
+},
+{
+    id: 9,
+    q: 'What is compatible with the German Basic Law?',
+    a: [{ text: ' the corporal punishment', isCorrect: false},
+        { text: ' the torture', isCorrect: false},
+        { text: ' the death penalty', isCorrect: false},
+        { text: '  the fine', isCorrect: true},
+]
+}
+]

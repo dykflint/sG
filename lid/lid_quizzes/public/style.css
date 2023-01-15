@@ -198,8 +198,8 @@ body{
 /* Small Size */
 @media (max-width: 30.0rem){
 	.panel {
-		min-height: 200px;
-		width: 250px;
+		min-height: 300px;
+		width: 300px;
 	}	
 	.counter {
 		font-size: 23px;
@@ -216,7 +216,7 @@ body{
 		font-size: 15px;
 	}
 	.finish-screen {
-		min-height: 200px;
-		width: 200px;
+		min-height: 300px;
+		width: 300px;
 	}
 }

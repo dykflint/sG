@@ -214,7 +214,8 @@ body{
 	}
 	.option {
 		font-size: 15px;
-		height: 5vh;
+		min-height: 5vh;
+		max-height: 10vh;
 	}
 	.finish-screen {
 		min-height: 300px;

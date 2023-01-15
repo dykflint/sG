@@ -114,21 +114,21 @@ body{
 }
 /* Finish Section */
 .finish-screen {
-		/* width: 50vw;  */
-		min-height: 500px;
-		width: 700px;
-		display: flex; 
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		border-radius: 2.0rem;
-		/* background-color: #E9F3F3; */
-		box-shadow: 0 0 5px grey;
-		margin: auto;
-		flex-wrap: wrap;
-		position: relative;
-		margin-top: 1.0rem;
+	/* width: 50vw;  */
+	min-height: 500px;
+	width: 700px;
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 2.0rem;
+	/* background-color: #E9F3F3; */
+	box-shadow: 0 0 5px grey;
+	margin: auto;
+	flex-wrap: wrap;
+	position: relative;
+	margin-top: 1.0rem;
 }
 .retake {
     background: none;
@@ -175,4 +175,48 @@ body{
 
 .hide-konstantin {
 	display: none;
+}
+
+/* Medium Size */
+@media (max-width: 60.0rem){
+	.panel {
+		min-height: 300px;
+		width: 500px;
+	}	
+	.counter {
+		font-size: 33px;
+	}
+	.option {
+		font-size: 20px;
+	}
+	.finish-screen {
+		min-height: 300px;
+		width: 500px;
+	}
+}
+
+/* Small Size */
+@media (max-width: 30.0rem){
+	.panel {
+		min-height: 200px;
+		width: 250px;
+	}	
+	.counter {
+		font-size: 23px;
+	}
+	.translation_button, .original_button {
+		font-size: 10px;
+		padding: 5px;
+		border-radius: 20px;
+	}
+	.question-container {
+		font-size: 23px;
+	}
+	.option {
+		font-size: 15px;
+	}
+	.finish-screen {
+		min-height: 200px;
+		width: 200px;
+	}
 }

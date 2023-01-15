@@ -73,7 +73,7 @@ function iterate(id) {
     wrongButton.src = Questions[id].a[1].text;
     rightButton.value = Questions[id].a[0].isCorrect;
     wrongButton.value = Questions[id].a[1].isCorrect;
-    titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
+    titleContainer.innerText = title + "\n(" + (id + 1) + "/" + Questions.length + ")";
     // if(rightButton.value) {
     //     console.log("The answer you picked is correct.")
     // }    
@@ -99,11 +99,11 @@ document.querySelectorAll('img').forEach(item => {
             ncorrect++;
             sleepFor(1, () => {
                 console.log(item.value);
-                item.style.backgroundColor = rightColor;
+                item.style.border = "5px solid " + rightColor;
             })
         } else {
             sleepFor(1, () => {
-                item.style.backgroundColor = wrongColor;
+                item.style.border = "5px solid " + wrongColor;
             })
         }
         sleepFor(2, () => {

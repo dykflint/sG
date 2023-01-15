@@ -71,7 +71,7 @@ function iterate(id) {
     // Create a copy of the right and wrong buttons to give them the true/false values
     rightButton.value = Questions[id].a[0].isCorrect;
     wrongButton.value = Questions[id].a[1].isCorrect;
-    titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
+    titleContainer.innerText = title + "\n(" + (id + 1) + "/" + Questions.length + ")";
     // if(rightButton.value) {
     //     console.log("The answer you picked is correct.")
     // }    

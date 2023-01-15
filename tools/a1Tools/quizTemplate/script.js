@@ -70,7 +70,7 @@ function iterate(id) {
     option3.classList.remove('unclickable');
     // Put the current question into the question div
     questionContainer.innerText = Questions[id].q;
-    titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
+    titleContainer.innerText = title + "\n(" + (id + 1) + "/" + Questions.length + ")";
     // Set the options and give them the value to indicate whether correct or incorrect
     option1.innerText = Questions[id].a[0].text;
     option1.value = Questions[id].a[0].isCorrect;

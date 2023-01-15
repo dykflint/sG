@@ -9,5 +9,6 @@ do
 	#sed -i -e 's/  */ /g' $i/public/triggers.js
 	#cp $i/public/triggers.js $i/triggers.js
 	#rm -r $i/public
-	cp base/index.html $i/
+	#cp base/index.html $i/
+	sed -i.bak -e 's/gern[ ?!.,]\{1\}/gerne/g' $i/triggers.js
 done

@@ -19,9 +19,9 @@ body > * {
     align-items: center;
     gap: 25px;
 }
-.right-wrong-quiz img {
+/* .right-wrong-quiz img {
     width: 100%;
-}
+} */
 .title {
     font-size: 30px;
     font-weight: bold;
@@ -44,7 +44,7 @@ audio {
     text-align: center;
 }
 .right-wrong-options img {
-    width: 40%;
+    width: 45%;
 }
 .right-wrong-options img:hover {
     transform: scale(1.1);

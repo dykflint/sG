@@ -30,31 +30,7 @@ let wrongColor = "#FF8080";
 let start = true;
 let id = 0;
 
-// Create data structure of questions with the correct answer highlighted 
-const title = "Reality Check | Hören - Teil 01 "
-const Questions = [
-{
-    id: 0,
-    q: 'Wie heißt die Hauptstadt von Deutschland?', 
-    a: [{ text: 'Berlin', isCorrect: true},
-        { text: 'Düsseldorf', isCorrect: false},
-        { text: 'München', isCorrect: false}]
-},
-{
-    id: 1,
-    q: 'Wie heißt die Hauptstadt von Frankreich?', 
-    a: [{ text: 'Toulouse', isCorrect: false},
-        { text: 'Paris', isCorrect: true},
-        { text: 'Lyon', isCorrect: false}]
-},
-{
-    id: 2,
-    q: 'Wie heißt die Hauptstadt von Kanada?', 
-    a: [{ text: 'Ottawa', isCorrect: true},
-        { text: 'Toronto', isCorrect: false},
-        { text: 'Vancouver', isCorrect: false}]
-}
-];
+
 
 // Testing field 
 

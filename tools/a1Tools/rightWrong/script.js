@@ -29,30 +29,6 @@ let wrongColor = "#FF8080";
 let start = true;
 let id = 0;
 
-// Create data structure of questions with the correct answer highlighted 
-const title = "Reality Check | Hören - Teil 01 "
-const Questions = [
-{
-    id: 0,
-    q: 'Die Hauptstadt von Deutschland ist Berlin.', 
-    a: [{ text: 'Richtig', isCorrect: true},
-        { text: 'Falsch', isCorrect: false}]
-},
-{
-    id: 1,
-    q: 'Die Hauptstadt von Frankreich ist Toulouse', 
-    a: [{ text: 'Richtig', isCorrect: false},
-        { text: 'Falsch', isCorrect: true}]
-},
-{
-    id: 2,
-    q: 'Die Hauptstadt von Kanada ist Ottawa', 
-    a: [{ text: 'Richtig', isCorrect: true},
-        { text: 'Falsch', isCorrect: false}]
-}
-];
-
-// Testing field 
 
 
 rightButton.addEventListener('click', () => {

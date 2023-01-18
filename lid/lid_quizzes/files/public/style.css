@@ -181,7 +181,7 @@ body{
 @media (max-width: 60.0rem){
 	.panel {
 		min-height: 300px;
-		width: 500px;
+		width: 750px;
 	}	
 	.counter {
 		font-size: 33px;
@@ -191,7 +191,7 @@ body{
 	}
 	.finish-screen {
 		min-height: 300px;
-		width: 500px;
+		width: 750px;
 	}
 }
 

@@ -35,20 +35,20 @@ const Questions = [
 {
     id: 0,
     q: 'Die Hauptstadt von Deutschland ist Berlin.', 
-    a: [{ text: 'img/img1.png', isCorrect: true},
-        { text: 'img/img2.png', isCorrect: false}]
+    a: [{ text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: true},
+        { text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: false}]
 },
 {
     id: 1,
     q: 'Die Hauptstadt von Frankreich ist Toulouse', 
-    a: [{ text: 'img/img3.png', isCorrect: false},
-        { text: 'img/img4.png', isCorrect: true}]
+    a: [{ text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: false},
+        { text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: true}]
 },
 {
     id: 2,
     q: 'Die Hauptstadt von Kanada ist Ottawa', 
-    a: [{ text: 'img/img1.png', isCorrect: true},
-        { text: 'img/img3.png', isCorrect: false}]
+    a: [{ text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: true},
+        { text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: false}]
 }
 ];
 
@@ -73,7 +73,7 @@ function iterate(id) {
     wrongButton.src = Questions[id].a[1].text;
     rightButton.value = Questions[id].a[0].isCorrect;
     wrongButton.value = Questions[id].a[1].isCorrect;
-    titleContainer.innerText = title + "\n(" + (id + 1) + "/" + Questions.length + ")";
+    titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
     // if(rightButton.value) {
     //     console.log("The answer you picked is correct.")
     // }    

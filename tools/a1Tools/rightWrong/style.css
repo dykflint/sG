@@ -83,3 +83,16 @@ audio {
     display: none;
 }
 
+/* Smaller Sizes */
+@media (max-width: 40.0rem){
+    .right-wrong-quiz {
+        width: 250px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .right-wrong-options {
+        display: flex;
+        flex-direction: column;
+    }
+}

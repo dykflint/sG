@@ -54,7 +54,7 @@ body{
 	/* height: 10vh; */
 	border-radius: 1.0rem;
 	/* background-color: white; */
-	font-size: 2em;
+	font-size: 1.8em;
 	text-align: center;
 	font-weight: bold; 
 	/* border: 0.1em black solid; */
@@ -186,6 +186,9 @@ body{
 	.counter {
 		font-size: 33px;
 	}
+	.question-container {
+		font-size: 
+	}
 	.option {
 		font-size: 20px;
 	}
@@ -195,6 +198,25 @@ body{
 	}
 }
 
+@media (max-width: 50.0rem){
+	.panel {
+		min-height: 300px;
+		width: 600px;
+	}	
+	.counter {
+		font-size: 33px;
+	}
+	.question-container {
+		font-size: 
+	}
+	.option {
+		font-size: 20px;
+	}
+	.finish-screen {
+		min-height: 300px;
+		width: 600px;
+	}
+}
 /* Small Size */
 @media (max-width: 30.0rem){
 	.panel {

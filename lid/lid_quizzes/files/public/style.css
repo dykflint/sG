@@ -199,7 +199,7 @@ body{
 @media (max-width: 30.0rem){
 	.panel {
 		min-height: 300px;
-		width: 300px;
+		width: 280px;
 	}	
 	.counter {
 		font-size: 23px;
@@ -214,11 +214,11 @@ body{
 	}
 	.option {
 		font-size: 15px;
-		min-height: 5vh;
+		min-height: 4vh;
 		max-height: 10vh;
 	}
 	.finish-screen {
 		min-height: 300px;
-		width: 300px;
+		width: 280px;
 	}
 }

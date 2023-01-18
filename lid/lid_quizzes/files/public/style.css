@@ -85,7 +85,8 @@ body{
 	width: auto;
 	/* min-width: 10.0rem; */
 	width: 90%;
-	height: 10vh;
+	min-height: 5vh;
+	max-height: 14vh;
 	font-size: larger;
 	/* border: 2px solid grey; */
 	background-color: #D7EBFA;
@@ -185,9 +186,6 @@ body{
 	}	
 	.counter {
 		font-size: 33px;
-	}
-	.question-container {
-		font-size: 
 	}
 	.option {
 		font-size: 20px;

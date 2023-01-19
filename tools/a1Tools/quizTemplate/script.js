@@ -20,6 +20,7 @@ const option2 = document.querySelector('.option-2');
 const option3 = document.querySelector('.option-3');
 const scoreMessage = document.querySelector('.score');
 const titleContainer = document.querySelector('.title')
+const audioContainer = document.querySelector('.audio-src');
 
 // Necessary variables for points and other values 
 let ncorrect = 0;
@@ -48,6 +49,7 @@ function iterate(id) {
     questionContainer.innerText = Questions[id].q;
     titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
     // Set the options and give them the value to indicate whether correct or incorrect
+    audioContainer.src = "audio/A1-Exam-Prep-Hören-Teil-1-Aufgabe-" + (id+1)+".mp3";
     option1.innerText = Questions[id].a[0].text;
     option1.value = Questions[id].a[0].isCorrect;
     option2.innerText = Questions[id].a[1].text;

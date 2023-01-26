@@ -1,3 +1,4 @@
+// TODO: REMOVE DOWNLOAD OPTIONS
 // Delay function 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

@@ -19,6 +19,7 @@ const rightButton = document.querySelector('.right');
 const wrongButton = document.querySelector('.wrong');
 const scoreMessage = document.querySelector('.score');
 const titleContainer = document.querySelector('.title')
+const imgContainer = document.querySelector('.img-src');
 
 // Necessary variables for points and other values 
 let ncorrect = 0;
@@ -29,30 +30,6 @@ let wrongColor = "#FF8080";
 let start = true;
 let id = 0;
 
-// Create data structure of questions with the correct answer highlighted 
-const title = "Reality Check | Lesen - Teil 01 "
-const Questions = [
-{
-    id: 0,
-    q: 'Die Hauptstadt von Deutschland ist Berlin.', 
-    a: [{ text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: true},
-        { text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: false}]
-},
-{
-    id: 1,
-    q: 'Die Hauptstadt von Frankreich ist Toulouse', 
-    a: [{ text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: false},
-        { text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: true}]
-},
-{
-    id: 2,
-    q: 'Die Hauptstadt von Kanada ist Ottawa', 
-    a: [{ text: 'img/Lesen Teil 02 - 1.2.png', isCorrect: true},
-        { text: 'img/Lesen Teil 02 - 1.1.png', isCorrect: false}]
-}
-];
-
-// Testing field 
 
 
 rightButton.addEventListener('click', () => {
@@ -69,8 +46,33 @@ function iterate(id) {
     questionContainer.innerText = Questions[id].q;
 
     // Create a copy of the right and wrong buttons to give them the true/false values
-    rightButton.src = Questions[id].a[0].text;
-    wrongButton.src = Questions[id].a[1].text;
+    if(id < 4){
+        imgContainer.src = "img/Lesen Teil 01 - 1-4.png";
+    }
+    if(id >= 4 && id < 10){
+        imgContainer.src = "img/Lesen Teil 01 - 5-10.png";
+    }
+    if(id >= 10 && id < 18){
+        imgContainer.src = "img/Lesen Teil 01 - 11-18.png";
+    }
+    if(id >= 18 && id < 22){
+        imgContainer.src = "img/Lesen Teil 01 - 19-22.png";
+    }
+    if(id >= 22 && id < 27){
+        imgContainer.src = "img/Lesen Teil 01 - 23-27.png";
+    }
+    if(id >= 27 && id < 37){
+        imgContainer.src = "img/Lesen Teil 01 - 28-37.png";
+    }
+    if(id >= 37 && id < 43){
+        imgContainer.src = "img/Lesen Teil 01 - 38-43.png";
+    }
+    if(id >= 43 && id < 48){
+        imgContainer.src = "img/Lesen Teil 01 - 44-48.png";
+    }
+    if(id >= 48 && id < 55){
+        imgContainer.src = "img/Lesen Teil 01 - 49-55.png";
+    }
     rightButton.value = Questions[id].a[0].isCorrect;
     wrongButton.value = Questions[id].a[1].isCorrect;
     titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";
@@ -89,21 +91,21 @@ function retakeQuiz(){
     iterate(0);
 }
 // Create event listener for both buttons
-document.querySelectorAll('img').forEach(item => {
+document.querySelectorAll('button').forEach(item => {
     item.addEventListener('click', event => {
         // Make the right and wrong buttons unclickable
         wrongButton.classList.add('unclickable');
         rightButton.classList.add('unclickable');
-        // console.log(item.value);
-        if(item.value == true){
+        console.log(item.value);
+        if(item.value == "true"){
             ncorrect++;
             sleepFor(1, () => {
                 console.log(item.value);
-                item.style.border = "5px solid " + rightColor;
+                item.style.backgroundColor = rightColor;
             })
         } else {
             sleepFor(1, () => {
-                item.style.border = "5px solid " + wrongColor;
+                item.style.backgroundColor = wrongColor;
             })
         }
         sleepFor(2, () => {
@@ -114,7 +116,7 @@ document.querySelectorAll('img').forEach(item => {
                 rightButton.classList.remove('unclickable');
                 iterate(id);
             } else {
-                // console.log("In the finish screen");
+                console.log("In the finish screen");
                 gameScreen.classList.add('hide');
                 finishScreen.classList.remove('hide');
                 scoreMessage.innerText = ncorrect + "/" + Questions.length;

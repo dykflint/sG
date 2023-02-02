@@ -60,6 +60,7 @@ audio {
     font-weight: bold;
     color: white;
     cursor: pointer;
+    content: "Retake Quiz";
 }
 .finish-message {
     font-size: 20px;
@@ -91,11 +92,15 @@ audio {
         width: 250px;
         font-size: 17px;
     }
+    .retake {
+        content: "Retake";
+    }
 }
 
 @media (max-width: 30.0rem){
     .right-wrong-quiz {
-        width: 180px;
+        width: 220px;
+        padding: 2.0rem 2.0rem;
     }
     .title {
         font-size: 20px;
@@ -104,7 +109,11 @@ audio {
         width: 180px;
     }
     .option-1, .option-2, .option-3 {
-        width: 180px;
+        width: 220px;
         font-size: 17px;
+        padding: 1.0rem 2.0rem;
+    }
+    .retake {
+        content: "Retake";
     }
 }

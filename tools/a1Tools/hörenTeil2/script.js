@@ -46,7 +46,7 @@ function iterate(id) {
     questionContainer.innerText = Questions[id].q;
 
     // Create a copy of the right and wrong buttons to give them the true/false values
-    audioContainer.src = "audio/A1-Exam-Prep-Hören-Teil-2-Aufgabe-" + (id+1)+".mp3";
+    audioContainer.src = "audio/A1-Exam-Prep-Hoeren-Teil-2-Aufgabe-" + (id+1)+".mp3";
     rightButton.value = Questions[id].a[0].isCorrect;
     wrongButton.value = Questions[id].a[1].isCorrect;
     titleContainer.innerText = title + "(" + (id + 1) + "/" + Questions.length + ")";

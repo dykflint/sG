@@ -5,45 +5,26 @@ const secondField = document.querySelector('#second');
 const thirdField = document.querySelector('#third');
 const fourthField = document.querySelector('#fourth');
 const fifthField = document.querySelector('#fifth');
-const sixthField = document.querySelector('#sixth');
+// const sixth1Field = document.querySelector('#sixth1');
+const radio1Field = document.querySelector('.radio1');
+const radio2Field = document.querySelector('.radio2');
+const radio3Field = document.querySelector('.radio3');
+const radio1Button = document.querySelector('#radio1');
+const radio2Button = document.querySelector('#radio2');
+const radio3Button = document.querySelector('#radio3');
+const miscField = document.querySelector('#misc');
 const checkButton = document.querySelector('.check-button');
-
 // TODO: Make pre-filled fields uneditable 
 
-// Structure with the answers 
-const Solutions = [
-    {
-        id: 0,
-        a: [{ text: 'Volodymyr Zelenskyy'},
-            { text: 'Volodymyr, Zelenskyy'}]
-    },
-    {
-        id: 1,
-        a: [{ text: '55246'}]
-    },
-    {
-        id: 2,
-        a: [{ text: '25'}]
-    },
-    {
-        id: 3,
-        a: [{ text: 'AOK'}]
-    },
-    {
-        id: 4, 
-        a: [{ text: 'Elektriker'}]
-    },
-    {
-        id: 5,
-        a: [{ text: 'Fieber'}]
-    }
-];
+
 
 function checkInput(id, field) {
     // correct or incorrect tracker for multiple answers 
     let isValid = 0;
     Solutions[id].a.forEach((element) => {
-        if(field.value.toLowerCase() == element.text.toLowerCase()){
+        // console.log(field.value.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+        // console.log(element.text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+        if(field.value.toLowerCase().trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\s/g,"") == element.text.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\s/g,"")){
             isValid = 1;
         }
     })
@@ -55,6 +36,29 @@ function checkInput(id, field) {
         field.classList.remove('correct');
         field.classList.add('incorrect');
     }
+    miscField.classList.add('correct');
+}
+// Function to remove the coloring for the radio buttons 
+function uncheckRadio() {
+    radio1Field.classList.remove('radio-correct');
+    radio1Field.classList.remove('radio-incorrect');
+    radio2Field.classList.remove('radio-correct');
+    radio2Field.classList.remove('radio-incorrect');
+    radio3Field.classList.remove('radio-correct');
+    radio3Field.classList.remove('radio-incorrect');
+}
+function checkRadio(id) {
+    Solutions[id].a.forEach((element) => {
+        if($('input[name="writing"]:checked').val().trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()] /g,"") == element.text.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()] /g,"")) {
+            uncheckRadio();
+            $('input[name="writing"]:checked').parent()[0].classList.add('radio-correct');
+            $('input[name="writing"]:checked').parent()[0].classList.remove('radio-incorrect')
+        } else {
+            uncheckRadio();
+            $('input[name="writing"]:checked').parent()[0].classList.remove('radio-correct');
+            $('input[name="writing"]:checked').parent()[0].classList.add('radio-incorrect')
+        }
+    })
 }
 checkButton.addEventListener('click', () => {
     checkInput(0, firstField);
@@ -62,5 +66,5 @@ checkButton.addEventListener('click', () => {
     checkInput(2, thirdField);
     checkInput(3, fourthField);
     checkInput(4, fifthField);
-    checkInput(5, sixthField);
+    checkRadio(5);
 })

@@ -72,6 +72,9 @@ body > * {
     color: white;
     cursor: pointer;
 }
+.retake:after {
+    content: "Retake Quiz";
+}
 .finish-message {
     font-size: 20px;
     font-weight: bold;
@@ -99,5 +102,12 @@ body > * {
     .right-wrong-options {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+    }
+    .right, .wrong {
+        width: 100%;
+    }
+    .retake:after {
+        content: "Retake";
     }
 }

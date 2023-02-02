@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Writing Tool</title>
 </head>
 <body>
     <div class="container">
         <div class="inputs-container">
             <div class="input-field">
-                <label for="first">1. Name, Vorname:</label>
-                <input type="text" id="first" name="first">
+                <label for="first">1. Familienname, Vorname: </label>
+                <input type="text" id="first" name="first" readonly placeholder="Aytogmus, Lydia" value="Aytogmus, Lydia">
             </div>
             <div class="input-field">
-                <label for="second">2. Postleitzahl:</label>
+                <label for="second">2. Geburtsdatum:</label>
                 <input type="text" id="second" name="second">
             </div>
             <div class="input-field">
-                <label for="third">3. Alter:</label>
+                <label for="third">3. Geburtsort:</label>
                 <input type="text" id="third" name="third">
             </div>
             <div class="input-field">
-                <label for="fourth">4. Krankenkasse:</label>
+                <label for="fourth">4. Muttersprache:</label>
                 <input type="text" id="fourth" name="fourth">
             </div>
             <div class="input-field">
-                <label for="fifth">5. Beruf:</label>
+                <label for="fifth">5. Andere Sprachen:</label>
                 <input type="text" id="fifth" name="fifth">
             </div>
             <div class="input-field">
-                <label for="sixth">6. Symptome?</label>
-                <input type="text" id="sixth" name="sixth">
+                <label for="misc">Aktuelles Deutsch-Niveau:</label>
+                <input type="text" id="misc" name="misc" readonly placeholder="A2.2">
             </div>
+            <div class="input-field">
+                <label for="sixth">6. Gewünschte Kurszeit:</label>
+                <div class="radio-field">
+                    <span class="radio1">
+                        <input type="radio" id="radio1" class="sixth" name="writing" value="vormittags (9-12)">vormittags (9-12)<br>
+                    </span>
+                    <span class="radio2">
+                        <input type="radio" id="radio2" class="sixth" name="writing" value="nachmittags (13-16)">nachmittags (13-16)<br>
+                    </span>
+                    <span class="radio3">
+                        <input type="radio" id="radio3" class="sixth" name="writing" value="abends (17-20)">abends (17-20)<br>
+                    </span>
+                </div>
+            </div>
+            <button class="check-button">Check</button>
         </div>
-        <button class="check-button">Check</button>
     </div>
 </body>
+<script src="solutions.js"></script>
 <script src="script.js"></script>
 </html>
 

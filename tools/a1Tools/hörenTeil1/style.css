@@ -61,6 +61,8 @@ audio {
     font-weight: bold;
     color: white;
     cursor: pointer;
+}
+.retake:after {
     content: "Retake Quiz";
 }
 .finish-message {
@@ -94,7 +96,7 @@ audio {
         font-size: 17px;
         padding: 1.0rem 1.0rem;
     }
-    .retake {
+    .retake:after {
         content: "Retake";
     }
 }
@@ -117,7 +119,7 @@ audio {
     .finish-screen {
         width: 180px;
     }
-    .retake {
+    .retake:after {
         content: "Retake";
     }
 }

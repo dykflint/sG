@@ -4,7 +4,7 @@ const Questions = [
 {
     id: 0,
     q: 'Wie heißt das Restaurant?', 
-    a: [{ text: 'Monsieru Croque', isCorrect: false},
+    a: [{ text: 'Monsieur Croque', isCorrect: false},
         { text: 'Albert´s Küche', isCorrect: true},
         { text: 'Frischer Fisch', isCorrect: false}]
 },

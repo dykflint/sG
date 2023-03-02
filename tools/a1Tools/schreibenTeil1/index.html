@@ -4,65 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schreiben Teil 1</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>Writing Tool</title>
 </head>
 <body>
-    <div class="container">
-        <div class="inputs-container">
-            <div class="input-field">
-                <label for="first">0. Familienname, Vorname: </label>
-                <input type="text" id="first" name="first" readonly placeholder="Aytogmus, Lydia" value="Aytogmus, Lydia">
-            </div>
-            <div class="input-field">
-                <label for="second">1. Geburtsdatum:</label>
-                <input type="text" id="second" name="second">
-            </div>
-            <div class="input-field">
-                <label for="third">2. Geburtsort:</label>
-                <input type="text" id="third" name="third">
-            </div>
-            <div class="input-field">
-                <label for="fourth">3. Muttersprache:</label>
-                <input type="text" id="fourth" name="fourth">
-            </div>
-            <div class="input-field">
-                <label for="fifth">4. Andere Sprachen:</label>
-                <input type="text" id="fifth" name="fifth">
-            </div>
-            <div class="input-field">
-                <label for="misc">Aktuelles Deutsch-Niveau:</label>
-                <input type="text" id="misc" name="misc" readonly placeholder="A2.2">
-            </div>
-            <div class="input-field">
-                <label for="sixth">5. Gewünschte Kurszeit:</label>
-                <div class="radio-field">
-                    <span class="radio1">
-                        <input type="radio" id="radio1" class="sixth" name="writing" value="vormittags (9-12)">vormittags (9-12)<br>
-                    </span>
-                    <span class="radio2">
-                        <input type="radio" id="radio2" class="sixth" name="writing" value="nachmittags (13-16)">nachmittags (13-16)<br>
-                    </span>
-                    <span class="radio3">
-                        <input type="radio" id="radio3" class="sixth" name="writing" value="abends (17-20)">abends (17-20)<br>
-                    </span>
-                </div>
-            </div>
-            <button class="check-button">Check</button>
+    <section class="babystepsSection">
+        <div class='wrap'>
+            <select id="lessonNumber">
+              <option value='1'>Lesson 1</option>
+              <option value='2'>Lesson 2</option>
+              <option value='3'>Lesson 3</option>
+              <option value='4'>Lesson 4</option>
+              <option value='5'>Lesson 5</option>
+              <option value='6'>Lesson 6</option>
+              <option value='7'>Lesson 7</option>
+              <option value='8'>Lesson 8</option>
+              <option value='9'>Lesson 9</option>
+              <option value='10'>Lesson 10</option>
+            </select>
         </div>
-    </div>
+        <div class="lesson-title"></div>
+        <div class="lesson-text">Ihre Freundin Lydia Aytogmus aus der Türkei, geboren am 12.3.1981 in Mersin, möchte im Januar einen Deutschkurs in Deutschland besuchen. Sie ist auf dem Niveau A2.2. Sie hat nur morgens Zeit. Sie spricht Türkisch als Muttersprache und fließend Arabisch. Helfen Sie Lydia und schreiben Sie die fünf fehlenden Informationen in das Formular unten. Am Ende schreiben Sie Ihre Lösungen bitte auf den Antwortbogen.</div>
+        <iframe class="schreibenIframe" src="https://smartergerman.github.io/a1ExamHacking/Schreiben/teil1/1/index.html" frameborder="0" width="100%" height="550"></iframe>
+    </section>
 </body>
-<script src="solutions.js"></script>
 <script src="script.js"></script>
 </html>
-
-<!-- (0) 	Name, Vorname: Volodymyr Zelenskyy 
-Telefon: 0611 / 654 87 98
-Straße, Hausnummer:  Hauptstraße 21
-(1) 	Postleitzahl, Wohnort: 55246 
-(2)	Alter: 
-(3) 	Krankenkasse: 
-(4) 	Beruf: 
-	Seit wann krank? 11.11. 
-(5) 	Symptome?  -->

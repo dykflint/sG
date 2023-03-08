@@ -155,7 +155,6 @@ function nextTrigger() {
   // triggerFocus(words);
   computerSpeakingFirst = true;
   countTrigger();
-  tmpCounter == 0;
 }
 // ! DELETE EVERYTHING FUNCTION 
 function deleteEverything() {
@@ -251,26 +250,28 @@ recognition.addEventListener('result', e => {
       // Remove special characters from current_trigger 
       current_trigger = current_trigger.replace(/\n/g,"");
       if (tmpCounter == 0){
-        let tmpArrQuestions = questions;
+        let tmpArr = questions;
         let spoken = paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"");
         console.log("I am in the questions section");
-        if(tmpArrQuestions.some(el => spoken.includes(el.toLowerCase().replace(/[.,?!;:]/g,""))))
+        if(tmpArr.some(el => spoken.includes(el.toLowerCase().replace(/[.,?!;:]/g,""))))
         {
+          console.log("Questions arr: " + tmpArr);
           paragraphs[paragraphs.length - 2].style.color = "green";
           tmpCounter++;
         } else {
           paragraphs[paragraphs.length - 2].style.color = "red";
         }
       } else {
-        let tmpArrAnswers = answers;
+        let tmpArr = answers;
         let spoken = paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"");
         console.log("I am in the answers section");
-        if(tmpArrAnswers.some(el => spoken.includes(el.toLowerCase().replace(/[.,?!;:]/g,""))))
+        if(tmpArr.some(el => spoken.includes(el.toLowerCase().replace(/[.,?!;:]/g,""))))
         {
+          console.log("Answers arr: " + tmpArr);
           paragraphs[paragraphs.length - 2].style.color = "green";
           if (tmpCounter == 1){
             tmpCounter = 0;
-            sleepFor(3, nextTrigger);
+            sleepFor(2, nextTrigger);
           }
         } else {
           paragraphs[paragraphs.length - 2].style.color = "red";

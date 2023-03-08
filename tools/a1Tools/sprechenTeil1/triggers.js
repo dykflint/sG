@@ -9,7 +9,7 @@ let allTriggerAnswersJSON = `[
     "Sprachen?" : ["Welche Sprachen sprichst du?", "Ich spreche"],
     "Beruf?" : ["Was ist dein Beruf?", "Ich bin", "Ich arbeite als"],
     "Hobby?" : ["Was sind deine Hobbies?", ""],
-    "Wie ist Ihr Familienname?" : ["Wie ist Ihr Familienname?","Ich heiße", "Mein Familienname ist", "Mein Name ist"],
+    "Wie ist Ihr Familienname?" : ["Wie ist Ihr Familienname?","Ich heiße", "Mein Familienname ist", "Mein Name ist", "Mein Nachname ist"],
     "Können Sie das buchstabieren?" : ["Können Sie das buchstabieren?", ""],
     "Haben Sie ein Handy?" : ["Haben Sie ein Handy?","Ja", "Ja, habe ich.", "Ja, ich habe ein Handy."],
     "Wie ist bitte Ihre Nummer?" : ["Wie ist bitte Ihre Nummer?","0", "1", "2", "3", "4", "5", "6","7","8","9"]}

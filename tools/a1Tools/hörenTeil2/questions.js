@@ -1,5 +1,5 @@
 // Create data structure of questions with the correct answer highlighted 
-const title = "Reality Check | Hören - Teil 02 "
+const title = "Hören - Teil 02 "
 const Questions = [
 {
     id: 0,

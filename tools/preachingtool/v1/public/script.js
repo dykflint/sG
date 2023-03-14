@@ -27,6 +27,7 @@ const starting_box = document.querySelector(".starting-box-konstantin");
 const mic_container = document.querySelector(".mic-container");
 const tutorialContainer = document.querySelector(".tutorial-container");
 const navigationContainer = document.querySelector(".navigation");
+const nextButton = document.querySelector(".next-button");
 const triggerTutorialContainer = document.querySelector(".triggers");
 const finishBox = document.querySelector(".finish-screen-konstantin");
 const triggerCounterDiv = document.querySelector(".trigger-counter");
@@ -50,8 +51,25 @@ function resetGame(){
   location.reload();
 }
 // Let computer give its answer function 
+function computerOutput(computerSpeech){
+  var timer = setInterval(function() {
+      var voices = speechSynthesis.getVoices();
+      console.log(voices);
+      let germanVoices = speechSynthesis.getVoices().filter(function(voice) { return voice.lang.includes('de-DE'); });
+      console.log(germanVoices);
+      if (germanVoices.length !== 0) {
+          var msg = new SpeechSynthesisUtterance(computerSpeech);
+          msg.rate = 0.8;
+          msg.pitch = 1.2;
+          msg.voice = germanVoices[0];
+          speechSynthesis.speak(msg);
+          clearInterval(timer);
+      }
+  }, 200);
+}
 function toolAnswer(){
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index +1];
+  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index +1]);
   // console.log("current index" + current_trigger_index);
   // if (current_trigger_index == 2) {
   //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
@@ -67,6 +85,7 @@ function computerFirst(){
   p = document.createElement('p');
   words.appendChild(p);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
+  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
   current_trigger_index += 1;
   p = document.createElement('p');
   words.appendChild(p);
@@ -78,6 +97,7 @@ function startPreaching(){
   starting_box.classList.add("hide-konstantin");
   trigger_content.classList.remove("hide-konstantin");
   mic_container.classList.remove("hide-konstantin");
+  nextButton.classList.add("hide-konstantin");
   gameIsFinished = false;
   // startTutorial();
 }
@@ -253,7 +273,8 @@ function finishGame(){
       .map(result => result.transcript)
       .join('');
       
-      const poopScript = transcript.replace(/Baum|poo|shit|dump/gi, '💩');
+      // const poopScript = transcript.replace(/poo|shit|dump/gi, '💩');
+      const poopScript = transcript;
       const deleteScript = transcript.match("löschen");
       if (deleteScript == "löschen" && counter == 0) {
         deleteEverything();
@@ -322,7 +343,10 @@ function finishGame(){
       .map(result => result.transcript)
       .join('');
       
-      const poopScript = transcript.replace(/Baum|poo|shit|dump/gi, '💩');
+      const poopScript = transcript.replace(/grossen/gi, 'großen');
+      poopScript = transcript.replace(/gross/gi, 'groß');
+      poopScript = transcript.replace(/grosse/gi, 'große');
+      // const poopScript = transcript;
       const deleteScript = transcript.match("löschen");
       if (deleteScript == "löschen" && counter == 0) {
         deleteEverything();
@@ -384,15 +408,11 @@ function finishGame(){
   });
   // Key command to pause and start the audio 
   window.addEventListener("keydown", (event) => {
+    nextButton.classList.remove("hide-konstantin");
     if(event.isComposing || event.keyCode === 13 && 
       (event.ctrlKey ||event.metaKey) && !gameIsFinished){
       recognition.start();
       audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
-      // console.log(tutorial_counter);
-      // if(tutorial_counter % 2 == 1 && test){
-      //   deleteEverything();
-      //   tutorial_counter++;
-      // }
       if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
         computerFirst();
         computerSpeakingFirst = false;
@@ -403,28 +423,13 @@ function finishGame(){
   });
   // Button to start the microphone 
   function turnOnMicro(){
+    nextButton.classList.remove("hide-konstantin");
     if(initialCounter){
       countTrigger();
       initialCounter = false;
     }
     recognition.start();
     audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
-    // if(tutorial_counter % 2 == 1 && test){
-    //   deleteEverything();
-    //   tutorial_counter++;
-    // } else if(tutorial_counter)
-    // if (computerSpeakingFirst && switchPlaces % 2 == 0 
-    //   && test) {
-    //   console.log(test);
-    //   computerFirst();
-    //   computerSpeakingFirst = false;
-    // } else {
-    //   // deleteEverything();
-    // }
-    // if(tutorial_counter % 2 == 1 && test){
-    //   deleteEverything();
-    //   tutorial_counter++;
-    // }
     if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
       computerFirst();
       computerSpeakingFirst = false;

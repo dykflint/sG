@@ -19,8 +19,8 @@
   }
   
   .slider-container {
-    max-width: 1000px;
-    width: 90%;
+    max-width: 1200px;;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -30,12 +30,12 @@
   .carousel-container {
     border-radius: 30px;
     overflow: hidden;
-    max-width: 800px;
+    max-width: 1000px;
     position: relative;
     box-shadow: 0 0 30px -20px #223344;
     margin: auto;
     z-index: 0;
-    width: 80%;
+    width: 90%;
   }
   
   /* Hide the images by default */

@@ -1,8 +1,9 @@
 #!/bin/bash
-let start_question=301
-let number_of_questions=10
-let state="badenw"
-for i in {301..310}
+rm test/*
+let start_question=222
+let number_of_questions=5
+folder="borders"
+for i in 222 223 227 229 233
 do
-	python3 convert_questions.py state_questions_german/${state}_questions_german$i state_questions_english/${state}_questions_english$i $start_question $i $number_of_questions
+	python3 convert_questions.py ${folder}_german/$i ${folder}_english/$i $start_question $i $number_of_questions
 done

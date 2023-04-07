@@ -1,2 +1,2 @@
 #!/bin/bash
-cat allQuestions/questions emptyLine allQuestions/translations >> allQuestions/questions.js 
+cat test/questions emptyLine test/translations >> $1/questions.js 

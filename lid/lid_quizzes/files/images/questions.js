@@ -5,7 +5,8 @@ const Questions = [{
         { text: ' 2', isCorrect: false},
         { text: ' 3', isCorrect: false},
         { text: ' 4', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/fQrpJsUTui3HfxlBqmDQ"
 },
 {
     id: 34,
@@ -14,7 +15,8 @@ const Questions = [{
         { text: '  den Bundestagssitz in Berlin', isCorrect: true},
         { text: ' das Bundesverfassungsgericht in Karlsruhe', isCorrect: false},
         { text: ' das Bundesratsgebäude in Berlin', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/cmzanvtlQlKOGJBEHhhw"
 },
 {
     id: 49,
@@ -23,7 +25,8 @@ const Questions = [{
         { text: ' Er / Sie kontrolliert die Regierungspartei.', isCorrect: false},
         { text: ' Er / Sie wählt die Minister / Ministerinnen aus.', isCorrect: false},
         { text: '  Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor.', isCorrect: true},
-]
+	],
+	image: "https://www.filepicker.io/api/file/fxT6sCNSCQEX3lULHZBg"
 },
 {
     id: 109,
@@ -32,16 +35,18 @@ const Questions = [{
         { text: ' 2', isCorrect: false},
         { text: ' 3', isCorrect: false},
         { text: ' 4', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/9Ak1E1QaTDGuXRKvM3xA"
 },
 {
     id: 155,
-    q: 'How were the occupation zones of Germany distributed after 1945?',
-    a: [{ text: ' 1=Great Britain, 2=Soviet Union, 3=France, 4=USA', isCorrect: false},
-        { text: ' 1=Soviet Union, 2=Great Britain, 3=USA, 4=France', isCorrect: false},
-        { text: '  1=Great Britain, 2=Soviet Union, 3=USA, 4=France', isCorrect: true},
-        { text: ' 1=Great Britain, 2=USA, 3=Soviet Union, 4=France', isCorrect: false},
-]
+    q: 'Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt??',
+    a: [{ text: ' 1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA', isCorrect: false},
+        { text: ' 1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich', isCorrect: false},
+        { text: '  1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich', isCorrect: true},
+        { text: ' 1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich', isCorrect: false},
+	],
+	image: "https://www.filepicker.io/api/file/r2dyD5N4Q02dRNV0Zld1"
 },
 {
     id: 160,
@@ -50,7 +55,8 @@ const Questions = [{
         { text: '  Er bat Polen und die polnischen Juden um Vergebung.', isCorrect: true},
         { text: ' Er zeigte seine Demut vor dem Warschauer Pakt.', isCorrect: false},
         { text: ' Er sprach ein Gebet am Grab des Unbekannten Soldaten.', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/39fVSlK1SQyB7XQsLvwr"
 },
 {
     id: 166,
@@ -59,7 +65,8 @@ const Questions = [{
         { text: ' Bundesrepublik Deutschland', isCorrect: false},
         { text: '  DDR', isCorrect: true},
         { text: ' „Drittes Reich“', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/30rnUeLnQnC8mElPRaAw"
 },
 {
     id: 188,
@@ -68,7 +75,8 @@ const Questions = [{
         { text: ' 2', isCorrect: false},
         { text: ' 3', isCorrect: false},
         { text: '  4', isCorrect: true},
-]
+	],
+	image: "https://www.filepicker.io/api/file/u9oRPtIeQYqCwP08ji5c"
 },
 {
     id: 195,
@@ -77,7 +85,8 @@ const Questions = [{
         { text: '  der Bundesadler.', isCorrect: true},
         { text: ' der Reichsadler.', isCorrect: false},
         { text: ' die Reichskrone.', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/82uugPAUSWi9oBSEBkqy"
 },
 {
     id: 205,
@@ -86,7 +95,8 @@ const Questions = [{
         { text: ' 1', isCorrect: false},
         { text: ' 4', isCorrect: false},
         { text: ' 3', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/S5o5oIniQlOfPBJCE6dA"
 },
 {
     id: 214,
@@ -95,7 +105,8 @@ const Questions = [{
         { text: ' Reisefreiheit in alle Länder der EU', isCorrect: false},
         { text: '  Frieden und Sicherheit in den Ländern der EU', isCorrect: true},
         { text: ' einheitliche Feiertage in den Ländern der EU', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/f9OJKxdT6u89UIpAp7wa"
 }];
 
 

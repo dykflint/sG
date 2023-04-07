@@ -95,7 +95,8 @@ const Questions = [{
         { text: ' 2', isCorrect: false},
         { text: ' 3', isCorrect: false},
         { text: ' 4', isCorrect: false},
-]
+	],
+	image: "https://www.filepicker.io/api/file/fQrpJsUTui3HfxlBqmDQ"
 },
 {
     id: 11,

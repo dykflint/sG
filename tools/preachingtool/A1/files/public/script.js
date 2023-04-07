@@ -1,7 +1,3 @@
-// ! CURRENT ISSUES: 
-// ! TUTORIAL BUTTON SHOWS FIRST INPUT 
-// TODO: Let the user know that its his/her turn 
-// TODO: Hide the tool for mobiles 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 Element.prototype.remove = function() {
   this.parentElement.removeChild(this);
@@ -33,12 +29,12 @@ const finishBox = document.querySelector(".finish-screen-konstantin");
 const triggerCounterDiv = document.querySelector(".trigger-counter");
 const counter = 0;
 let play_pause_counter = 0;
+let germanVoices = speechSynthesis.getVoices().filter(function(voice) { return voice.lang.includes('de-DE'); });
 // ! DELAY FUNCTION
 // Put whatever code that needs to be delayed into sleepFor(seconds)
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
 async function sleepFor(seconds, whattodo, index) {
   for (let i = 0; i < seconds; i++) {
       await sleep(i * 1000);
@@ -50,30 +46,53 @@ async function sleepFor(seconds, whattodo, index) {
 function resetGame(){
   location.reload();
 }
-// Let computer give its answer function 
+
+// cancel any ongoing speech output
+function cancelSpeech() {
+  audio.pause();
+}
+
+
+
+function computerOutput(computerSpeech) {
+  // remove all special characters from the input string 
+  computerSpeech = computerSpeech.replace(/ä/g,"ae");
+  computerSpeech = computerSpeech.replace(/Ä/g,"Ae");
+  computerSpeech = computerSpeech.replace(/ö/g,"oe");
+  computerSpeech = computerSpeech.replace(/Ö/g,"Oe");
+  computerSpeech = computerSpeech.replace(/ü/g,"ue");
+  computerSpeech = computerSpeech.replace(/Ü/g,"Ue");
+  computerSpeech = computerSpeech.replace(/ß/g,"ss");
+  computerSpeech = computerSpeech.replace(/[^a-zA-Z0-9 ]/g, "");
+  // console.log(computerSpeech);
+  globalThis.audio = new Audio('../audio/' + computerSpeech + '.mp3');
+  // let audio = new Audio('audio/Ich sehe einen Stuhl.mp3');
+  audio.play();
+}
+
+
 function toolAnswer(){
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index +1];
-  // console.log("current index" + current_trigger_index);
-  // if (current_trigger_index == 2) {
-  //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
-  // }
+  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index +1]);
   current_trigger_index += 2; 
-  console.log("Trigger Index: " + current_trigger_index);
+  // console.log("Trigger Index: " + current_trigger_index);
   p = document.createElement('p');
   words.appendChild(p)
 }
 function computerFirst(){
-  console.log("Computer writes");
+  // console.log("Computer writes");
   current_trigger = current_trigger.replace(/\n/g,"");
   p = document.createElement('p');
   words.appendChild(p);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
+  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
   current_trigger_index += 1;
   p = document.createElement('p');
   words.appendChild(p);
 }
 
 // ! START PREACHING 
+let preachingStarted = 0;
 function startPreaching(){
   preaching_section.classList.remove("hide-konstantin");
   starting_box.classList.add("hide-konstantin");
@@ -81,7 +100,8 @@ function startPreaching(){
   mic_container.classList.remove("hide-konstantin");
   nextButton.classList.add("hide-konstantin");
   gameIsFinished = false;
-  // startTutorial();
+  sleep(3000);
+  turnOnMicro();
 }
 // ! FINISHED PREACHING 
 let gameIsFinished = true;
@@ -102,13 +122,6 @@ function finishGame(){
   recognition.continuous = false;
   recognition.lang = 'de-DE';
   
-  // TRIGGERS AND ANSWERS 
-  // const triggers = ["bestrafen - to punish", "betrügen - to cheat"];
-//   let allTriggerAnswersJSON = `[
-//     {"bestrafen - to punish" : ["Bestrafst du gern?","Ich bestrafe nicht gern.", "Warum bestrafst du nicht gern?", "Weil ich einfach nicht gern bestrafe."],
-//     "betrügen - to cheat" : ["Betrügst du gern?", "Ich betrüge nicht gern.", "Warum betrügst du nicht gern?", "Weil ich einfach nicht gern betrüge."]}
-// ]`;
-
   allTriggerAnswersData = JSON.parse(allTriggerAnswersJSON);
   trigger_content.innerText = triggers[0];
   
@@ -148,6 +161,9 @@ function finishGame(){
   let secondHalf = false;
   let nextCounter = 0;
   function nextTrigger() {
+    cancelSpeech();
+    recognition.stop();
+    audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5";
     nextCounter++;
     if (next_index + 1 < triggers.length){
       next_index++; 
@@ -167,13 +183,13 @@ function finishGame(){
     deleteEverything();
     correct_answers_div.innerText = "";
     // triggerFocus(words);
-    computerSpeakingFirst = true;
+    // computerSpeakingFirst = true;
     countTrigger();
   }
   // ! DELETE EVERYTHING FUNCTION 
   function deleteEverything() {
     if(switchPlaces % 2 == 0){
-      console.log("Delete first");
+      // console.log("Delete first");
       for(i=paragraphs.length - 1; i > 0; i--){
           if(i >= 0){
               paragraphs[i].remove();
@@ -195,7 +211,7 @@ function finishGame(){
     computerSpeakingFirst = true;
     // console.log("Before the if statement in DELETE");
     if(computerSpeakingFirst && switchPlaces % 2 == 0){
-      console.log("Is the computerFirst function being called?");
+      // console.log("Is the computerFirst function being called?");
       computerFirst();
       computerSpeakingFirst = false;
     }
@@ -255,27 +271,23 @@ function finishGame(){
       .map(result => result.transcript)
       .join('');
       
-      // const poopScript = transcript.replace(/poo|shit|dump/gi, '💩');
-      const poopScript = transcript;
-      const deleteScript = transcript.match("löschen");
-      if (deleteScript == "löschen" && counter == 0) {
-        deleteEverything();
-        $('.words').children().last().remove();
-      }
-      
       if(paragraphs.length > 1){
         paragraphs[paragraphs.length - 1].style.color = "black";
+        console.log(paragraphs[paragraphs.length - 1].textContent.replace('großen','grossen'));
       }
-      p.textContent = poopScript;
+      p.textContent = transcript;
       // Here is where stuff is being written 
       if (e.results[0].isFinal) {
+        let poopScript = transcript;
+        poopScript = transcript.replace(/grossen/gi, 'großen').replace(/gross/gi,'groß').replace(/grosse/gi,'große').replace(/grosses/gi,'großes').replace(/weiss/gi,'weiß').replace(/beisse/gi,'beiße').replace(/beisst/gi,'beißt').replace(/beissen/gi,'beißen');
+        p.textContent = poopScript;
         p = document.createElement('p');
         words.appendChild(p);
         // Remove special characters from current_trigger 
         current_trigger = current_trigger.replace(/\n/g,"");
         if(paragraphs.length > 1) {
           if(paragraphs[paragraphs.length - 2].innerText.toLowerCase().replace(/[.,?!;:]/g,"") == allTriggerAnswersData[0][current_trigger][current_trigger_index].toLowerCase().replace(/[.,?!;:]/g,"")){
-            console.log("I am in the TOOL LOOP");
+            // console.log("I am in the TOOL LOOP");
             paragraphs[paragraphs.length - 2].style.color = "green";
             // if(current_trigger_index == 3){
             //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
@@ -284,17 +296,7 @@ function finishGame(){
             sleepFor(2, toolAnswer);
           }
           if(current_trigger_index == 3){
-            // console.log("Last Trigger Answer");
-            console.log("I am about to call the timer nextTrigger");
             sleepFor(3, nextTrigger);
-            console.log("Was it called before?");
-            // previous_answers_div.innerHTML = "";
-            // for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
-            //   p = document.createElement('p');
-            //   p.innerText = allTriggerAnswersData[0][current_trigger][i];
-            //   previous_answers_div.appendChild(p);
-            //   p = document.createElement('p');
-            // }
           }
         }
         else {
@@ -325,21 +327,16 @@ function finishGame(){
       .map(result => result.transcript)
       .join('');
       
-      const poopScript = transcript.replace(/grossen/gi, 'großen');
-      poopScript = transcript.replace(/gross/gi, 'groß');
-      poopScript = transcript.replace(/grosse/gi, 'große');
       // const poopScript = transcript;
-      const deleteScript = transcript.match("löschen");
-      if (deleteScript == "löschen" && counter == 0) {
-        deleteEverything();
-        $('.words').children().last().remove();
-      }
-      
+      p.textContent = transcript;
       if(paragraphs.length > 1){
         paragraphs[paragraphs.length - 1].style.color = "black";
       }
-      p.textContent = poopScript;
+      p.textContent = transcript;
       if (e.results[0].isFinal) {
+        let poopScript = transcript;
+        poopScript = transcript.replace(/grossen/gi, 'großen').replace(/gross/gi,'groß').replace(/grosse/gi,'große').replace(/grosses/gi,'großes').replace(/weiss/gi,'weiß').replace(/beisse/gi,'beiße').replace(/beisst/gi,'beißt').replace(/beissen/gi,'beißen');
+        p.textContent = poopScript;
         p = document.createElement('p');
         words.appendChild(p);
         // Remove special characters from current_trigger 
@@ -352,25 +349,15 @@ function finishGame(){
           }
           if(current_trigger_index == 2){
             // console.log("Last Trigger Answer");
-            console.log("I am about to call the timer nextTrigger in Else");
+            // console.log("I am about to call the timer nextTrigger in Else");
             // sleepFor(2, () => {
               // p.innerText = allTriggerAnswersData[0][current_trigger][3];
             // });
             if(current_trigger == triggers[triggers.length - 1]){
               sleepFor(3, finishGame);
             } else {
-              sleepFor(3, nextTrigger);
+              sleepFor(3.5, nextTrigger);
             }
-            // previous_answers_div.innerHTML = "";
-            //   sleepFor(2, () => {
-            //     for(i=0; i < allTriggerAnswersData[0][current_trigger].length; i++){
-            //       p = document.createElement('p');
-            //       p.innerText = allTriggerAnswersData[0][current_trigger][i];
-            //       previous_answers_div.appendChild(p);
-            //       p = document.createElement('p');
-            //       words.appendChild(p);
-            //     }
-              // })
           }
         }
         else {
@@ -384,17 +371,23 @@ function finishGame(){
     }
     recognition.addEventListener('end', () => { 
       // MIC OFF
-      audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5"
+      audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5";
     });
   }
   });
-  // Key command to pause and start the audio 
+
   window.addEventListener("keydown", (event) => {
-    nextButton.classList.remove("hide-konstantin");
-    if(event.isComposing || event.keyCode === 13 && 
-      (event.ctrlKey ||event.metaKey) && !gameIsFinished){
-      recognition.start();
-      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
+    if((event.metaKey ||  event.ctrlKey) && event.key == "Enter"){
+      nextButton.classList.remove("hide-konstantin");
+      if(initialCounter){
+        countTrigger();
+        initialCounter = false;
+      }
+      if (preachingStarted){
+        audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
+        recognition.start();
+      }
+      preachingStarted = 1;
       if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
         computerFirst();
         computerSpeakingFirst = false;
@@ -403,6 +396,8 @@ function finishGame(){
       }
     }
   });
+
+
   // Button to start the microphone 
   function turnOnMicro(){
     nextButton.classList.remove("hide-konstantin");
@@ -410,8 +405,12 @@ function finishGame(){
       countTrigger();
       initialCounter = false;
     }
-    recognition.start();
-    audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
+    if (preachingStarted){
+      cancelSpeech();
+      audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
+      recognition.start();
+    }
+    preachingStarted = 1;
     if (computerSpeakingFirst && switchPlaces % 2 == 0 && test) {
       computerFirst();
       computerSpeakingFirst = false;

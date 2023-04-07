@@ -8,7 +8,7 @@ def formatJSON(jsonFile, lessonNumber):
     # Load the JSON data from the file
     with open(jsonFile, 'r') as f:
         data = json.load(f)
-    with open('formatted/' + lessonNumber, 'w') as f:
+    with open('formatted/a2/' + lessonNumber, 'w') as f:
         # Loop through each key-value pair in the JSON data
         for key, value in data.items():
             # Loop through each sentence in the array and write it to the file
@@ -16,4 +16,4 @@ def formatJSON(jsonFile, lessonNumber):
                 f.write(sentence + '\n')
 
 for i in range(1,51):
-    formatJSON('a1/' + str(i) + '.json', str(i))
+    formatJSON('a2/' + str(i) + '.json', str(i))

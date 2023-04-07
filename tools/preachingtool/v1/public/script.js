@@ -51,25 +51,8 @@ function resetGame(){
   location.reload();
 }
 // Let computer give its answer function 
-function computerOutput(computerSpeech){
-  var timer = setInterval(function() {
-      var voices = speechSynthesis.getVoices();
-      console.log(voices);
-      let germanVoices = speechSynthesis.getVoices().filter(function(voice) { return voice.lang.includes('de-DE'); });
-      console.log(germanVoices);
-      if (germanVoices.length !== 0) {
-          var msg = new SpeechSynthesisUtterance(computerSpeech);
-          msg.rate = 0.8;
-          msg.pitch = 1.2;
-          msg.voice = germanVoices[0];
-          speechSynthesis.speak(msg);
-          clearInterval(timer);
-      }
-  }, 200);
-}
 function toolAnswer(){
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index +1];
-  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index +1]);
   // console.log("current index" + current_trigger_index);
   // if (current_trigger_index == 2) {
   //   correct_answers_div.innerText = "Good job. Practice the trigger again or go to the next one.";
@@ -85,7 +68,6 @@ function computerFirst(){
   p = document.createElement('p');
   words.appendChild(p);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
-  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
   current_trigger_index += 1;
   p = document.createElement('p');
   words.appendChild(p);

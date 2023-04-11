@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Speech-to-Text Recorder</title>
+	<title>Speech to Text</title>
 </head>
 <body>
-  <h1>Speech-to-Text Recorder</h1>
+	<input type="text" id="input-field" placeholder="Speak here...">
+	<button id="microphone-button">Record</button>
 
-  <button id="record">Record</button>
+	<script>
+		const inputField = document.getElementById('input-field');
+		const microphoneButton = document.getElementById('microphone-button');
+		const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		const recognition = new SpeechRecognition();
 
-  <div id="output"></div>
+		recognition.continuous = true;
+		recognition.interimResults = true;
+
+		microphoneButton.addEventListener('click', () => {
+			recognition.start();
+			microphoneButton.disabled = true;
+			microphoneButton.innerText = 'Recording...';
+		});
+
+		recognition.addEventListener('result', (event) => {
+			const transcript = Array.from(event.results)
+				.map((result) => result[0])
+				.map((result) => result.transcript)
+				.join('');
+
+			inputField.value = transcript;
+		});
+
+		recognition.addEventListener('end', () => {
+			microphoneButton.disabled = false;
+			microphoneButton.innerText = 'Record';
+		});
+
+		recognition.addEventListener('nomatch', () => {
+			console.log('I didn\'t recognize that.');
+		});
+
+		recognition.addEventListener('audiostart', () => {
+			console.log('Audio input started.');
+		});
+
+		recognition.addEventListener('audioend', () => {
+			console.log('Audio input ended.');
+			recognition.stop();
+			microphoneButton.disabled = false;
+			microphoneButton.innerText = 'Record';
+		});
+	</script>
 </body>
-<script src="script.js"></script>
 </html>
+

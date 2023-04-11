@@ -310,6 +310,7 @@ function finishGame(){
     }
     recognition.addEventListener('end', () => {
       // MIC OFF 
+      recognition.stop();
       audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5"
     });
     test = false; 
@@ -371,6 +372,7 @@ function finishGame(){
     }
     recognition.addEventListener('end', () => { 
       // MIC OFF
+      recognition.stop();
       audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5";
     });
   }

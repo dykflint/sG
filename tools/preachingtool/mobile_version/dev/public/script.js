@@ -48,32 +48,32 @@ function resetGame(){
 }
 
 // cancel any ongoing speech output
-function cancelSpeech() {
-  audio.pause();
-}
+// function cancelSpeech() {
+//   audio.pause();
+// }
 
 
 
 function computerOutput(computerSpeech) {
-  // remove all special characters from the input string 
-  computerSpeech = computerSpeech.replace(/ä/g,"ae");
-  computerSpeech = computerSpeech.replace(/Ä/g,"Ae");
-  computerSpeech = computerSpeech.replace(/ö/g,"oe");
-  computerSpeech = computerSpeech.replace(/Ö/g,"Oe");
-  computerSpeech = computerSpeech.replace(/ü/g,"ue");
-  computerSpeech = computerSpeech.replace(/Ü/g,"Ue");
-  computerSpeech = computerSpeech.replace(/ß/g,"ss");
-  computerSpeech = computerSpeech.replace(/[^a-zA-Z0-9 ]/g, "");
-  // console.log(computerSpeech);
-  globalThis.audio = new Audio('../audio/' + computerSpeech + '.mp3');
-  // let audio = new Audio('audio/Ich sehe einen Stuhl.mp3');
-  audio.play();
+  // // remove all special characters from the input string 
+  // computerSpeech = computerSpeech.replace(/ä/g,"ae");
+  // computerSpeech = computerSpeech.replace(/Ä/g,"Ae");
+  // computerSpeech = computerSpeech.replace(/ö/g,"oe");
+  // computerSpeech = computerSpeech.replace(/Ö/g,"Oe");
+  // computerSpeech = computerSpeech.replace(/ü/g,"ue");
+  // computerSpeech = computerSpeech.replace(/Ü/g,"Ue");
+  // computerSpeech = computerSpeech.replace(/ß/g,"ss");
+  // computerSpeech = computerSpeech.replace(/[^a-zA-Z0-9 ]/g, "");
+  // // console.log(computerSpeech);
+  // globalThis.audio = new Audio('../audio/' + computerSpeech + '.mp3');
+  // // let audio = new Audio('audio/Ich sehe einen Stuhl.mp3');
+  // audio.play();
 }
 
 
 function toolAnswer(){
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index +1];
-  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index +1]);
+  // computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index +1]);
   current_trigger_index += 2; 
   // console.log("Trigger Index: " + current_trigger_index);
   p = document.createElement('p');
@@ -85,7 +85,7 @@ function computerFirst(){
   p = document.createElement('p');
   words.appendChild(p);
   p.innerText = allTriggerAnswersData[0][current_trigger][current_trigger_index];
-  computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
+  // computerOutput(allTriggerAnswersData[0][current_trigger][current_trigger_index]);
   current_trigger_index += 1;
   p = document.createElement('p');
   words.appendChild(p);
@@ -311,7 +311,7 @@ function finishGame(){
     recognition.addEventListener('end', () => {
       // MIC OFF 
       console.log("Audio capturing ended");
-      recognition.stop();
+      // recognition.stop();
       audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5"
     });
     test = false; 
@@ -374,7 +374,7 @@ function finishGame(){
     recognition.addEventListener('end', () => { 
       // MIC OFF
       console.log("Audio capturing ended");
-      recognition.stop();
+      // recognition.stop();
       audio_img.src = "https://www.filepicker.io/api/file/VyfbFTekQn6m2LEPlNm5";
     });
   }
@@ -410,7 +410,7 @@ function finishGame(){
       initialCounter = false;
     }
     if(!preachingStarted){
-      cancelSpeech();
+      // cancelSpeech();
       audio_img.src = "https://www.filepicker.io/api/file/Vd1N70dPS1yslZ2XwZEJ"
       recognition.start();
     }

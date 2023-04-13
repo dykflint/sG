@@ -96,8 +96,7 @@ const Questions = [{
         { text: ' 1953', isCorrect: false},
         { text: ' 1956', isCorrect: false},
 ]
-}
-]
+},
 {
     id: 26,
     q: 'Vom Juni 1948 bis zum Mai 1949 wurden die Bürger und Bürgerinnen von WestBerlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?',
@@ -297,8 +296,7 @@ const Translations = [{
         { text: ' 1953', isCorrect: false},
         { text: ' 1956', isCorrect: false},
 ]
-}
-]
+},
 {
     id: 26,
     q: 'From June 1948 to May 1949, the citizens of West Berlin were supplied by an airlift. What circumstance was responsible for this?',
@@ -368,7 +366,7 @@ const Translations = [{
     a: [{ text: ' the solemn entry into the Warsaw Pact', isCorrect: false},
         { text: '  Nationwide strikes and popular uprising', isCorrect: true},
         { text: ' the 1st SED party congress', isCorrect: false},
-        { text: ' Fidel Castro's first visit', isCorrect: false},
+        { text: " Fidel Castro's first visit", isCorrect: false},
 ]
 },
 {
